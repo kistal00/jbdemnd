@@ -1,0 +1,30 @@
+name: Update job data
+
+on:
+  schedule:
+    - cron: "30 2 * * *"   # 02:30 UTC = 08:15 Nepal time, once a day
+  workflow_dispatch:        # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Fetch jobs
+        env:
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+        run: python fetch_jobs.py
+      - name: Commit data
+        run: |
+          git config user.name "job-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "Update job data"
+          git push
