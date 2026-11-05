@@ -102,6 +102,15 @@ def collect_jobbank():
     c_max = find_col(headers, "salary", "maximum")
     c_per = find_col(headers, "salary", "per")
     c_posted = find_col(headers, "first", "posting")
+    c_edu = find_col(headers, "education")
+    c_exp = find_col(headers, "experience")
+    c_vac = find_col(headers, "vacancy")
+    c_type = find_col(headers, "employment", "type")
+    c_start = find_col(headers, "start", "date")
+    c_hmin = find_col(headers, "hours", "minimum")
+    c_hmax = find_col(headers, "hours", "maximum")
+    c_hper = find_col(headers, "hours", "per")
+    c_lang = find_col(headers, "official", "language")
     print("Using columns:", dict(title=c_title, id=c_id, city=c_city, province=c_prov, term=c_term,
                                   noc=c_noc, sal_min=c_min, sal_max=c_max, sal_per=c_per))
     if not c_title or not c_id:
@@ -126,6 +135,22 @@ def collect_jobbank():
             pay = f"CAD {lo or hi} {per}".strip()
         else:
             pay = ""
+        hmin, hmax, hper = val(row, c_hmin), val(row, c_hmax), val(row, c_hper)
+        hours = ""
+        if hmin or hmax:
+            hours = (f"{hmin}-{hmax}" if hmin and hmax and hmin != hmax else (hmin or hmax)) + f" hours {hper}".rstrip()
+        details = {
+            "Education required": val(row, c_edu),
+            "Experience required": val(row, c_exp),
+            "Language": val(row, c_lang),
+            "Employment type": val(row, c_type),
+            "Employment term": term,
+            "Start date": val(row, c_start)[:10],
+            "Hours": hours,
+            "Vacancies": val(row, c_vac),
+            "Posted on": val(row, c_posted)[:10],
+        }
+        details = {k: v for k, v in details.items() if v}
         place = ", ".join(x for x in (val(row, c_city), val(row, c_prov)) if x)
         jobs.append({
             "id": f"jb-{val(row, c_id)}",
@@ -137,6 +162,7 @@ def collect_jobbank():
             "source": "Job Bank Canada",
             "salary": pay,
             "closes_on": "",
+            "details": details,
             "_posted": val(row, c_posted),
         })
     # newest first, seasonal-term jobs first, then cap
