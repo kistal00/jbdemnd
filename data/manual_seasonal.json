@@ -1,0 +1,15 @@
+{
+  "jobs": [
+    {
+      "id": "manual-001",
+      "title": "Fruit picker (example - replace me)",
+      "employer": "Example Farm Pty Ltd",
+      "country": "Australia",
+      "location": "Queensland",
+      "category": "Agriculture",
+      "source": "SEEK",
+      "salary": "AUD 28/h",
+      "closes_on": "2026-12-31"
+    }
+  ]
+}
