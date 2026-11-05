@@ -9,6 +9,7 @@ Each "collector" returns a list of dicts with these keys:
 A collector that fails is logged and skipped, so one broken site never wipes the file.
 """
 import csv
+import hashlib
 import json
 import os
 import re
@@ -31,14 +32,27 @@ SEASONAL_WORDS = re.compile(
 )
 
 
+def norm(name):
+    return re.sub(r"[^a-z0-9]+", " ", (name or "").lower()).strip()
+
+
 def pick(row, *names):
-    """First non-empty column among several possible names (case-insensitive)."""
-    lowered = {k.strip().lower(): v for k, v in row.items() if k}
+    """First non-empty column among several possible names (ignores case and punctuation)."""
+    lowered = {norm(k): v for k, v in row.items() if k}
     for n in names:
-        v = lowered.get(n.lower())
+        v = lowered.get(norm(n))
         if v and str(v).strip():
             return str(v).strip()
     return ""
+
+
+def find_col(headers, *keywords):
+    """First header containing ALL keywords (after normalising)."""
+    for h in headers:
+        n = norm(h)
+        if all(k in n for k in keywords):
+            return h
+    return None
 
 
 # ---------------------------------------------------------------------
@@ -63,32 +77,52 @@ def collect_jobbank():
     print("Job Bank CSV:", url)
 
     jobs = []
+    rows = no_id = no_text = 0
     with requests.get(url, headers=UA, timeout=300, stream=True) as resp:
         resp.raise_for_status()
         lines = (ln.decode("utf-8-sig", errors="replace") for ln in resp.iter_lines())
         reader = csv.DictReader(lines)
+        headers = [h for h in (reader.fieldnames or []) if h]
+        print("Job Bank columns:", headers)
+
+        c_title = find_col(headers, "title") or find_col(headers, "job")
+        c_id = find_col(headers, "id") or find_col(headers, "number") or find_col(headers, "reference")
+        c_emp = find_col(headers, "employer")
+        c_city = find_col(headers, "city") or find_col(headers, "location")
+        c_wage = find_col(headers, "wage") or find_col(headers, "salary")
+        c_exp = find_col(headers, "expir") or find_col(headers, "clos") or find_col(headers, "end")
+        c_noc = find_col(headers, "noc") or find_col(headers, "occupation")
+        print("Using columns:", dict(title=c_title, id=c_id, employer=c_emp, city=c_city,
+                                      wage=c_wage, expiry=c_exp, noc=c_noc))
+
         for row in reader:
-            title = pick(row, "job title", "title")
-            blob = " ".join([title, pick(row, "noc21 job title", "noc job title", "occupation")])
+            rows += 1
+            if rows == 1:
+                print("First row sample:", {k: (v or "")[:60] for k, v in row.items() if k})
+            title = (row.get(c_title) or "").strip() if c_title else ""
+            blob = title + " " + ((row.get(c_noc) or "") if c_noc else "")
             if not SEASONAL_WORDS.search(blob):
+                no_text += 1
                 continue
-            ref = pick(row, "job posting id", "job id", "id", "job_posting_id")
-            if not ref:
-                continue
-            wage = pick(row, "salary per hour", "wage", "salary", "salary_per_hour")
+            ref = (row.get(c_id) or "").strip() if c_id else ""
+            if not ref:  # no id column: build a stable one from the row
+                ref = hashlib.md5(f"{title}|{row.get(c_emp)}|{row.get(c_city)}".encode()).hexdigest()[:10]
+                no_id += 1
+            wage = (row.get(c_wage) or "").strip() if c_wage else ""
             jobs.append({
                 "id": f"jb-{ref}",
                 "title": title,
-                "employer": pick(row, "employer name", "employer"),
+                "employer": (row.get(c_emp) or "").strip() if c_emp else "",
                 "country": "Canada",
-                "location": pick(row, "city", "work location", "province/territory", "province"),
+                "location": (row.get(c_city) or "").strip() if c_city else "",
                 "category": "Agriculture / Seasonal",
                 "source": "Job Bank Canada",
-                "salary": f"CAD {wage}/h" if wage and wage[0].isdigit() else wage,
-                "closes_on": pick(row, "expiry date", "closing date", "date expiry")[:10],
+                "salary": wage,
+                "closes_on": ((row.get(c_exp) or "").strip()[:10]) if c_exp else "",
             })
             if len(jobs) >= 300:
                 break
+    print(f"Job Bank: read {rows} rows, {len(jobs)} matched, {no_text} not seasonal, {no_id} without id")
     return jobs
 
 
