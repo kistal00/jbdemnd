@@ -9,7 +9,7 @@ Each "collector" returns a list of dicts with these keys:
 A collector that fails is logged and skipped, so one broken site never wipes the file.
 """
 import csv
-import hashlib
+import io
 import json
 import os
 import re
@@ -62,67 +62,91 @@ def find_col(headers, *keywords):
 JOBBANK_PACKAGE = "https://open.canada.ca/data/api/3/action/package_show?id=ea639e28-c0fc-48bf-b5dd-b8899bd43072"
 
 
+def decode_csv_bytes(raw):
+    """Job Bank files are UTF-16 with tab separators; handle normal UTF-8 CSVs too."""
+    if raw[:2] in (b"\xff\xfe", b"\xfe\xff"):
+        return raw.decode("utf-16", errors="replace")
+    return raw.decode("utf-8-sig", errors="replace")
+
+
 def collect_jobbank():
     pkg = requests.get(JOBBANK_PACKAGE, headers=UA, timeout=60).json()["result"]
     csvs = [
         r for r in pkg["resources"]
-        if r.get("format", "").upper() == "CSV" and "-en-" in r.get("url", "").lower()
-        or (r.get("format", "").upper() == "CSV" and "job-postings-en" in r.get("url", "").lower())
+        if r.get("format", "").upper() == "CSV" and "job-postings-en" in r.get("url", "").lower()
     ]
     if not csvs:
         raise RuntimeError("no English CSV found in Job Bank dataset")
-    # newest first (the dataset lists newest first; fall back to last_modified)
     csvs.sort(key=lambda r: r.get("last_modified") or r.get("created") or "", reverse=True)
     url = csvs[0]["url"]
     print("Job Bank CSV:", url)
 
-    jobs = []
-    rows = no_id = no_text = 0
-    with requests.get(url, headers=UA, timeout=300, stream=True) as resp:
-        resp.raise_for_status()
-        lines = (ln.decode("utf-8-sig", errors="replace") for ln in resp.iter_lines())
-        reader = csv.DictReader(lines)
-        headers = [h for h in (reader.fieldnames or []) if h]
-        print("Job Bank columns:", headers)
+    resp = requests.get(url, headers=UA, timeout=600)
+    resp.raise_for_status()
+    text = decode_csv_bytes(resp.content)
+    del resp
+    first_line = text[:5000].splitlines()[0] if text else ""
+    delim = "\t" if first_line.count("\t") > first_line.count(",") else ","
+    reader = csv.DictReader(io.StringIO(text, newline=""), delimiter=delim)
+    headers = [h.strip() for h in (reader.fieldnames or []) if h]
+    reader.fieldnames = [h.strip() for h in (reader.fieldnames or [])]
+    print("Job Bank columns:", headers)
 
-        c_title = find_col(headers, "title") or find_col(headers, "job")
-        c_id = find_col(headers, "id") or find_col(headers, "number") or find_col(headers, "reference")
-        c_emp = find_col(headers, "employer")
-        c_city = find_col(headers, "city") or find_col(headers, "location")
-        c_wage = find_col(headers, "wage") or find_col(headers, "salary")
-        c_exp = find_col(headers, "expir") or find_col(headers, "clos") or find_col(headers, "end")
-        c_noc = find_col(headers, "noc") or find_col(headers, "occupation")
-        print("Using columns:", dict(title=c_title, id=c_id, employer=c_emp, city=c_city,
-                                      wage=c_wage, expiry=c_exp, noc=c_noc))
+    c_title = find_col(headers, "job", "title")
+    c_id = find_col(headers, "snapshot", "id") or find_col(headers, "posting", "id")
+    c_city = find_col(headers, "city")
+    c_prov = find_col(headers, "province")
+    c_term = find_col(headers, "employment", "term") if find_col(headers, "employment", "term") not in (None,) else None
+    c_noc = find_col(headers, "noc21", "name") or find_col(headers, "noc", "name")
+    c_min = find_col(headers, "salary", "minimum")
+    c_max = find_col(headers, "salary", "maximum")
+    c_per = find_col(headers, "salary", "per")
+    c_posted = find_col(headers, "first", "posting")
+    print("Using columns:", dict(title=c_title, id=c_id, city=c_city, province=c_prov, term=c_term,
+                                  noc=c_noc, sal_min=c_min, sal_max=c_max, sal_per=c_per))
+    if not c_title or not c_id:
+        raise RuntimeError("could not find title/id columns in Job Bank file")
 
-        for row in reader:
-            rows += 1
-            if rows == 1:
-                print("First row sample:", {k: (v or "")[:60] for k, v in row.items() if k})
-            title = (row.get(c_title) or "").strip() if c_title else ""
-            blob = title + " " + ((row.get(c_noc) or "") if c_noc else "")
-            if not SEASONAL_WORDS.search(blob):
-                no_text += 1
-                continue
-            ref = (row.get(c_id) or "").strip() if c_id else ""
-            if not ref:  # no id column: build a stable one from the row
-                ref = hashlib.md5(f"{title}|{row.get(c_emp)}|{row.get(c_city)}".encode()).hexdigest()[:10]
-                no_id += 1
-            wage = (row.get(c_wage) or "").strip() if c_wage else ""
-            jobs.append({
-                "id": f"jb-{ref}",
-                "title": title,
-                "employer": (row.get(c_emp) or "").strip() if c_emp else "",
-                "country": "Canada",
-                "location": (row.get(c_city) or "").strip() if c_city else "",
-                "category": "Agriculture / Seasonal",
-                "source": "Job Bank Canada",
-                "salary": wage,
-                "closes_on": ((row.get(c_exp) or "").strip()[:10]) if c_exp else "",
-            })
-            if len(jobs) >= 300:
-                break
-    print(f"Job Bank: read {rows} rows, {len(jobs)} matched, {no_text} not seasonal, {no_id} without id")
+    def val(row, col):
+        return (row.get(col) or "").strip() if col else ""
+
+    jobs, rows, not_seasonal = [], 0, 0
+    for row in reader:
+        rows += 1
+        title = val(row, c_title)
+        term = val(row, c_term)
+        blob = f"{title} {val(row, c_noc)}"
+        if not (SEASONAL_WORDS.search(blob) or "seasonal" in term.lower()):
+            not_seasonal += 1
+            continue
+        lo, hi, per = val(row, c_min), val(row, c_max), val(row, c_per)
+        if lo and hi and lo != hi:
+            pay = f"CAD {lo}-{hi} {per}".strip()
+        elif lo or hi:
+            pay = f"CAD {lo or hi} {per}".strip()
+        else:
+            pay = ""
+        place = ", ".join(x for x in (val(row, c_city), val(row, c_prov)) if x)
+        jobs.append({
+            "id": f"jb-{val(row, c_id)}",
+            "title": title.title() if title.isupper() else title,
+            "employer": "",  # the open data file has no employer names
+            "country": "Canada",
+            "location": place,
+            "category": "Seasonal" if "seasonal" in term.lower() else "Agriculture / Farm",
+            "source": "Job Bank Canada",
+            "salary": pay,
+            "closes_on": "",
+            "_posted": val(row, c_posted),
+        })
+    # newest first, seasonal-term jobs first, then cap
+    jobs.sort(key=lambda j: (j["category"] != "Seasonal", j["_posted"]), reverse=False)
+    jobs.sort(key=lambda j: j["_posted"], reverse=True)
+    jobs.sort(key=lambda j: j["category"] != "Seasonal")
+    for j in jobs:
+        j.pop("_posted", None)
+    jobs = jobs[:300]
+    print(f"Job Bank: read {rows} rows, kept {len(jobs)}, {not_seasonal} not seasonal")
     return jobs
 
 
