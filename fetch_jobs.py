@@ -78,6 +78,25 @@ def clean(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
+KNOWN_KEYS = {"lotDetailID", "lotNo", "skillName", "companyName", "countryName", "salaryStr",
+              "currency", "deadLine", "deadLineDate", "rowTotal"}
+
+
+def extra_fields(x):
+    """Every other readable field DoFE sends (requirements, qualifications, etc.) for the details page."""
+    out = {}
+    for k, v in x.items():
+        if k in KNOWN_KEYS or v is None or isinstance(v, (dict, list)):
+            continue
+        kl = k.lower()
+        if kl.endswith("id") or kl in ("rownum", "rownumber", "sn", "sno", "totalrows"):
+            continue
+        t = clean(str(v))
+        if t and t.lower() not in ("null", "none", "0", "0.0", "false"):
+            out[k] = t
+    return out
+
+
 def post(country, gender, page):
     payload = {
         "Offset": str(page), "Limit": str(LIMIT), "Country": country,
@@ -155,6 +174,7 @@ def main():
                         "closes_on": (today + timedelta(days=d)).isoformat() if d is not None else None,
                         "genders": [gender],
                         "source_url": SOURCE_PAGE,
+                        "details": extra_fields(x),
                     }
                 got += len(rows)
                 if got >= (rows[0].get("rowTotal") or 0):
