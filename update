@@ -2,7 +2,7 @@ name: Update job data
 
 on:
   schedule:
-    - cron: "30 2 * * *"   # 02:30 UTC = 08:15 Nepal time, once a day
+    - cron: "15 22 * * *"   # 22:15 UTC = 04:00 Nepal time, once a day
   workflow_dispatch:        # lets you run it by hand from the Actions tab
 
 permissions:
@@ -11,16 +11,24 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests
-      - name: Fetch jobs
+      - name: Fetch DoFE jobs
+        continue-on-error: true      # a failure here must not block the seasonal step
         env:
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
         run: python fetch_jobs.py
+      - name: Build seasonal jobs
+        continue-on-error: true      # ...and vice versa
+        env:
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: python build_seasonal.py
       - name: Commit data
         run: |
           git config user.name "job-data-bot"
