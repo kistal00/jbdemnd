@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -22,8 +23,9 @@ import requests
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "data" / "seasonal.json"
 MANUAL = ROOT / "data" / "manual_seasonal.json"
-MAX_JOBS = 600                     # keeps the file small for the app
-UA = {"User-Agent": f"job-demand-dashboard (contact: {os.environ.get('CONTACT_EMAIL', 'not-provided')})"}
+ENABLE_CANADA = False   # Canadian jobs are not shown in the app yet; set True to collect them
+MAX_JOBS = 1000                     # keeps the file small for the app
+UA = {"User-Agent": f"job-demand-dashboard (contact: {os.environ.get('CONTACT_EMAIL', 'kistal.gamer2020@gmail.com')})"}
 
 SEASONAL_WORDS = re.compile(
     r"seasonal|harvest|picker|picking|farm|agricultur|greenhouse|orchard|horticultur|"
@@ -157,6 +159,8 @@ def collect_jobbank():
             "title": title.title() if title.isupper() else title,
             "employer": "",  # the open data file has no employer names
             "country": "Canada",
+            "region": "Canada",
+            "kind": "Seasonal",
             "location": place,
             "category": "Seasonal" if "seasonal" in term.lower() else "Agriculture / Farm",
             "source": "Job Bank Canada",
@@ -177,21 +181,325 @@ def collect_jobbank():
 
 
 # ---------------------------------------------------------------------
-# 2) Job Market Finland (Tyomarkkinatori)
-#    The OFFICIAL retrieval API needs credentials from KEHA Centre (terms of use).
-#    Fill in once you have them, then remove the NotImplementedError.
+# 2) EURES - the EU's official job mobility portal (public employment services of
+#    EU countries). One collector covers most of your country list.
+#    NOT covered by EURES: Serbia, Albania, United Kingdom.
+#    NOTE: this uses EURES' public search service (community-documented, not an official
+#    partner API). Keep volumes low, and check the EURES terms of use before you publish.
 # ---------------------------------------------------------------------
-def collect_finland():
-    raise NotImplementedError(
-        "Needs official Job Market Finland API credentials (apply to KEHA Centre) - see README"
+EURES_SEARCH = "https://europa.eu/eures/api/jv-searchengine/public/jv-search/search"
+EURES_DETAIL = "https://europa.eu/eures/api/jv-searchengine/public/jv/id/{id}?requestLang=en"
+EURES_DELAY = 1.5            # seconds between requests (be polite)
+PER_QUERY = 30               # jobs kept per country per search word
+PAGE_SIZE = 20               # results asked per request (falls back to 10 if EURES refuses)
+MAX_PER_COUNTRY_KIND = 30
+FETCH_DETAILS = True
+MAX_DETAIL_CALLS = 400      # new jobs only; details are remembered in data/eures_cache.json
+CACHE = ROOT / "data" / "eures_cache.json"
+DEEPL_KEY = os.environ.get("DEEPL_API_KEY", "").strip()
+MONTHLY_CHAR_LIMIT = 450_000  # DeepL Free allows 500,000 characters a month
+TRANSLATE_DESC_CHARS = 300
+
+# EURES country code -> name shown in the app
+EURES_COUNTRIES = {
+    "ro": "Romania", "hr": "Croatia", "cy": "Cyprus", "mt": "Malta", "pt": "Portugal",
+    "pl": "Poland", "bg": "Bulgaria", "hu": "Hungary", "cz": "Czechia", "de": "Germany",
+    "it": "Italy", "lu": "Luxembourg", "fi": "Finland",
+}
+SEASONAL_TERMS = {
+    "default": ["seasonal"],
+    "ro": ["sezonier", "seasonal"], "hr": ["sezonski", "seasonal"], "pt": ["sazonal", "seasonal"],
+    "pl": ["sezonowa", "seasonal"], "bg": ["сезонна", "seasonal"], "hu": ["szezonális", "seasonal"],
+    "cz": ["sezónní", "seasonal"], "de": ["Saisonarbeit", "Erntehelfer", "seasonal"],
+    "it": ["stagionale", "seasonal"], "fi": ["kausityö", "seasonal"], "lu": ["saisonnier", "seasonal"],
+}
+VISA_TERMS = ["visa sponsorship", "work permit", "relocation"]
+VISA_RE = re.compile(r"visa|work permit|relocat|sponsor", re.I)
+SCHEDULES = {"fulltime": "Full-time", "parttime": "Part-time", "flexitime": "Flexible hours"}
+URI_RE = re.compile(r"^https?://", re.I)
+
+
+def strip_html(t, limit=700):
+    t = re.sub(r"<[^>]+>", " ", t or "")
+    t = re.sub(r"&nbsp;|&#160;", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    return (t[:limit].rsplit(" ", 1)[0] + "…") if len(t) > limit else t
+
+
+def eures_post(body):
+    last = None
+    for attempt in range(2):
+        try:
+            r = requests.post(EURES_SEARCH, json=body, headers={**UA, "Content-Type": "application/json"}, timeout=60)
+            r.raise_for_status()
+            return r.json()
+        except Exception as e:
+            last = e
+            time.sleep(5)
+    raise last
+
+
+def eures_query(cc, keyword):
+    global PAGE_SIZE
+    items, data, page = [], {}, 1
+    while len(items) < PER_QUERY and page <= 4:
+        body = {
+            "resultsPerPage": PAGE_SIZE, "page": page, "sortSearch": "MOST_RECENT",
+            "keywords": [{"keyword": keyword, "specificSearchCode": "EVERYWHERE"}],
+            "publicationPeriod": None, "occupationUris": [], "skillUris": [],
+            "requiredExperienceCodes": [], "positionScheduleCodes": [], "sectorCodes": [],
+            "educationAndQualificationLevelCodes": [], "positionOfferingCodes": [],
+            "locationCodes": [cc], "euresFlagCodes": [], "otherBenefitsCodes": [],
+            "requiredLanguages": [], "minNumberPost": None,
+            "sessionId": "jobs-bot", "requestLanguage": "en",
+        }
+        try:
+            data = eures_post(body)
+        except Exception:
+            if page == 1 and PAGE_SIZE > 10:
+                PAGE_SIZE = 10
+                continue
+            raise
+        got = None
+        for key in ("jvs", "results", "data", "items", "vacancies"):
+            if isinstance(data.get(key), list):
+                got = data[key]
+                break
+        if not got:
+            break
+        items += got
+        page += 1
+        if len(items) < PER_QUERY:
+            time.sleep(EURES_DELAY)
+    return data, items[:PER_QUERY]
+
+
+def walk_leaves(obj, path=""):
+    """Yield (key path, string value) for every simple value inside a JSON object."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            yield from walk_leaves(v, f"{path}.{k}" if path else str(k))
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from walk_leaves(v, path)
+    elif obj is not None and not isinstance(obj, bool):
+        yield path, str(obj)
+
+
+def eures_details(job_id):
+    """Qualification / requirement style fields from the vacancy detail (shape is guessed; see log)."""
+    r = requests.get(EURES_DETAIL.format(id=job_id), headers=UA, timeout=60)
+    r.raise_for_status()
+    data = r.json()
+    det, desc = {}, ""
+    for path, val in walk_leaves(data):
+        low = path.lower()
+        val = val.strip()
+        if not val or URI_RE.match(val):
+            continue
+        val = SCHEDULES.get(val.lower(), val)
+        if "description" in low and len(val) > len(desc):
+            desc = val
+        elif re.search(r"education|qualification", low):
+            det.setdefault("Qualification", val)
+        elif "experience" in low:
+            det.setdefault("Experience", val)
+        elif "language" in low and len(val) < 40:
+            det["Language"] = (det["Language"] + ", " + val) if "Language" in det and val not in det["Language"] else det.get("Language", val)
+        elif re.search(r"salary|wage|remuneration", low) and len(val) < 60:
+            det.setdefault("Pay", val)
+        elif re.search(r"schedule|offering|contract", low) and len(val) < 40:
+            det.setdefault("Contract", val)
+    if desc:
+        det["Requirements and description"] = strip_html(desc, 900)
+    return det
+
+
+def load_cache():
+    try:
+        return json.loads(CACHE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def save_cache(cache):
+    CACHE.parent.mkdir(parents=True, exist_ok=True)
+    CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+
+
+EN_STOP = {"the", "and", "with", "for", "you", "we", "to", "of", "in", "is", "are", "will", "your", "our", "a"}
+
+
+def looks_english(text):
+    words = re.findall(r"[a-z']+", (text or "").lower())
+    if len(words) < 6:
+        return False
+    hits = sum(1 for w in words if w in EN_STOP)
+    return hits >= max(3, len(words) * 0.12)
+
+
+def short_text(t, n):
+    t = (t or "").strip()
+    return (t[:n].rsplit(" ", 1)[0] + "…") if len(t) > n else t
+
+
+def deepl_translate(texts):
+    url = "https://api-free.deepl.com/v2/translate" if DEEPL_KEY.endswith(":fx") else "https://api.deepl.com/v2/translate"
+    r = requests.post(
+        url, timeout=60,
+        headers={"Authorization": f"DeepL-Auth-Key {DEEPL_KEY}", "Content-Type": "application/json"},
+        json={"text": texts, "target_lang": "EN-GB"},
     )
+    r.raise_for_status()
+    return [t["text"] for t in r.json()["translations"]]
 
 
-# ---------------------------------------------------------------------
-# 3) EURES - add once you've confirmed the access terms / endpoint you will use.
-# ---------------------------------------------------------------------
+def translate_jobs(jobs, cache):
+    """Translate titles and short descriptions to English. Each job is translated once and remembered."""
+    pending = []
+    for j in jobs:
+        c = cache.setdefault(j["_eid"], {})
+        desc = j["details"].get("Requirements and description", "")
+        if "title_en" not in c and not looks_english(desc):
+            c["orig_title"], c["orig_desc"] = j["title"], short_text(desc, TRANSLATE_DESC_CHARS)
+            pending.append(j)
+        elif "title_en" in c:
+            apply_translation(j, c)
+    if not pending:
+        return
+    if not DEEPL_KEY:
+        print(f"Translation skipped: {len(pending)} jobs stay in their original language (no DEEPL_API_KEY set)")
+        return
+    usage = cache.setdefault("_usage", {})
+    month = datetime.now(timezone.utc).strftime("%Y-%m")
+    if usage.get("month") != month:
+        usage.clear()
+        usage.update({"month": month, "chars": 0})
+    done = 0
+    for i in range(0, len(pending), 20):
+        batch = pending[i:i + 20]
+        texts = []
+        for j in batch:
+            c = cache[j["_eid"]]
+            texts += [c["orig_title"], c["orig_desc"] or "-"]
+        if usage["chars"] + sum(len(t) for t in texts) > MONTHLY_CHAR_LIMIT:
+            print("Translation stopped: monthly character budget reached")
+            break
+        try:
+            res = deepl_translate(texts)
+        except Exception as e:
+            print(f"Translation failed ({type(e).__name__}: {e}); remaining jobs stay untranslated", file=sys.stderr)
+            break
+        usage["chars"] += sum(len(t) for t in texts)
+        for k, j in enumerate(batch):
+            c = cache[j["_eid"]]
+            c["title_en"] = res[2 * k].strip() or c["orig_title"]
+            c["desc_en"] = "" if c["orig_desc"] in ("", "-") else res[2 * k + 1].strip()
+            apply_translation(j, c)
+            done += 1
+        time.sleep(0.5)
+    print(f"Translated {done} jobs; characters used this month: {usage['chars']}")
+
+
+def apply_translation(j, c):
+    en = c.get("title_en")
+    if en and en != j["title"]:
+        j["details"]["Original title"] = j["title"]
+        j["title"] = en
+    if c.get("desc_en"):
+        j["details"]["Requirements and description"] = c["desc_en"]
+
+
 def collect_eures():
-    raise NotImplementedError("EURES collector not configured yet - see README")
+    found = {}          # eures id -> job dict (visa wins over seasonal)
+    printed = False
+    for cc, country in EURES_COUNTRIES.items():
+        for kind, terms in (("Seasonal", SEASONAL_TERMS.get(cc, SEASONAL_TERMS["default"])), ("Visa sponsored", VISA_TERMS)):
+            kept = 0
+            for term in terms:
+                if kept >= MAX_PER_COUNTRY_KIND:
+                    break
+                try:
+                    data, items = eures_query(cc, term)
+                except Exception as e:
+                    print(f"  EURES {cc}/{term}: failed {type(e).__name__}: {e}", file=sys.stderr)
+                    time.sleep(EURES_DELAY)
+                    continue
+                if not printed:
+                    printed = True
+                    print("EURES response keys:", list(data.keys())[:12])
+                    if items:
+                        print("EURES first item keys:", list(items[0].keys())[:25])
+                time.sleep(EURES_DELAY)
+                for it in items:
+                    jid = str(it.get("id") or "")
+                    title = (it.get("title") or "").strip()
+                    if not jid or not title:
+                        continue
+                    emp = it.get("employer")
+                    employer = (emp.get("name") if isinstance(emp, dict) else emp) or it.get("employerName") or ""
+                    loc = ""
+                    lm = it.get("locationMap")
+                    if isinstance(lm, dict):
+                        for v in lm.values():
+                            if isinstance(v, list) and v:
+                                loc = ", ".join(str(x) for x in v[:2] if not URI_RE.match(str(x)))
+                                break
+                    desc = strip_html(it.get("description") or "")
+                    if kind == "Visa sponsored" and desc and not VISA_RE.search(desc + " " + title):
+                        continue
+                    key = f"eu-{jid}"
+                    if key in found and found[key]["kind"] == "Visa sponsored":
+                        continue
+                    det = {}
+                    if desc:
+                        det["Requirements and description"] = desc
+                    posted = str(it.get("creationDate") or it.get("lastModificationDate") or "")[:10]
+                    if posted:
+                        det["Posted on"] = posted
+                    found[key] = {
+                        "id": key, "title": title, "employer": str(employer), "country": country,
+                        "location": loc, "region": "Europe", "kind": kind, "salary": "",
+                        "closes_on": "", "details": det, "_eid": jid,
+                    }
+                    kept += 1
+                    if kept >= MAX_PER_COUNTRY_KIND:
+                        break
+    jobs = list(found.values())
+    print(f"EURES: {len(jobs)} jobs found before details")
+
+    cache = load_cache()
+    calls = 0
+    for j in jobs:
+        c = cache.setdefault(j["_eid"], {})
+        if "details" not in c and FETCH_DETAILS and calls < MAX_DETAIL_CALLS:
+            calls += 1
+            try:
+                c["details"] = eures_details(j["_eid"])
+                if calls == 1:
+                    print("EURES detail fields kept:", list(c["details"].keys()))
+            except Exception as e:
+                print(f"  detail {j['_eid']}: {type(e).__name__}: {e}", file=sys.stderr)
+            time.sleep(EURES_DELAY)
+        j["details"].update({k: v for k, v in c.get("details", {}).items() if v})
+    print(f"EURES: fetched details for {calls} new jobs")
+
+    translate_jobs(jobs, cache)
+
+    # keep the cache small: forget jobs that are no longer listed
+    current = {j["_eid"] for j in jobs}
+    cache = {k: v for k, v in cache.items() if k in current or k == "_usage"}
+    save_cache(cache)
+
+    out = []
+    for j in jobs:
+        j.pop("_eid", None)
+        if j["kind"] == "Visa sponsored":
+            blob = " ".join(str(v) for v in j["details"].values()) + " " + j["title"]
+            if not VISA_RE.search(blob):
+                continue          # a "visa" hit that is not confirmed by the text
+        out.append(j)
+    return out
 
 
 # ---------------------------------------------------------------------
@@ -199,13 +507,24 @@ def collect_eures():
 #    Edit data/manual_seasonal.json directly on GitHub; it is merged in daily.
 # ---------------------------------------------------------------------
 def collect_manual():
+    """Hand-added listings. Defaults: region = Europe, kind = Seasonal. Ids starting with 'example-' are ignored."""
     if not MANUAL.exists():
         return []
     data = json.loads(MANUAL.read_text(encoding="utf-8"))
-    return [j for j in data.get("jobs", []) if not str(j.get("id", "")).startswith("manual-001")]
+    out = []
+    for j in data.get("jobs", []):
+        if str(j.get("id", "")).startswith("example-"):
+            continue
+        j = dict(j)
+        j.setdefault("region", "Europe")
+        j.setdefault("kind", "Seasonal")
+        j.pop("source", None)       # sources are never shown in the app
+        j.pop("source_url", None)
+        out.append(j)
+    return out
 
 
-COLLECTORS = [collect_jobbank, collect_finland, collect_eures, collect_manual]
+COLLECTORS = ([collect_jobbank] if ENABLE_CANADA else []) + [collect_eures, collect_manual]
 
 
 def main():
