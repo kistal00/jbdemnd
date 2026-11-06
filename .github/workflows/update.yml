@@ -11,7 +11,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,6 +27,7 @@ jobs:
         continue-on-error: true      # ...and vice versa
         env:
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: python build_seasonal.py
       - name: Commit data
         run: |
