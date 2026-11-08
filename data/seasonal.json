@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T02:06:13",
+ "updated": "2026-11-08T01:35:04",
  "jobs": [
   {
    "id": "eu-MzQzMjE4NSAxMw",
@@ -590,6 +590,48 @@
    }
   },
   {
+   "id": "eu-MjkzMzQ4OSAxOQ",
+   "title": "Receptionist / Receptionist",
+   "employer": "ANTE JURIĆ, d.o.o.",
+   "country": "Croatia",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Place of work: Lokva Rogoznica, Omiš, Hotel Saint Hildegard   Type of employment: fixed-term, seasonal   Planned start date: 01.04.2027 to 31.10.2027. Benefits we provide: a hot meal provided, full reimbursement of travel expenses for employees with their permanent or habitual residence outside the place of work…",
+    "Posted on": "1794005177",
+    "Language": "hr",
+    "Contract": "contract",
+    "Qualification": "3",
+    "Experience": "1",
+    "Pay": "4",
+    "Original title": "RECEPCIONAR / RECEPCIONARKA"
+   }
+  },
+  {
+   "id": "eu-MjkzMzQ0MSAxOQ",
+   "title": "BREAKFAST CHEF – HOTEL SAINT HILDEGARD",
+   "employer": "ANTE JURIĆ, d.o.o.",
+   "country": "Croatia",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Place of work: Lokva Rogoznica, Omiš - Hotel Saint Hildegard Type of employment: fixed-term, seasonal (possibility of a permanent contract)   Planned start date: 1 April 2027.   First contract until: 31 October 2027.   Benefits we provide: a hot meal provided, full reimbursement of travel expenses for employees who…",
+    "Posted on": "1794005174",
+    "Language": "hr",
+    "Contract": "contract",
+    "Qualification": "1",
+    "Experience": "2",
+    "Pay": "4",
+    "Original title": "KUHAR / KUHARICA ZA DORUČAK - HOTEL SAINT HILDEGARD"
+   }
+  },
+  {
    "id": "eu-MjkzMjYxNSAxOQ",
    "title": "Waiter/Waitress",
    "employer": "KISS",
@@ -1175,48 +1217,6 @@
     "Experience": "Nije potrebno radno iskustvo",
     "Pay": "4",
     "Original title": "POMOĆNI/A RADNIK/ICA U KUHINJI U ODJELU BOLNIČKE PREHRANE"
-   }
-  },
-  {
-   "id": "eu-Mjg2OTQyNSAxOQ",
-   "title": "SHIP'S ANCHORMAN",
-   "employer": "UGOSTITELJSKI OBRT MARKO§DOMINIK",
-   "country": "Croatia",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Seeking a worker for a seasonal job at a boat mooring. Job description: welcoming and receiving vessels at the anchorage, directing boats to the buoys, collecting mooring fees and overseeing the anchorage. This is a small anchorage with around 30–40 buoys for accommodating smaller vessels. Requirements: communicative, responsible and courteous towards…",
-    "Posted on": "1782247524",
-    "Language": "hr",
-    "Contract": "contract",
-    "Qualification": "3",
-    "Experience": "Nije potrebno radno iskustvo",
-    "Pay": "salaried",
-    "Original title": "RADNIK/CA NA SIDRIŠTU BRODOVA"
-   }
-  },
-  {
-   "id": "eu-MjkzMTk1MSAxOQ",
-   "title": "Personal Assistant",
-   "employer": "DRUŠTVO MULTIPLE SKLEROZE VUKOVARSKO-SRIJEMSKE ŽUPANIJE",
-   "country": "Croatia",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Job description - personal hygiene, household chores, administrative tasks, accompaniment to doctor's appointments.",
-    "Posted on": "1793832320",
-    "Language": "hr",
-    "Contract": "contract",
-    "Qualification": "3",
-    "Experience": "Nije potrebno radno iskustvo",
-    "Pay": "4",
-    "Original title": "OSOBNI ASISTENT/OSOBNA ASISTENTICA"
    }
   },
   {
@@ -1852,6 +1852,44 @@
    }
   },
   {
+   "id": "eu-NDU5NDI4IDEwMQ",
+   "title": "HOUSEKEEPER",
+   "employer": "OUTSOURCE INITIATIVES LIMITED",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Responsible for cleaning and maintaining guest rooms and public areas to ensure high standards of cleanliness and hygiene. Duties include servicing rooms, changing linen, replenishing supplies, and providing a welcoming environment for guests.",
+    "Posted on": "1794051300",
+    "Language": "en",
+    "Contract": "contract",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5NDI0IDEwMQ",
+   "title": "HOUSEKEEPER",
+   "employer": "OUTSOURCE INITIATIVES LIMITED",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Responsible for cleaning and maintaining guest rooms and public areas to ensure high standards of cleanliness and hygiene. Duties include servicing rooms, changing linen, replenishing supplies, and providing a welcoming environment for guests.",
+    "Posted on": "1794051300",
+    "Language": "en",
+    "Contract": "contract",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
    "id": "eu-NDU5MzU0IDEwMQ",
    "title": "CLEANER",
    "employer": "COUNTRY TERRACE",
@@ -1871,9 +1909,9 @@
    }
   },
   {
-   "id": "eu-NDU3NTg5IDEwMQ",
+   "id": "eu-NDU5MzA5IDEwMQ",
    "title": "CLEANER",
-   "employer": "OZ SOFRA",
+   "employer": "CARABELLA COMPANY LTD",
    "country": "Malta",
    "location": "MT001",
    "region": "Europe",
@@ -1881,8 +1919,67 @@
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "We are seeking a hardworking and reliable Cleaner for a full-time position to maintain a clean, tidy, and hygienic environment.",
-    "Posted on": "1791984334",
+    "Requirements and description": "We are seeking a Cleaner to maintain a clean, tidy and hygienic environment across various premises.",
+    "Posted on": "1794051300",
+    "Language": "en",
+    "Contract": "contract",
+    "Qualification": "1",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5MzA0IDEwMQ",
+   "title": "CLEANER",
+   "employer": "GREEN KERALA LTD",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are seeking a reliable and detail- oriented Cleaner to maintain a clean , safe and welcoming environment throughout our convenience store.",
+    "Posted on": "1794051300",
+    "Language": "en",
+    "Contract": "contract",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5Mjk3IDEwMQ",
+   "title": "CLEANER",
+   "employer": "EVOLA CLEAN SOLUTIONS LTD",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are seeking a reliable and hardworking Cleaner to maintain clean, tidy and hygienic environments in hotel, office and domestic settings.",
+    "Posted on": "1794051300",
+    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
+    "Contract": "contract",
+    "Qualification": "2",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5Mjk0IDEwMQ",
+   "title": "CLEANER",
+   "employer": "GALEA REALTY LIMITED",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are seeking a reliable Cleaner to maintain clean and hygienic facilities, including restrooms and office areas.",
+    "Posted on": "1794051300",
     "Language": "en",
     "Contract": "contract",
     "Experience": "1",
@@ -1909,6 +2006,26 @@
    }
   },
   {
+   "id": "eu-NDU5MjY0IDEwMQ",
+   "title": "CLEANER",
+   "employer": "DEREK LANDSCAPE CONTRACTORS LTD",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are seeking reliable Cleaners to maintain the cleanliness and upkeep of gardens, pathways, public restrooms, and waste bins, ensuring a clean, safe, and presentable environment for visitors.",
+    "Posted on": "1794051300",
+    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
+    "Contract": "contracttohire",
+    "Qualification": "3",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
    "id": "eu-NDU5MjYzIDEwMQ",
    "title": "SHOP ASSISTANT AND LOGISTICS CLERK",
    "employer": "LEOBRANT PROPERTIES LTD",
@@ -1928,6 +2045,124 @@
    }
   },
   {
+   "id": "eu-NDU5MjU5IDEwMQ",
+   "title": "BEAUTY THERAPIST",
+   "employer": "SOGUAPA BEAUTY EXPERT LIMITED",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Providing a range of beauty treatments, including facials, waxing, manicures, pedicures and skincare services, while ensuring high standards of customer care, hygiene and client satisfaction.",
+    "Posted on": "1794051300",
+    "Language": "en, c1, cef-understanding-listening, b1, cef-understanding-reading, cef-speaking-interaction, cef-writing-production, es",
+    "Contract": "contract",
+    "Qualification": "3",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5MjUxIDEwMQ",
+   "title": "CLEANER",
+   "employer": "BEHAVIOR HOTEL LTD",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are seeking reliable and hardworking Cleaners to perform general cleaning duties and maintain high standards of cleanliness and hygiene in hotels and other assigned premises.",
+    "Posted on": "1794051300",
+    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
+    "Contract": "contract",
+    "Qualification": "2",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5MjQ4IDEwMQ",
+   "title": "HR COORDINATOR",
+   "employer": "KIIOUTSOURCING LTD.",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Organised and reliable Hotel HR Coordinator experienced in recruitment, staff administration, employee records, onboarding, and supporting daily human resources operations within the hospitality industry.",
+    "Posted on": "1794051300",
+    "Language": "en, c1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
+    "Contract": "contract",
+    "Qualification": "3",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5MjQ2IDEwMQ",
+   "title": "ROOM ATTENDANT",
+   "employer": "KIIOUTSOURCING LTD.",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Responsible for cleaning and maintaining guest rooms and bathrooms, changing bed linen, replenishing room amenities, and ensuring that all rooms are kept clean, tidy and presentable in accordance with hotel standards.",
+    "Posted on": "1794051300",
+    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
+    "Contract": "contract",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5MjQyIDEwMQ",
+   "title": "INDUSTRIAL AREA CLEANER",
+   "employer": "MACK INDUSTRIAL ENGINEERING LTD",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Responsible for maintaining high standards of cleanliness, hygiene and safety throughout the industrial area, workshops and machinery facilities.",
+    "Posted on": "1794051300",
+    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
+    "Contract": "contracttohire",
+    "Qualification": "3",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5MjQwIDEwMQ",
+   "title": "CLEANER",
+   "employer": "CORE CATERERS LTD.",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Responsible for cleaning and sanitising assigned areas, maintaining cleanliness and hygiene standards, and ensuring that all premises are kept clean, tidy and safe at all times.",
+    "Posted on": "1794051300",
+    "Language": "en",
+    "Contract": "contract",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
    "id": "eu-NDU5MjM5IDEwMQ",
    "title": "CLEANER",
    "employer": "LA SALITA LEISURE HOLDINGS LTD",
@@ -1941,6 +2176,44 @@
     "Requirements and description": "We are seeking a reliable, hardworking, and detail-oriented Hotel Cleaner to maintain high standards of cleanliness and hygiene throughout the hotel.",
     "Posted on": "1793897100",
     "Language": "en",
+    "Contract": "contract",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5MjMzIDEwMQ",
+   "title": "SALESPERSON",
+   "employer": "MICALLEF CHRISTIAN",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are seeking to recruit a Salesperson. The selected candidate will provide customer service by assisting customers, promoting products, and ensuring a smooth shopping experience",
+    "Posted on": "1794051300",
+    "Language": "en, c1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
+    "Contract": "contract",
+    "Experience": "1",
+    "Pay": "salaried"
+   }
+  },
+  {
+   "id": "eu-NDU5MjI1IDEwMQ",
+   "title": "HOUSEKEEPING SUPERVISOR",
+   "employer": "BEHAVIOR HOTEL LTD",
+   "country": "Malta",
+   "location": "MT001",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are seeking a responsible and experienced Housekeeping Supervisor to oversee daily housekeeping operations, supervise cleaning staff, and ensure high standards of cleanliness and guest satisfaction in hotels.",
+    "Posted on": "1794051300",
+    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
     "Contract": "contract",
     "Experience": "1",
     "Pay": "salaried"
@@ -2161,271 +2434,24 @@
    }
   },
   {
-   "id": "eu-NDU5MTUxIDEwMQ",
-   "title": "CLEANER",
-   "employer": "PICARESCO MALTA LIMITED",
-   "country": "Malta",
-   "location": "MT001",
+   "id": "eu-NTg5NDU5OTgzIDE0MQ",
+   "title": "OTHER ADMINISTRATIVE SUPPORT STAFF, NE",
+   "employer": "",
+   "country": "Portugal",
+   "location": "PT194",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Responsible for cleaning and maintaining the premises, including floors, surfaces, windows, restrooms and other designated areas, ensuring high standards of cleanliness and hygiene.",
-    "Posted on": "1793897100",
-    "Language": "en",
-    "Contract": "contracttohire",
-    "Experience": "1",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTQ3IDEwMQ",
-   "title": "CLEANER",
-   "employer": "MUSCAT KORA",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are seeking a reliable and detail-oriented Cleaner to maintain, tidy, and organize a variety of assigned properties.",
-    "Posted on": "1793897100",
-    "Language": "en",
-    "Contract": "contracttohire",
-    "Experience": "1",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTQ2IDEwMQ",
-   "title": "SALES ASSISTANT",
-   "employer": "MUSCAT KORA",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Ensure exemplary guest service through all forms of greeting and serving customers from the moment they approach the shop.",
-    "Posted on": "1793897100",
-    "Language": "en",
-    "Contract": "contracttohire",
-    "Experience": "1",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTQzIDEwMQ",
-   "title": "CAB DRIVER",
-   "employer": "BRH SERVICES LIMITED",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are looking for a reliable, professional Y-Plate Cab Driver to join our team. You will transport passengers safely and efficiently across Malta using digital ride-hailing platforms.",
-    "Posted on": "1793965200",
-    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
-    "Contract": "contract",
+    "Requirements and description": "A PERSON WITH ORGANISATIONAL SKILLS AND COMPUTER SKILLS",
+    "Posted on": "1794025800",
+    "Language": "pt",
+    "Contract": "directhire",
     "Qualification": "3",
-    "Experience": "2",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTQyIDEwMQ",
-   "title": "CLEANER",
-   "employer": "ZAMMIT PULLICINO MAXIMILIAN",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Seeking reliable and hardworking cleaners to carry out residential, commercial and short-let property cleaning across Malta, ensuring high standards of cleanliness, hygiene and customer satisfaction.",
-    "Posted on": "1793897100",
-    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
-    "Contract": "contracttohire",
-    "Experience": "1",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTQxIDEwMQ",
-   "title": "CAB DRIVER",
-   "employer": "BRH SERVICES LIMITED",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are looking for a reliable, professional Y-Plate Cab Driver to join our team. You will transport passengers safely and efficiently across Malta using digital ride-hailing platforms.",
-    "Posted on": "1793965200",
-    "Language": "en",
-    "Contract": "contract",
-    "Experience": "2",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTM4IDEwMQ",
-   "title": "CLEANER",
-   "employer": "ALVIT PHARMA LIMITED",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Responsible for cleaning and maintaining office areas, kitchens, restrooms, laboratories, warehouses and other designated premises, ensuring cleanliness and hygiene standards are maintained.",
-    "Posted on": "1793897100",
-    "Language": "en",
-    "Contract": "contracttohire",
-    "Experience": "1",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTMzIDEwMQ",
-   "title": "CAB DRIVER",
-   "employer": "GALEA LEE",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are looking for a reliable and customer-friendly Cab Driver to transport passengers safely and comfortably. Applicants must hold a valid driving licence and have good knowledge of local roads.",
-    "Posted on": "1793965200",
-    "Language": "en",
-    "Contract": "contracttohire",
-    "Experience": "1",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTIzIDEwMQ",
-   "title": "CLEANER",
-   "employer": "BRINCAT JENNIFER",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are seeking a reliable and detail-oriented Cleaner to provide cleaning services in homes, offices, Airbnb properties, condominiums and post-construction sites across Malta.",
-    "Posted on": "1793988949",
-    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
-    "Contract": "contract",
-    "Qualification": "2",
-    "Experience": "1",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTIwIDEwMQ",
-   "title": "SALES ASSISTANT",
-   "employer": "SAREX TRADING LTD",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Assisting customers, handling sales transactions, replenishing stock, arranging merchandise and maintaining the cleanliness and organisation of the retail premises in Gozo outlet.",
-    "Posted on": "1793897100",
-    "Language": "en",
-    "Contract": "contract",
-    "Experience": "1",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTE3IDEwMQ",
-   "title": "CLEANER",
-   "employer": "PARAMOUNT COACHES",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Responsible for cleaning and maintaining the cleanliness of office areas, kitchen, toilets, common areas and the garage. Duties include sweeping, mopping, dusting, emptying bins ensuring that all areas are kept clean, tidy and hygienic.",
-    "Posted on": "1793883920",
-    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production, mt",
-    "Contract": "contracttohire",
-    "Experience": "2",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTE1IDEwMQ",
-   "title": "MASSAGE AND BEAUTY THERAPIST",
-   "employer": "ISOLA SPA LIMITED",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Qualified Beautician and Massage Therapist skilled in beauty treatments, massage therapy, and advanced facial devices. Reliable, professional, and confident working independently, with weekend availability and multilingual communication skills.",
-    "Posted on": "1793988949",
-    "Language": "en",
-    "Contract": "contract",
-    "Experience": "6",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTE0IDEwMQ",
-   "title": "NANNY",
-   "employer": "LEGACY PEOPLE CAPITAL LTD.",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are seeking a Nanny to provide safe, caring and reliable childcare while supporting children's daily routines and development.",
-    "Posted on": "1793988949",
-    "Language": "en, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-production",
-    "Contract": "contract",
     "Experience": "0",
-    "Pay": "salaried"
-   }
-  },
-  {
-   "id": "eu-NDU5MTEwIDEwMQ",
-   "title": "CAB DRIVER",
-   "employer": "WFDM LTD",
-   "country": "Malta",
-   "location": "MT001",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are seeking a reliable Cab Driver to transport passengers safely and provide a professional and courteous service.",
-    "Posted on": "1793988949",
-    "Language": "en",
-    "Contract": "contracttohire",
-    "Experience": "1",
-    "Pay": "salaried"
+    "Pay": "2",
+    "Original title": "OUTRO PESSOAL DE APOIO DE TIPO ADMINISTRATIVO, NE"
    }
   },
   {
@@ -2951,48 +2977,6 @@
    }
   },
   {
-   "id": "eu-MTQ5MjY1MjMgMTI",
-   "title": "Painter, Procurement Department (M/F)",
-   "employer": "SZKOŁA POLICJI W KATOWICACH",
-   "country": "Poland",
-   "location": "PL22",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Job description: Responsibilities associated with the role: - day-to-day maintenance of buildings, facilities and equipment; - carrying out maintenance work on premises and buildings, including painting and bricklaying; - carrying out plastering and tiling work;- day-to-day maintenance…",
-    "Posted on": "1792495800",
-    "Language": "pl",
-    "Contract": "temporary",
-    "Qualification": "2",
-    "Experience": "0",
-    "Pay": "4808.0",
-    "Original title": "Malarz / Malarka Wydziału Zaopatrzenia (K/M)"
-   }
-  },
-  {
-   "id": "eu-MTQ5Mjk1NTcgMTI",
-   "title": "School cleaner\n(no. 1854)",
-   "employer": "SZKOŁA PODSTAWOWA NR 46 IM. UNII EUROPEJSKIEJ Z ODDZIAŁAMI DWUJĘZYCZNYMI W BYDGOSZCZY",
-   "country": "Poland",
-   "location": "PL61",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Job responsibilities: General responsibilities: - Maintaining the assigned school premises (classrooms, corridors, toilets and other passageways) to a satisfactory standard of cleanliness on a daily basis. - Correct use and application of cleaning and disinfectant products. -…",
-    "Posted on": "1793016000",
-    "Language": "pl",
-    "Contract": "temporary",
-    "Qualification": "1",
-    "Experience": "1",
-    "Pay": "5100.0",
-    "Original title": "Sprzątaczka szkolna/sprzątacz szkolny\n(nr 1854)"
-   }
-  },
-  {
    "id": "eu-MTQ5MzAzOTggMTI",
    "title": "Maintenance worker [M/F]",
    "employer": "GUMA PRODUKT ANDRZEJ BAŁANDO SPÓŁKA KOMANDYTOWA",
@@ -3347,6 +3331,48 @@
     "Experience": "0",
     "Pay": "38.0",
     "Original title": "osoba do pracy sezonowej (koszenie trawy)"
+   }
+  },
+  {
+   "id": "eu-MTQ4MTc5MjkgMTI",
+   "title": "SEASONAL WORKER",
+   "employer": "Powiatowy Urząd Pracy",
+   "country": "Poland",
+   "location": "PL43",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Job description: SELLING STRAWBERRIES AT MARKET STALLS IN ZIELONA GÓRA Requirements: - other: NO EXPERIENCE REQUIRED How to apply: - contact via the OHP Intended solely for those registered with the jobcentre: NO",
+    "Posted on": "1780981200",
+    "Language": "pl",
+    "Contract": "temporary",
+    "Qualification": "0",
+    "Experience": "0",
+    "Pay": "31.4",
+    "Original title": "PRACOWNIK SEZONOWY"
+   }
+  },
+  {
+   "id": "eu-MTQ4MDg5OTMgMTI",
+   "title": "fieldwork – maize / research department (m/f)",
+   "employer": "Powiatowy Urząd Pracy",
+   "country": "Poland",
+   "location": "PL52",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Job description: seasonal work harvesting maize cobs, and in the research department. How to apply: - contact via the OHP. Intended solely for those registered with the jobcentre: NO",
+    "Posted on": "1779863400",
+    "Language": "pl",
+    "Contract": "temporary",
+    "Qualification": "0",
+    "Experience": "0",
+    "Pay": "4000.0",
+    "Original title": "prace polowe- przy kukurydzy/dział naukowy (k/m)"
    }
   },
   {
@@ -3898,22 +3924,21 @@
    }
   },
   {
-   "id": "eu-NjMzNzMzMCAxMjE",
-   "title": "Fitbit Customer Support Specialist Swedish and English– Relocation Bulgaria",
-   "employer": "Jobs Europe AB",
+   "id": "eu-MTAwMDEtMTAwMzEwNDgzMi1TIDE",
+   "title": "Rent-a-Car Customer Service Consultant (German & English) (Callcenteragent/in)",
+   "employer": "Callpoint New Europe EAD",
    "country": "Bulgaria",
-   "location": "None",
+   "location": "BG41",
    "region": "Europe",
    "kind": "Visa sponsored",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Please note that the position is based in Sofia, Bulgaria and we will assist you to relocate.If you are excited about health and technology, join our Fitbit Team!As a Fitbit Products Support Specialist with Swedish and English, you will be part of a great team and will: Help our users with any issues they might have via tickets or calls Provide solutions to everyday device use questions on a case-by-case customer-oriented approach Identify trending issues and bugs from users’ reported issues and communicate them to your supervision team Work with a passionate team of customer-friendly colleagues from an international backgroundNot bad, right?What we expect from you: Very good knowledge of Swedish language (B2 or similar) for daily communication with customers Good command of English (B1 or similar) for training and internal communication Basic understanding of iOS and Android OS…",
-    "Posted on": "1791899280",
-    "Language": "en, da",
+    "Requirements and description": "*Please note that the position is based in Sofia, Bulgaria, and we will assist you to relocate.Drive Your Career Forward in SofiaAre you fluent in German and ready to begin an exciting international career? Join our team and represent a well-known global car rental brand while working in one of the most modern and inspiring office environments in Sofia.At TELUS Digital Bulgaria, we provide more than just a job - we offer professional growth, international collaboration, and an exceptional workplace designed for success.Work in One of Sofia’s Most Impressive Office BuildingsOur team is based in the iconic** TELUS Tower,** located in the vibrant center of Sofia. The office environment is designed to support both productivity and well-being.Here you will enjoy:- State-of-the-art personal gym with a breathtaking 360° panoramic view of Sofia- Relaxation areas, chill-out lounges, and gaming…",
+    "Posted on": "1794003821",
+    "Language": "de, b1, en, c1",
     "Contract": "directhire",
-    "Qualification": "3",
-    "Experience": "0"
+    "Pay": "1750.0"
    }
   },
   {
@@ -3934,21 +3959,56 @@
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMjA4NDM0Ny1TIDE",
-   "title": "Player Support Staff (m/f/d) – German & English – Sofia, Bulgaria (Customer Service Advisor)",
-   "employer": "Jobs Europe AB",
+   "id": "eu-MTAwMDEtMTAwMzEwNDc5Ny1TIDE",
+   "title": "Digital Trust and Safety Analyst with German and English (Callcenteragent/in)",
+   "employer": "Callpoint New Europe EAD",
    "country": "Bulgaria",
-   "location": "DEC, DE300",
+   "location": "BG41",
    "region": "Europe",
    "kind": "Visa sponsored",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "You will be supporting one of the world’s leading providers in the gaming sector and the developer of some of the best-known multiplayer battle arena games. Through your work, you will be making a direct contribution to a positive gaming experience for millions of gamers worldwide. Your relocation to Sofia We support…",
-    "Posted on": "1788815625",
-    "Language": "de",
+    "Requirements and description": "*Please note that the position is based in Sofia, Bulgaria and we will help you to relocateAre you ready to take the next step in your career and achieve your next challenge?If your answer is YES - join the leader in the CX (Customer Experience) industry TELUS Digital Bulgaria!As a Digital Trust and Safety Analyst with German and English you will be a part of a great team and all together will:- Review user-generated back-office information to ensure compliance with established policies- Take prompt and appropriate action on information that violates guidelines or poses risks- Stay updated on internal policies to ensure accurate implementation- Identify and analyze patterns to proactively address potential risksWe’re looking for someone with:- High attention to detail- Ability to defend decisions and provide context in thought process- Ability to identify patterns in behavior that can…",
+    "Posted on": "1794003821",
+    "Language": "de, c1, b1, en",
+    "Contract": "directhire"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzEwNDc3Mi1TIDE",
+   "title": "Back Office Gaming Support Specialist with German and English (Callcenteragent/in)",
+   "employer": "Callpoint New Europe EAD",
+   "country": "Bulgaria",
+   "location": "BG42",
+   "region": "Europe",
+   "kind": "Visa sponsored",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "*Please note that the position is based in Sofia, Bulgaria, and we will assist you to relocate.TELUS Digital Bulgaria is looking for passionate Back Office Gaming Support Specialists with German to join our Game Support Team - get the job you will enjoy!A typical day:- Assist our players with any issues they might experience or report- Focus on the player and provide the ultimate player experience- Listen to the voice of the players and communicate it further to the appropriate teams- Work with our team to improve our processesIf you have:- Fluency in German and a good command of English- Gaming experience - you have played games and you can relate to a player’s concept, community, and mindset- Player empathy and understanding a player’s perspective when tackling their issues- Understanding of Player Support- Desire to help the players as best as possible and to contribute to the team’s…",
+    "Posted on": "1794003821",
+    "Language": "de, c1, b1, en",
     "Contract": "directhire",
-    "Original title": "Mitarbeiter (m/w/d) im Spielersupport – Deutsch & Englisch – Sofia, Bulgarien (Kundendienstberater/in)"
+    "Pay": "Tarifvertrag: 2500"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMTM0MjU3Mi1TIDE",
+   "title": "Player Support Specialist for a Gaming Account with German and English (Callcenteragent/in)",
+   "employer": "Callpoint New Europe EAD",
+   "country": "Bulgaria",
+   "location": "BG42",
+   "region": "Europe",
+   "kind": "Visa sponsored",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "*Please note that the position is based in Sofia, Bulgaria, and we will assist you to relocate.About the ProjectYou'll be supporting one of the world's leading gaming companies and the creator of some of the most iconic multiplayer battle arena games. Your work directly impacts millions of passionate gamers worldwide.Your Relocation Starts Here- Relocation Bonus: €1,200 Gross (paid in 2 instalments) - to support relocation and initial rent costs- 21 Days of Company-Provided Accommodation on arrival, and assistance in finding a long-term home- Plane Ticket from your location to Sofia- Taxi transportation directly from the airport to your accommodation- Fully Paid Training - comprehensive onboarding program- Attractive Salary Package above average for SofiaWhy You'll Love It HereWork Environment- Amazing TELUS Tower location - right in the heart of Sofia- Modern personal gym with…",
+    "Posted on": "1794003820",
+    "Language": "de, a1, c1, en",
+    "Contract": "directhire",
+    "Pay": "Tarifvertrag: 2500"
    }
   },
   {
@@ -4054,6 +4114,25 @@
    }
   },
   {
+   "id": "eu-NjMzNzMzMCAxMjE",
+   "title": "Fitbit Customer Support Specialist Swedish and English– Relocation Bulgaria",
+   "employer": "Jobs Europe AB",
+   "country": "Bulgaria",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Visa sponsored",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Please note that the position is based in Sofia, Bulgaria and we will assist you to relocate.If you are excited about health and technology, join our Fitbit Team!As a Fitbit Products Support Specialist with Swedish and English, you will be part of a great team and will: Help our users with any issues they might have via tickets or calls Provide solutions to everyday device use questions on a case-by-case customer-oriented approach Identify trending issues and bugs from users’ reported issues and communicate them to your supervision team Work with a passionate team of customer-friendly colleagues from an international backgroundNot bad, right?What we expect from you: Very good knowledge of Swedish language (B2 or similar) for daily communication with customers Good command of English (B1 or similar) for training and internal communication Basic understanding of iOS and Android OS…",
+    "Posted on": "1791899280",
+    "Language": "en, da",
+    "Contract": "directhire",
+    "Qualification": "3",
+    "Experience": "0"
+   }
+  },
+  {
    "id": "eu-MTU1MzgwMTk0MTQgMTY",
    "title": "Teaching assistant",
    "employer": "Angolul Vidáman Oktatási és Szolgáltató Korlátolt Felelősségű Társaság",
@@ -4065,28 +4144,10 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "Angolul Vidáman Educational and Service Limited Liability Company is seeking an educational assistant to work in Budapest’s 8th district under a fixed-term employment contract. . Work rota and working hours: permanent morning shift; start and end of employment:…",
-    "Posted on": "1794007800",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Oktatási asszisztens"
-   }
-  },
-  {
-   "id": "eu-MTU2MDYwNDk1ODQgMTY",
-   "title": "Car wash",
-   "employer": "STORE HOUSE Ingatlanhasznosító Korlátolt Felelősségű Társaság",
-   "country": "Hungary",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "STORE HOUSE Property Management Limited Liability Company is seeking a vehicle cleaner to work in Budapest’s 16th district under a fixed-term employment contract. . Work rota and working hours: flexible; start and end dates of employment: 1 February 2027 – 31 January 2029,…",
-    "Posted on": "1794007800",
-    "Language": "hu",
-    "Contract": "temporary",
-    "Original title": "Járműtakarító"
    }
   },
   {
@@ -4101,7 +4162,7 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "NÁDASDI KFT is seeking other cleaning and support staff to work in Csévharaszt under an employment contract for an indefinite period. . Work rota and working hours: permanent morning shift; start and end dates of employment: 17 September 2026 – ; place and method of job interview:…",
-    "Posted on": "1794007800",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "directhire",
     "Original title": "Egyéb takarító és kisegítő (baromfifeldolgozó betanított munkás)"
@@ -4119,16 +4180,16 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "KREAL FM solutions Limited Liability Company is seeking other cleaning and support staff to work in Budapest’s 3rd district under a fixed-term employment contract. . Work schedule and working hours: fixed daytime hours; start and end dates of employment: 29 January 2027 –…",
-    "Posted on": "1794007800",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Egyéb takarító és kisegítő"
    }
   },
   {
-   "id": "eu-MTU2MjQ0Mzk4MjEgMTY",
-   "title": "Institutional cleaner and assistant (hotel room cleaning)",
-   "employer": "ZILIBAL Korlátolt Felelősségű Társaság",
+   "id": "eu-MTU2MDYwNDk1ODQgMTY",
+   "title": "Car wash",
+   "employer": "STORE HOUSE Ingatlanhasznosító Korlátolt Felelősségű Társaság",
    "country": "Hungary",
    "location": "None",
    "region": "Europe",
@@ -4136,11 +4197,11 @@
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "ZILIBAL Limited Liability Company is seeking an institutional cleaner and support staff member to work in Budapest’s 22nd district under a fixed-term employment contract. . Work rota and working hours: two shifts: morning and afternoon; start and end dates of employment: 4 November 2026 – 3 November 2028,…",
-    "Posted on": "1794007800",
+    "Requirements and description": "STORE HOUSE Property Management Limited Liability Company is seeking a vehicle cleaner to work in Budapest’s 16th district under a fixed-term employment contract. . Work rota and working hours: flexible; start and end dates of employment: 1 February 2027 – 31 January 2029,…",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "temporary",
-    "Original title": "Intézményi takarító és kisegítő (szállodai szobatakarítás)"
+    "Original title": "Járműtakarító"
    }
   },
   {
@@ -4155,7 +4216,7 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "HAZAI PÉKSÉG Bakery and Trading Limited Liability Company is seeking a cleaner and assistant for its Albertirsa site, to be employed on a fixed-term contract. . Work rota and working hours: permanent morning shift; start and end dates:…",
-    "Posted on": "1794007800",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő"
@@ -4173,7 +4234,43 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "TARCHA WORLD Kereskedelmi és Szolgáltató Kft. is seeking an institutional cleaner and support staff member to work in Budapest’s 14th district under a fixed-term employment contract. . Work rota and working hours: permanent morning shift; start and end dates of employment: 12 October 2026 –…",
-    "Posted on": "1794007800",
+    "Posted on": "1794094200",
+    "Language": "hu",
+    "Contract": "temporary",
+    "Original title": "Intézményi takarító és kisegítő"
+   }
+  },
+  {
+   "id": "eu-MTU2MjQ0Mzk4MjEgMTY",
+   "title": "Institutional cleaner and assistant (hotel room cleaning)",
+   "employer": "ZILIBAL Korlátolt Felelősségű Társaság",
+   "country": "Hungary",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "ZILIBAL Limited Liability Company is seeking an institutional cleaner and support staff member to work in Budapest’s 22nd district under a fixed-term employment contract. . Work rota and working hours: two shifts: morning and afternoon; start and end dates of employment: 4 November 2026 – 3 November 2028,…",
+    "Posted on": "1794094200",
+    "Language": "hu",
+    "Contract": "temporary",
+    "Original title": "Intézményi takarító és kisegítő (szállodai szobatakarítás)"
+   }
+  },
+  {
+   "id": "eu-MTU1NzA0MTQxMDggMTY",
+   "title": "Institutional cleaner and assistant",
+   "employer": "IBRI Pékség Korlátolt Felelősségű Társaság",
+   "country": "Hungary",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "IBRI Bakery Limited Liability Company is seeking an institutional cleaner and assistant to work in Budapest’s 3rd district under a fixed-term employment contract. . Work rota and working hours: irregular; start and end dates of employment: 16 December 2026 – 16 December 2028,…",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő"
@@ -4191,61 +4288,7 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "Nexways Cargo Limited Liability Company is seeking an institutional cleaner and support staff member to work in Budapest’s 23rd district under a fixed-term employment contract. . Work rota and working hours: two shifts: morning–afternoon; start and end dates of employment: 21 September 2026 – 21 September 2028,…",
-    "Posted on": "1794007800",
-    "Language": "hu",
-    "Contract": "temporary",
-    "Original title": "Intézményi takarító és kisegítő"
-   }
-  },
-  {
-   "id": "eu-MTU1Mzc4OTYyMDYgMTY",
-   "title": "Institutional cleaner and assistant (4-hour role)",
-   "employer": "Pophen.technology Hungary Korlátolt Felelősségű Társaság",
-   "country": "Hungary",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Pophen.technology Hungary Limited Liability Company is seeking an institutional cleaner and support staff member to work in Debrecen under an employment contract for an indefinite period. . Work schedule and working hours: fixed daytime hours; start and end dates of employment: 26 October 2026 –…",
-    "Posted on": "1794007800",
-    "Language": "hu",
-    "Contract": "directhire",
-    "Original title": "Intézményi takarító és kisegítő (4 órás állás)"
-   }
-  },
-  {
-   "id": "eu-MTU2MjIzMDE5NDggMTY",
-   "title": "Institutional cleaner and assistant (cleaning rooms and the entrance hall)",
-   "employer": "Argona Korlátolt Felelősségű Társaság",
-   "country": "Hungary",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Argona Limited Liability Company is seeking an institutional cleaner and support staff member to work in Budapest’s 10th district under a fixed-term employment contract. . Work rota and working hours: permanent morning shift; start and end dates of employment: 9 November 2026 – 9 November 2028,…",
-    "Posted on": "1794007800",
-    "Language": "hu",
-    "Contract": "temporary",
-    "Original title": "Intézményi takarító és kisegítő (a szobák és előtér kitakarítása)"
-   }
-  },
-  {
-   "id": "eu-MTU1NzA0MTQxMDggMTY",
-   "title": "Institutional cleaner and assistant",
-   "employer": "IBRI Pékség Korlátolt Felelősségű Társaság",
-   "country": "Hungary",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "IBRI Bakery Limited Liability Company is seeking an institutional cleaner and assistant to work in Budapest’s 3rd district under a fixed-term employment contract. . Work rota and working hours: irregular; start and end dates of employment: 16 December 2026 – 16 December 2028,…",
-    "Posted on": "1794007800",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő"
@@ -4263,10 +4306,46 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "ACH Service Kft. is seeking a cleaning and support staff member to work in Ecseri under a fixed-term employment contract. . Work rota and working hours: two shifts: morning–afternoon; start and end dates of employment: 1 December 2026 – 15 October 2028; place and method of job interview: A…",
-    "Posted on": "1794007800",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő"
+   }
+  },
+  {
+   "id": "eu-MTU2MjIzMDE5NDggMTY",
+   "title": "Institutional cleaner and assistant (cleaning rooms and the entrance hall)",
+   "employer": "Argona Korlátolt Felelősségű Társaság",
+   "country": "Hungary",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Argona Limited Liability Company is seeking an institutional cleaner and support staff member to work in Budapest’s 10th district under a fixed-term employment contract. . Work rota and working hours: permanent morning shift; start and end dates of employment: 9 November 2026 – 9 November 2028,…",
+    "Posted on": "1794094200",
+    "Language": "hu",
+    "Contract": "temporary",
+    "Original title": "Intézményi takarító és kisegítő (a szobák és előtér kitakarítása)"
+   }
+  },
+  {
+   "id": "eu-MTU1Mzc4OTYyMDYgMTY",
+   "title": "Institutional cleaner and assistant (4-hour role)",
+   "employer": "Pophen.technology Hungary Korlátolt Felelősségű Társaság",
+   "country": "Hungary",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Pophen.technology Hungary Limited Liability Company is seeking an institutional cleaner and support staff member to work in Debrecen under an employment contract for an indefinite period. . Work schedule and working hours: fixed daytime hours; start and end dates of employment: 26 October 2026 –…",
+    "Posted on": "1794094200",
+    "Language": "hu",
+    "Contract": "directhire",
+    "Original title": "Intézményi takarító és kisegítő (4 órás állás)"
    }
   },
   {
@@ -4281,7 +4360,7 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "A-Z Nursery and International Crèche is seeking a childcare worker or nursery nurse to work in Budapest’s 12th district under a fixed-term employment contract. . Work schedule and working hours: fixed daytime hours; start and end dates: 1 October 2026 – 30 September 2028,…",
-    "Posted on": "1794007800",
+    "Posted on": "1794094200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Gyermekfelügyelő, dajka (gondozó, takarító)"
@@ -4303,23 +4382,6 @@
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő"
-   }
-  },
-  {
-   "id": "eu-MTM2MzUtNzQxOTExY2RfSkI1MjY3NDk4LVMgMQ",
-   "title": "Packaging Planner for Budapest (Ingenieur/in - Verpackungstechnik)",
-   "employer": "C-P-S Group",
-   "country": "Hungary",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Your tasksFor our team in Budapest, we are looking for a packaging planner (m/f/d) with experience in the field of load carrier planning with the following main tasks:• Planning of reusable load carriers in the field of motors, axles, transmissions and batteries• Creation of packaging concepts and project planning of new load carrier concepts in automotive production• Independent and responsible planning and coordination of load carrier concepts in accordance with logistical and production requirements• Specification of technical requirements and preparation of request documents• Support of technical purchasing in procurement processes and packaging project documentation• Coordination of tank structures in different development phases (partial samples, samples, series failure samples...)• Testing and acceptance of the presented tanks• Coordination and monitoring with specialist…",
-    "Posted on": "1791577669",
-    "Language": "de",
-    "Contract": "directhire"
    }
   },
   {
@@ -4588,6 +4650,24 @@
     "Language": "hu",
     "Contract": "directhire",
     "Original title": "Egyéb, máshova nem sorolható irodai, ügyviteli foglalkozású (Élőállat átvevő)"
+   }
+  },
+  {
+   "id": "eu-MTU1MDcwMjMwMTcgMTY",
+   "title": "Institutional cleaner and assistant",
+   "employer": "Violin-food Trade Élelmiszer-nagykereskedelmi Korlátolt Felelősségű Társaság",
+   "country": "Hungary",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Violin-food Trade Food Wholesale Limited Liability Company is seeking an institutional cleaner and support staff member to work in Vecsés under a fixed-term employment contract. . Work rota and working hours: 3 shifts, every day of the week, without interruption…",
+    "Posted on": "1791401400",
+    "Language": "hu",
+    "Contract": "temporary",
+    "Original title": "Intézményi takarító és kisegítő"
    }
   },
   {
@@ -5345,7 +5425,7 @@
    "title": "Packaging Assistant (m/f/d)  (Assistant – Warehouse Management, Transport)",
    "employer": "redworkgroup GmbH",
    "country": "Germany",
-   "location": "DE25B, DE255",
+   "location": "DE25C, DE25B",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
@@ -5655,22 +5735,58 @@
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzk2ODEzNi1TIDE",
-   "title": "Service Staff – Catering and Hospitality | Assistant – Hospitality | Assistant – Kitchen (Service Staff – Catering and Hospitality)",
-   "employer": "SHL Gastro GmbH",
+   "id": "eu-MTAwMDEtMTAwMzk3NDg1Ni1TIDE",
+   "title": "Garden and Landscaping Team is looking for new members (m/f/d) (Garden/Landscape Designer)",
+   "employer": "Andreas de Vries",
    "country": "Germany",
-   "location": "DE40B",
+   "location": "DE923",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "We’re looking for new staff for our beer garden and restaurant in Leipe – both in front of house and in the kitchen. Whether you’re from the area and simply looking for a good job, or whether you’d like to try something new outside the city – you’re welcome here. We are…",
-    "Posted on": "1793917733",
-    "Language": "de, a1",
-    "Contract": "temporary",
-    "Pay": "15.0",
-    "Original title": "Servicekraft - Gastronomie und Gastgewerbe | Helfer/in - Gastgewerbe | Helfer/in - Küche (Servicekraft - Gastronomie und Gastgewerbe)"
+    "Requirements and description": "This is us… We are a team with a passion for green oases. For us, it’s all about planting dreams and designing living spaces. As specialists in gardening and landscaping, we have been creating unique outdoor spaces for over 25 years – spaces that inspire and invite you to relax and feel at ease…",
+    "Posted on": "1794003861",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Garten Landschaftsbau Team sucht Verstärkung (m/w/d) (Garten-/Landschaftsgestalter/in)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzk3NDg0Mi1TIDE",
+   "title": "Landscaping Assistant (m/f/d) – part-time or full-time, permanent (Assistant – Horticulture)",
+   "employer": "Andreas de Vries",
+   "country": "Germany",
+   "location": "DE923",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Job title: Staff member (m/f/d) for Green Space Maintenance &amp; Horticulture (Full-time or Part-time) About us &amp; the role: We are looking to strengthen our team in the field of green space maintenance, horticulture and landscaping as soon as possible. - Working hours: Monday to Friday…",
+    "Posted on": "1794003861",
+    "Language": "de",
+    "Contract": "directhire",
+    "Pay": "Tarifvertrag: Garten- und Landschaftsbau",
+    "Original title": "Helfer Grünpflege (m/w/d) - Teilzeit oder Vollzeit, unbefristet (Helfer/in - Gartenbau)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDAtMTIwODU1Mjc1MC1TIDE",
+   "title": "Brewer / Maltster / Distiller (m/f/d) wanted for whisky production (brewer and maltster)",
+   "employer": "Hammerschmiede Spirituosen",
+   "country": "Germany",
+   "location": "DE91C",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "As a STILLMAN/MASHMAN (M / F / D), you will play a key role within the team in the areas of active whisky production and ensure the ideal conditions for producing perfect, handcrafted products to a 5* standard. You will work hand in hand with Anna Buchholz and Christian Gräfenstein to…",
+    "Posted on": "1794003823",
+    "Language": "de",
+    "Contract": "Full-time",
+    "Original title": "Brauer / Mälzer / Brenner (m/w/d) für Whiskyproduktion gesucht (Brauer/in und Mälzer/in)"
    }
   },
   {
@@ -5692,57 +5808,56 @@
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzk1NTExNC1TIDE",
-   "title": "Pastry chef (m/f/d) – full-time and part-time (Pastry chef)",
-   "employer": "BÄCKPOMM GmbH",
+   "id": "eu-MTAwMDAtMTIwODI4ODYyNS1TIDE",
+   "title": "Driver (m/f/d) for roll-off lorries (professional driver)",
+   "employer": "Christian Metz",
    "country": "Germany",
-   "location": "DE80N",
+   "location": "DE239",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Would you like to be part of a young, up-and-coming company and do you love the art of baking? Then you’ve come to the right place! Your responsibilities: - Handcrafting cakes, tarts and other sweet baked goods - Designing, shaping and decorating baked goods - Operating machinery and ovens -…",
-    "Posted on": "1793744922",
-    "Language": "de",
+    "Requirements and description": "We are looking for a driver (m/f/d) for a tipper lorry to start as soon as possible.Your role: Transporting materials and machinery to construction sites. Regional assignments, returning home every day. Requirements: Category C/CE driving licence. We offer: A family-run business, no seasonal work, above-average pay,…",
+    "Posted on": "1792009542",
+    "Language": "de, b1",
     "Contract": "Full-time",
-    "Original title": "Konditor/in (m/w/d) in Voll- und Teilzeit (Konditor/in)"
+    "Pay": "Tarifvertrag: Baugewerbe Bayern",
+    "Original title": "Fahrer (m/w/d) für Abroller (Berufskraftfahrer/in)"
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzk1NTEwMi1TIDE",
-   "title": "Cook (m/f/d) – full-time and part-time (Cook)",
-   "employer": "BÄCKPOMM GmbH",
+   "id": "eu-MTgzNjgtMjAyNjE4NjcwMTYwLVMgMQ",
+   "title": "Truck Driver (gn) CE - Germany | EU & Non-EU Drivers Welcome (Berufskraftfahrer/in)",
+   "employer": "hello jobs GmbH",
    "country": "Germany",
-   "location": "DE80N",
+   "location": "DE300",
    "region": "Europe",
-   "kind": "Seasonal",
+   "kind": "Visa sponsored",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Would you like to join a young, up-and-coming company and have you completed your training as a chef? Then you’ve come to the right place! Your responsibilities: - Mise en place for our à la carte bistro - Independently preparing and cooking dishes according to recipes and…",
-    "Posted on": "1793744922",
+    "Requirements and description": "Hey! I’m Robert from hello jobs Are you an experienced truck driver looking for a secure job in Germany? Whether you are already living in the EU - for example in Spain, Italy, Romania, Poland or another EU country - or you are currently outside the EU , I’d be happy to hear from you. I personally support you throughout the recruitment process and, where required, also with the steps involved in relocating to Germany.Your Tasks - Driving modern CE trucks on national or international long-distance routes * Safe and responsible transport of goods * Checking and taking care of your truck and trailer * Securing cargo correctly * Following driving, rest and working-time regulations * Reliable communication with the transport company and dispatch team * Depending on the position: returning home regularly according to the agreed scheduleYour Profile For EU Drivers * Valid EU Category CE…",
+    "Posted on": "1794006074",
     "Language": "de",
-    "Contract": "Full-time",
-    "Original title": "Koch/ Köchin (m/w/d) in Voll- und Teilzeit (Koch/Köchin)"
+    "Contract": "directhire"
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzk1NTA4OC1TIDE",
-   "title": "Bakery sales assistant (m/f/d) – full-time and part-time (Sales assistant – food trade (bakery/patisserie))",
-   "employer": "BÄCKPOMM GmbH",
+   "id": "eu-MTgzNjgtMjAyNjE4NjcwMjUyLVMgMQ",
+   "title": "Truck Drivers (m/f/d) Wanted – Already in the EU? Start your career in Germany (Berufskraftfahrer/in)",
+   "employer": "hello jobs GmbH",
    "country": "Germany",
-   "location": "DE80N",
+   "location": "DE300",
    "region": "Europe",
-   "kind": "Seasonal",
+   "kind": "Visa sponsored",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Would you like to be part of a young, up-and-coming company and do you enjoy sales? Then you’ve come to the right place! Your responsibilities: - Providing friendly and expert advice to our customers - Selling baked goods, fine pastries and confectionery - Ensuring an attractive display…",
-    "Posted on": "1793744922",
+    "Requirements and description": "Are you living in the EU and have experience as a truck driver – or are ready to take the wheel professionally? Then hello jobs is your gateway to a secure, well-paid job in Germany’s transport sector. We’re looking for motivated drivers from all backgrounds. Whether you’re from Italy, Spain, Nigeria, Romania, Ghana, or anywhere else – if you’re living in the EU, we’d love to hear from you.What We Offer- Competitive salary: up to €3,000 gross per month plus daily allowances- Your own truck with a fixed trailer- Permanent, full-time contract directly with the German employer- Flexible shift models: 3/1, 4/1, 6/2, 9/3 and others- Personal support throughout your relocation and onboarding- Help with housing, registration, paperwork and moreYour Profile- EU Category CE driver’s license with Code 95- Valid driver card- Legal residence in an EU country- Previous truck driving experience is a…",
+    "Posted on": "1794006074",
     "Language": "de",
-    "Contract": "directhire",
-    "Original title": "Bäckereifachverkäufer/in (m/w/d) in Voll- und Teilzeit (Fachverkäufer/in - Nahrungsmittelhandwerk (Bäckerei/Konditorei))"
+    "Contract": "directhire"
    }
   },
   {
@@ -6504,6 +6619,24 @@
    }
   },
   {
+   "id": "eu-MTAwMDEtMTAwMzk1MDYwNS1TIDE",
+   "title": "Guide (m/f/x) – 2027 season (tour guide)",
+   "employer": "Luxair Société Luxembourgeoise de Navigation Aérienne S.A.",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "• Welcome our guests on arrival and arrange their transfer to their hotel• Inform guests about local leisure activities available during their stay• Assist our guests whenever necessary• Represent the Company to our guests and local partners (hotels, etc.)",
+    "Posted on": "1793661393",
+    "Language": "de",
+    "Contract": "temporary",
+    "Original title": "Guide (m/f/x) - Saison 2027 (Reiseleiter/in)"
+   }
+  },
+  {
    "id": "eu-MTA2OTM5IDEx",
    "title": "Catering Chef – Specialism: World Cuisine (M/F)",
    "employer": "SSRAW TRADING S.à.r.l.-S",
@@ -6521,24 +6654,6 @@
     "Qualification": "5",
     "Experience": "3",
     "Original title": "Cuisinier traiteur - Spécialité: Cuisine du Monde (H/F)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzk1MDYwNS1TIDE",
-   "title": "Guide (m/f/x) – 2027 season (tour guide)",
-   "employer": "Luxair Société Luxembourgeoise de Navigation Aérienne S.A.",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "• Welcome our guests on arrival and arrange their transfer to their hotel• Inform guests about local leisure activities available during their stay• Assist our guests whenever necessary• Represent the Company to our guests and local partners (hotels, etc.)",
-    "Posted on": "1793661393",
-    "Language": "de",
-    "Contract": "temporary",
-    "Original title": "Guide (m/f/x) - Saison 2027 (Reiseleiter/in)"
    }
   },
   {
@@ -6735,9 +6850,9 @@
    }
   },
   {
-   "id": "eu-ODQ1NjIwMiA5",
-   "title": "Quantitative Developer - Risk Modeling (m/f/n) (H/F)",
-   "employer": "Non renseigné",
+   "id": "eu-MTAwMDEtMTAwMzk1MDY4Ni1TIDE",
+   "title": "Animator (m/f/x) - Season 2027 (Animateur/in)",
+   "employer": "Luxair Société Luxembourgeoise de Navigation Aérienne S.A.",
    "country": "Luxembourg",
    "location": "None",
    "region": "Europe",
@@ -6745,10 +6860,45 @@
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Would you like to join a renowned and innovative organisation? Spuerkeess, a mainstay of the Luxembourg financial sector with some of the highest credit ratings in the world, and a trusted employer that has been combining banking tradition and innovation since , is actively seeking a new…",
-    "Posted on": "1793509261",
-    "Language": "fr",
+    "Requirements and description": "Main Responsibilities- Independently develop and deliver a varied, engaging, and high-quality children’s entertainment programme for different age groups, in line with the entertainment concept.- Deliver the children’s programme on a daily basis.- Host and lead the weekly children’s activities, including the “Special Day”, “Special Night”, “Kids Show” and “Dinner for Kids”.- Host the children’s “Mini Disco”.- Maintain contact with guests after the evening entertainment programme.- Ensure the safety of children participating in the activities.- Take responsibility for all equipment and materials related to the role.- Actively contribute to a positive atmosphere within the entertainment team.- Attend regular team meetings.- Complete work reports, stock inventories, children’s registration records and other related administrative tasks.Minimum Requirements for the Position- Have completed…",
+    "Posted on": "1793661393",
+    "Language": "de",
+    "Contract": "temporary"
+   }
+  },
+  {
+   "id": "eu-MTUyMzktazQyNzQ2LjM2NjYtUyAx",
+   "title": "Electrical Engineer (m/f/d) (Ingenieur/in - Elektrotechnik)",
+   "employer": "OG Recruitment S.à r.l.",
+   "country": "Luxembourg",
+   "location": "LU000",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Electrical Engineer (m/f/d) in MamerOG Recruitment is your consulting agency for the recruitment of specialists in Luxembourg and the entire border region. We are exclusively concerned with direct placements with our clients. No temporary employment.On behalf of our renowned client with headquarters in Mamer (L) we are looking for an Electrical Engineer (m/f/d) for mechanical and electrical satellite systems.The position will be filled directly and permanent with the client.Our client is an innovative, Luxembourg based high-tech company with several state-of-the-art divisions.Your tasks- Design electrical installations and controller solutions for the satellite ground segment and the rubber industry testing equipment:- Define, document, implement and test new features and technologies in existing or new products,- Create electrical concepts and drawings,- Identify, assess and mitigate…",
+    "Posted on": "1791840544",
+    "Language": "de",
     "Contract": "directhire"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMjcxODQ5Ny1TIDE",
+   "title": "Childcare worker, nanny, nursery teacher (m/f/d) – Live-in (childcare worker)",
+   "employer": "IM Hauspersonal Sebastian Maderecker",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Since 2003, we have been a recruitment agency that is free of charge for applicants, specialising in housekeeping, childcare, facility services and care for the elderly in upmarket corporate and private households. We are not a temporary employment agency; instead, employers commission us to find…",
+    "Posted on": "1788988775",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Kinderbetreuer, Nanny, Erzieher (m/w/d) - Live-in (Kinderbetreuer/in)"
    }
   },
   {
@@ -6767,6 +6917,23 @@
     "Language": "fr",
     "Contract": "directhire",
     "Original title": "Chargé(e) de recrutement (H/F)"
+   }
+  },
+  {
+   "id": "eu-ODQ1NjIwMiA5",
+   "title": "Quantitative Developer - Risk Modeling (m/f/n) (H/F)",
+   "employer": "Non renseigné",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Would you like to join a renowned and innovative organisation? Spuerkeess, a mainstay of the Luxembourg financial sector with some of the highest credit ratings in the world, and a trusted employer that has been combining banking tradition and innovation since , is actively seeking a new…",
+    "Posted on": "1793509261",
+    "Language": "fr",
+    "Contract": "directhire"
    }
   },
   {
@@ -6972,58 +7139,6 @@
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzk1MDY4Ni1TIDE",
-   "title": "Animator (m/f/x) - Season 2027 (Animateur/in)",
-   "employer": "Luxair Société Luxembourgeoise de Navigation Aérienne S.A.",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Main Responsibilities- Independently develop and deliver a varied, engaging, and high-quality children’s entertainment programme for different age groups, in line with the entertainment concept.- Deliver the children’s programme on a daily basis.- Host and lead the weekly children’s activities, including the “Special Day”, “Special Night”, “Kids Show” and “Dinner for Kids”.- Host the children’s “Mini Disco”.- Maintain contact with guests after the evening entertainment programme.- Ensure the safety of children participating in the activities.- Take responsibility for all equipment and materials related to the role.- Actively contribute to a positive atmosphere within the entertainment team.- Attend regular team meetings.- Complete work reports, stock inventories, children’s registration records and other related administrative tasks.Minimum Requirements for the Position- Have completed…",
-    "Posted on": "1793661393",
-    "Language": "de",
-    "Contract": "temporary"
-   }
-  },
-  {
-   "id": "eu-MTUyMzktazQyNzQ2LjM2NjYtUyAx",
-   "title": "Electrical Engineer (m/f/d) (Ingenieur/in - Elektrotechnik)",
-   "employer": "OG Recruitment S.à r.l.",
-   "country": "Luxembourg",
-   "location": "LU000",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Electrical Engineer (m/f/d) in MamerOG Recruitment is your consulting agency for the recruitment of specialists in Luxembourg and the entire border region. We are exclusively concerned with direct placements with our clients. No temporary employment.On behalf of our renowned client with headquarters in Mamer (L) we are looking for an Electrical Engineer (m/f/d) for mechanical and electrical satellite systems.The position will be filled directly and permanent with the client.Our client is an innovative, Luxembourg based high-tech company with several state-of-the-art divisions.Your tasks- Design electrical installations and controller solutions for the satellite ground segment and the rubber industry testing equipment:- Define, document, implement and test new features and technologies in existing or new products,- Create electrical concepts and drawings,- Identify, assess and mitigate…",
-    "Posted on": "1791840544",
-    "Language": "de",
-    "Contract": "directhire"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMjcxODQ5Ny1TIDE",
-   "title": "Childcare worker, nanny, nursery teacher (m/f/d) – Live-in (childcare worker)",
-   "employer": "IM Hauspersonal Sebastian Maderecker",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Since 2003, we have been a recruitment agency that is free of charge for applicants, specialising in housekeeping, childcare, facility services and care for the elderly in upmarket corporate and private households. We are not a temporary employment agency; instead, employers commission us to find…",
-    "Posted on": "1788988775",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "Kinderbetreuer, Nanny, Erzieher (m/w/d) - Live-in (Kinderbetreuer/in)"
-   }
-  },
-  {
    "id": "eu-ODU2MjMyNCA5",
    "title": "Recruitment Consultant  (M/F)",
    "employer": "Non renseigné",
@@ -7058,6 +7173,41 @@
     "Contract": "directhire",
     "Qualification": "3",
     "Experience": "1"
+   }
+  },
+  {
+   "id": "eu-OTJlM2MyZTAtZThhZi00M2E5LWEyYjUtODJkYTZiYTk5NjA0IDgx",
+   "title": "Guest Service Attendant",
+   "employer": "Northern Lights Village Levi Oy",
+   "country": "Finland",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "**Guest Services Attendant position available at Northern Lights Village Levi!**The Northern Lights Village brand was born in 2016 and since then we have opened three resorts in Finnish Lapland. We pride ourselves in delivering consistently warm and personalized service to our guests. Everyone working at the Northern Lights Village embraces this mission with great care and responsibility. We appreciate the insight of every individual and see our employees as our most valuable resource. Our guests are truly international and so is our team, speaking all together 17 languages!**About the Job**We are seeking a **joyful, kind, and entertaining Guest Services Attendant** to join the Northern Lights Village. In this role, you will primarily be driving, assisting with luggage, guiding guests to their safari start point, and responding to various inquiries. Your charismatic character will be…",
+    "Posted on": "1793428702",
+    "Language": "en, fi",
+    "Contract": "seasonal"
+   }
+  },
+  {
+   "id": "eu-ZWFhMDA4OWUtN2Q1OS00MDFlLWIwODYtMDEyN2Q1ZmJhYzlhIDgx",
+   "title": "Furniture fitter",
+   "employer": "A.J.Peltokangas Oy",
+   "country": "Finland",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Fitting of fitted furniture in blocks of flats in the Tampere area. Kitchens, cupboards, walk-in wardrobes and, in some properties, bathrooms as well.",
+    "Posted on": "1794033203",
+    "Language": "fi",
+    "Contract": "seasonal",
+    "Original title": "Kalusteasentaja"
    }
   },
   {
@@ -7561,42 +7711,6 @@
    }
   },
   {
-   "id": "eu-MTI2YzZiYmItOGJjNS00MWI1LTg0Y2YtY2RmY2RiYmRmZDIzIDgx",
-   "title": "Property Maintenance Team Leader, Levi",
-   "employer": "Kero Services Levi Oy",
-   "country": "Finland",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "**Property Maintenance Team Leader – Levi****Kero Services Levi Oy is seeking a property maintenance team leader for its Levi branch. The position is full-time and open-ended.**Kero Services is a Finnish property services company that looks after holiday resorts, housing estates and businesses…",
-    "Posted on": "1793908013",
-    "Language": "fi",
-    "Contract": "directhire",
-    "Original title": "Kiinteistöhuollon tiiminvetäjä, Levi"
-   }
-  },
-  {
-   "id": "eu-MTllYTFjNjItMTBhZi00ZmIwLWE2MTItYmMwZDk5MzcyMDZiIDgx",
-   "title": "Restaurant staff member, Restaurant Talonpöytä Cafe – Pinseria Ruka",
-   "employer": "Café & Pinseria Ruka",
-   "country": "Finland",
-   "location": "FI1D9",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Are you the restaurant staff member we’re looking for in Ruka? Job description We’re currently looking for a restaurant staff member at Kuusamon Talonpöydän Café-Pinseria in Ruka for the 2026–2027 winter season! In Ruka’s atmospheric café, customers can enjoy delicious treats amidst stunning scenery in the heart of Ruka. The menu changes daily…",
-    "Posted on": "1793891342",
-    "Language": "fi",
-    "Contract": "seasonal",
-    "Original title": "Ravintolatyöntekijä, Ravintola Talonpöytä Cafe - Pinseria Ruka"
-   }
-  },
-  {
    "id": "eu-YTQzZTRjYTYtMzJhYS00YTdkLTgxMWMtMmMzN2MwMmY3MTg4IDgx",
    "title": "Business Cutover Lead",
    "employer": "Lokki Henkilöstöpalvelut Oy",
@@ -7609,23 +7723,6 @@
    "details": {
     "Requirements and description": "For our client, we are looking for a Business Cutover Lead. Note! This application is only for individuals already residing in Finland, and relocation is not possible. Description: The Customer is currently implementing SAP S/4HANA as a core ERP system. The aim is to go live in May 2027. To support the go live preparations, the Customer is looking for an experienced Business Cutover Lead to join the programme team. The Business Cutover Lead will ensure that the business transition from the legacy systems to the new solution at the go-live happens with minimal disruption to operations. Main responsibilities of the Business Cutover Lead: 1. Business cutover planning: Develop and maintain the business cutover plan in coordination with the program streams including activities (in Jira), dependencies, owners, milestones, and timing. 2. Business readiness: Coordinate and track business…",
     "Posted on": "1793969350",
-    "Language": "en",
-    "Contract": "temporary"
-   }
-  },
-  {
-   "id": "eu-MGY5YjI5YWItOGE1ZS00NTQ5LWJkZjktMTBmMTI5MTY0OWJlIDgx",
-   "title": "Senior Frontend Developers - Mobile / Web",
-   "employer": "Lokki Henkilöstöpalvelut Oy",
-   "country": "Finland",
-   "location": "FI1B1, FI1C5",
-   "region": "Europe",
-   "kind": "Visa sponsored",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "For our client in the banking sector were looking for 4 Senior Frontend Developers located in Joensuu. Note! This application is only for individuals already residing in Finland, and relocation is not possible. We are looking for senior frontend developers with skills in mobile (iOS, Android) and/or web (JavaScript frameworks). Knowledge of automated software testing is preferred as we use Test Driven development practices. The work consists of creating new UI components in Android, iOS and web. Must-have knowledge and experience: - Android - iOS - Web technologies (Angular, Typescript) - Unit testing frameworks - Kotlin - GIT Nice-to-have knowledge and experience: - Test Driven Development Answer these questions separately in a few sentences and attach them to your application! (Mandatory!) - Do you have hands-on experience with Android and iOS development or testing?* - Do you have…",
-    "Posted on": "1793913147",
     "Language": "en",
     "Contract": "temporary"
    }
