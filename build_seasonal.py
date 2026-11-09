@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "data" / "seasonal.json"
 MANUAL = ROOT / "data" / "manual_seasonal.json"
 ENABLE_CANADA = False   # Canadian jobs are not shown in the app yet; set True to collect them
-MAX_JOBS = 1000                     # keeps the file small for the app
+MAX_JOBS = 2000                     # keeps the file small for the app
 UA = {"User-Agent": f"job-demand-dashboard (contact: {os.environ.get('CONTACT_EMAIL', 'kistal.gamer2020@gmail.com')})"}
 
 SEASONAL_WORDS = re.compile(
@@ -190,28 +190,59 @@ def collect_jobbank():
 EURES_SEARCH = "https://europa.eu/eures/api/jv-searchengine/public/jv-search/search"
 EURES_DETAIL = "https://europa.eu/eures/api/jv-searchengine/public/jv/id/{id}?requestLang=en"
 EURES_DELAY = 1.5            # seconds between requests (be polite)
+# ---- LIMITS (Europe jobs). To REMOVE the 30-job limit raise ALL THREE numbers below, e.g. 1000 / 1000 / 50.
+# More jobs = bigger seasonal.json (about 1 KB per job), more detail requests, and more translation characters.
 PER_QUERY = 30               # jobs kept per country per search word
+MAX_PAGES = 4                # result pages read per search word (20 jobs per page)
 PAGE_SIZE = 20               # results asked per request (falls back to 10 if EURES refuses)
-MAX_PER_COUNTRY_KIND = 30
+MAX_PER_COUNTRY_KIND = 30   # jobs kept per country per type (Seasonal / Visa sponsored)
 FETCH_DETAILS = True
 MAX_DETAIL_CALLS = 400      # new jobs only; details are remembered in data/eures_cache.json
 CACHE = ROOT / "data" / "eures_cache.json"
 DEEPL_KEY = os.environ.get("DEEPL_API_KEY", "").strip()
 MONTHLY_CHAR_LIMIT = 450_000  # DeepL Free allows 500,000 characters a month
-TRANSLATE_DESC_CHARS = 300
+TRANSLATE_DESC_CHARS = 250
 
 # EURES country code -> name shown in the app
-EURES_COUNTRIES = {
-    "ro": "Romania", "hr": "Croatia", "cy": "Cyprus", "mt": "Malta", "pt": "Portugal",
-    "pl": "Poland", "bg": "Bulgaria", "hu": "Hungary", "cz": "Czechia", "de": "Germany",
-    "it": "Italy", "lu": "Luxembourg", "fi": "Finland",
+EURES_COUNTRIES = {   # every country EURES covers (EU + Iceland, Liechtenstein, Norway, Switzerland)
+    "at": "Austria", "be": "Belgium", "bg": "Bulgaria", "hr": "Croatia", "cy": "Cyprus",
+    "cz": "Czechia", "dk": "Denmark", "ee": "Estonia", "fi": "Finland", "fr": "France",
+    "de": "Germany", "el": "Greece", "hu": "Hungary", "is": "Iceland", "ie": "Ireland",
+    "it": "Italy", "lv": "Latvia", "li": "Liechtenstein", "lt": "Lithuania", "lu": "Luxembourg",
+    "mt": "Malta", "nl": "Netherlands", "no": "Norway", "pl": "Poland", "pt": "Portugal",
+    "ro": "Romania", "sk": "Slovakia", "si": "Slovenia", "es": "Spain", "se": "Sweden",
+    "ch": "Switzerland",
 }
-SEASONAL_TERMS = {
-    "default": ["seasonal"],
-    "ro": ["sezonier", "seasonal"], "hr": ["sezonski", "seasonal"], "pt": ["sazonal", "seasonal"],
-    "pl": ["sezonowa", "seasonal"], "bg": ["сезонна", "seasonal"], "hu": ["szezonális", "seasonal"],
-    "cz": ["sezónní", "seasonal"], "de": ["Saisonarbeit", "Erntehelfer", "seasonal"],
-    "it": ["stagionale", "seasonal"], "fi": ["kausityö", "seasonal"], "lu": ["saisonnier", "seasonal"],
+SEASONAL_TERMS = {        # search words per country: "seasonal" plus typical harvest/picking words in the local language
+    "default": ["seasonal", "harvest"],
+    "ro": ["sezonier", "seasonal", "culegător", "recoltare"],
+    "hr": ["sezonski", "seasonal", "berba", "branje"],
+    "pt": ["sazonal", "seasonal", "colheita", "apanha"],
+    "pl": ["sezonowa", "seasonal", "zbiór owoców", "zbiory"],
+    "bg": ["сезонна", "seasonal", "беритба"],
+    "hu": ["szezonális", "seasonal", "szüret"],
+    "cz": ["sezónní", "seasonal", "sběr ovoce", "sklizeň"],
+    "de": ["Saisonarbeit", "Erntehelfer", "seasonal"],
+    "at": ["Saisonarbeit", "Erntehelfer", "seasonal"],
+    "ch": ["Saisonarbeit", "Erntehelfer", "seasonal"],
+    "li": ["Saisonarbeit", "seasonal"],
+    "it": ["stagionale", "seasonal", "raccolta", "bracciante"],
+    "fi": ["kausityö", "seasonal", "poiminta"],
+    "lu": ["saisonnier", "seasonal"],
+    "fr": ["saisonnier", "vendanges", "cueillette", "seasonal"],
+    "be": ["saisonnier", "seizoenswerk", "seasonal"],
+    "nl": ["seizoenswerk", "oogst", "seasonal"],
+    "dk": ["sæsonarbejde", "frugtplukker", "seasonal"],
+    "no": ["sesongarbeid", "bærplukker", "seasonal"],
+    "se": ["säsongsarbete", "plockare", "seasonal"],
+    "ee": ["hooajatöö", "seasonal"],
+    "lv": ["sezonas darbs", "seasonal"],
+    "lt": ["sezoninis darbas", "seasonal"],
+    "sk": ["sezónna práca", "zber ovocia", "seasonal"],
+    "si": ["sezonsko delo", "trgatev", "seasonal"],
+    "es": ["temporada", "temporero", "recolección", "seasonal"],
+    "el": ["εποχιακή", "συγκομιδή", "seasonal"],
+    "cy": ["εποχιακή", "seasonal", "harvest"],
 }
 VISA_TERMS = ["visa sponsorship", "work permit", "relocation"]
 VISA_RE = re.compile(r"visa|work permit|relocat|sponsor", re.I)
@@ -242,7 +273,7 @@ def eures_post(body):
 def eures_query(cc, keyword):
     global PAGE_SIZE
     items, data, page = [], {}, 1
-    while len(items) < PER_QUERY and page <= 4:
+    while len(items) < PER_QUERY and page <= MAX_PAGES:
         body = {
             "resultsPerPage": PAGE_SIZE, "page": page, "sortSearch": "MOST_RECENT",
             "keywords": [{"keyword": keyword, "specificSearchCode": "EVERYWHERE"}],
@@ -388,8 +419,16 @@ def translate_jobs(jobs, cache):
         try:
             res = deepl_translate(texts)
         except Exception as e:
-            print(f"Translation failed ({type(e).__name__}: {e}); remaining jobs stay untranslated", file=sys.stderr)
-            break
+            print(f"Batch translation failed ({type(e).__name__}: {e}); trying job by job", file=sys.stderr)
+            res = []
+            for j in batch:
+                c = cache[j["_eid"]]
+                pair = [c["orig_title"], c["orig_desc"] or "-"]
+                try:
+                    pair = deepl_translate(pair)
+                except Exception:
+                    pass          # language not supported: keep the original text
+                res += pair
         usage["chars"] += sum(len(t) for t in texts)
         for k, j in enumerate(batch):
             c = cache[j["_eid"]]
@@ -425,6 +464,7 @@ def collect_eures():
                     print(f"  EURES {cc}/{term}: failed {type(e).__name__}: {e}", file=sys.stderr)
                     time.sleep(EURES_DELAY)
                     continue
+                print(f"  {cc}/{kind}/'{term}': {len(items)} results")
                 if not printed:
                     printed = True
                     print("EURES response keys:", list(data.keys())[:12])
@@ -557,6 +597,11 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     payload = {"updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"), "jobs": unique}
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    from collections import Counter
+    counts = Counter((j.get("country", "?"), j.get("kind", "?")) for j in unique)
+    print("Jobs by country / kind:")
+    for (country, kind), n in sorted(counts.items()):
+        print(f"  {country:12} {kind:15} {n}")
     print(f"Wrote {len(unique)} jobs to {OUT}")
 
 
