@@ -8,31 +8,73 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+
+      # Files you edit by hand (config.json, manual_seasonal.json, agencies.json) stay on main.
+      # Everything else (jobs.json, seasonal.json, caches, history) is kept on the "data" branch.
+      - name: Restore saved data from the data branch
+        run: |
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch --depth=1 origin data
+            mkdir -p data
+            git archive FETCH_HEAD | tar -x -C data \
+              --exclude=config.json --exclude=manual_seasonal.json --exclude=agencies.json
+            echo "Restored caches and the previous output from the data branch."
+          else
+            echo "No data branch yet - starting from the files on main."
+          fi
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests
+
       - name: Fetch DoFE jobs
         continue-on-error: true      # a failure here must not block the seasonal step
         env:
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          RUN_BUDGET_MIN: "70"       # stop fetching agency details in time to finish the run
         run: python fetch_jobs.py
+
       - name: Build seasonal jobs
         continue-on-error: true      # ...and vice versa
         env:
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: python build_seasonal.py
-      - name: Commit data
+
+      - name: Check the files before publishing
         run: |
+          python - <<'PY'
+          import json
+          jobs = json.load(open("data/jobs.json", encoding="utf-8"))
+          assert jobs["count"] > 0, "jobs.json has no jobs"
+          json.load(open("data/seasonal.json", encoding="utf-8"))
+          print("OK:", jobs["count"], "jobs,", jobs.get("with_details"), "with agency details")
+          PY
+
+      # One fresh commit, force-pushed: the data branch never grows, however many days pass.
+      - name: Publish to the data branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          rm -rf /tmp/publish && mkdir /tmp/publish
+          cp -r data/. /tmp/publish/
+          cd /tmp/publish
+          git init -q -b data
           git config user.name "job-data-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet || git commit -m "Update job data"
-          git push
+          git add -A
+          git commit -q -m "Update job data $(date -u +%Y-%m-%d)"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin data
