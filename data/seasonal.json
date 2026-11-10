@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T04:40:59",
+ "updated": "2026-11-10T06:30:06",
  "jobs": [
   {
    "id": "eu-MTc0MTE2MjggNDM",
@@ -621,23 +621,42 @@
    }
   },
   {
-   "id": "eu-M2JlMmU2OGUtNmU2My00ZWVlLWE2ZDEtNWIyNDNiYzU5NjgyIDM",
-   "title": "STUDENT | GARDEN MAINTENANCE | DEINZE",
-   "employer": "Vivaldis Interim",
+   "id": "eu-ODA3YTg2MzItOGVhMy00NWMyLTgzMTAtM2Q4ZjU0OTY4N2FmIDM",
+   "title": "Driver B",
+   "employer": "Infinity Jobs",
    "country": "Belgium",
-   "location": "BE234",
+   "location": "BE251",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Are you a student looking for a great student job as a gardener? We’re looking for a student who’d like to help out at a gardening company in Deinze during the academic year! Your duties will include: Mowing the lawn Pruning Tidying up the garden / grounds…",
-    "Posted on": "1784028514",
-    "Language": "nl, b1, fr, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-interaction, b2, cef-speaking-production, cef-writing-production",
+    "Requirements and description": "Loading and unloading goods. Delivering parcels and consignments along a fixed route. Checking deliveries and signing for receipts. Handling goods and company equipment with care. Maintaining contact with customers whilst…",
+    "Posted on": "1793787319",
+    "Language": "nl, b2, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-interaction, cef-speaking-production, cef-writing-production",
+    "Contract": "seasonal",
+    "Experience": "0",
+    "Original title": "Chauffeur B"
+   }
+  },
+  {
+   "id": "eu-ZTdlM2U3ZmEtY2VkNi00YzA2LWE4YzctN2Q2OTU2NmMyNzRiIDM",
+   "title": "All-round catering assistant",
+   "employer": "Infinity Jobs",
+   "country": "Belgium",
+   "location": "BE251",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Wanted: Enthusiastic student to work in the hospitality industry Do you enjoy interacting with people, are you happy to take orders, and do you like ensuring that customers have an unforgettable and enjoyable evening? Then you might just be the student we’re looking for! We are…",
+    "Posted on": "1792476919",
+    "Language": "nl, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-interaction",
     "Contract": "seasonal",
     "Qualification": "3",
     "Experience": "0",
-    "Original title": "STUDENT | TUINONDERHOUD | DEINZE"
+    "Original title": "Polyvalente horeca medewerker"
    }
   },
   {
@@ -674,6 +693,26 @@
     "Language": "nl, b1, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-interaction",
     "Contract": "seasonal",
     "Original title": "Orderpicker (STUDENT) - Nachtshift"
+   }
+  },
+  {
+   "id": "eu-M2JlMmU2OGUtNmU2My00ZWVlLWE2ZDEtNWIyNDNiYzU5NjgyIDM",
+   "title": "STUDENT | GARDEN MAINTENANCE | DEINZE",
+   "employer": "Vivaldis Interim",
+   "country": "Belgium",
+   "location": "BE234",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Are you a student looking for a great student job as a gardener? We’re looking for a student who’d like to help out at a gardening company in Deinze during the academic year! Your duties will include: Mowing the lawn Pruning Tidying up the garden / grounds…",
+    "Posted on": "1784028514",
+    "Language": "nl, b1, fr, cef-understanding-listening, cef-understanding-reading, cef-speaking-interaction, cef-writing-interaction, b2, cef-speaking-production, cef-writing-production",
+    "Contract": "seasonal",
+    "Qualification": "3",
+    "Experience": "0",
+    "Original title": "STUDENT | TUINONDERHOUD | DEINZE"
    }
   },
   {
@@ -1136,41 +1175,6 @@
     "Language": "nl",
     "Contract": "seasonal",
     "Original title": "Student winkelbediende bakkerij"
-   }
-  },
-  {
-   "id": "eu-YjNiNDY2NTYtZDI5Yy00ZmViLThiYWUtZjBkMTIyODg1YzVlIDM",
-   "title": "Student HR Consultant",
-   "employer": "Actief Interim Zeebrugge",
-   "country": "Belgium",
-   "location": "BE251",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are looking for a student HR Consultant for our Actief office in Zeebrugge. What does the role of HR Consultant involve? The telephone is your main tool of the trade. You will actively search for candidates in internal and external databases. You will carry out a…",
-    "Posted on": "1793610920",
-    "Language": "nl",
-    "Contract": "seasonal"
-   }
-  },
-  {
-   "id": "eu-OTdiMzAwN2UtZjIxOS00OGM3LTlmNmEtZjRkZDZlYjNjNWE2IDM",
-   "title": "Student worker  Taxi driver",
-   "employer": "Actief Interim Geel",
-   "country": "Belgium",
-   "location": "BE213",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Are you looking for a unique student job where you’ll meet lots of different people? Is there nothing you’d rather do than drive around the roads of the Kempen? We’re looking for a student taxi driver who’d like to work at weekends and during the holidays! As a taxi driver, you’ll…",
-    "Posted on": "1793898919",
-    "Language": "nl",
-    "Contract": "seasonal",
-    "Original title": "Jobstudent  Taxi chauffeur"
    }
   },
   {
@@ -6012,6 +6016,24 @@
    }
   },
   {
+   "id": "eu-MTYwMzItUUNWTThRMDc1WjJWNFBGNy1TIDE",
+   "title": "Agricultural Machinery Mechatronics Technician (m/f/d)  STARTING BONUS €500 (Agricultural Machinery Mechanic)",
+   "employer": "kfs Personal Service GmbH",
+   "country": "Germany",
+   "location": "DEG0M",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Agricultural Machinery Mechatronics Technician (m/f/d) STARTING BONUS €500 Location: Altenburg, Thuringia Employment type(s): Full-time We are looking for: an Agricultural Machinery Mechatronics Technician to join our regional client in the Altenburg area as soon as possible /…",
+    "Posted on": "1794265534",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Landmaschinenmechatroniker m/w/d  STARTPRÄMIE 500,-€ (Landmaschinenmechaniker/in)"
+   }
+  },
+  {
    "id": "eu-MTAwMDEtMTAwMzk0NzQwMy1TIDE",
    "title": "Gardener and Landscape Gardener (Garden/Landscape Designer)",
    "employer": "Uwe Kallies",
@@ -6028,206 +6050,6 @@
     "Contract": "directhire",
     "Pay": "16.5",
     "Original title": "Garten- u. Landschaftsbauer/-in (Garten-/Landschaftsgestalter/in)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzkxOTE5MC1TIDE",
-   "title": "Painter and Varnisher (m/f/d) (Painter and Varnisher – Design and Maintenance)",
-   "employer": "Vincenzo Calcagnile Malermeisterbetrieb",
-   "country": "Germany",
-   "location": "DE218",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "To strengthen our team, we are looking for 1–2 painters and varnishers (m/f/d) to start immediately or by arrangement – each on a full-time, permanent basis. This is not seasonal work – we offer long-term employment.We are a renowned painting and decorating firm and have been operating successfully in… since 2008.",
-    "Posted on": "1793142283",
-    "Language": "de",
-    "Contract": "directhire",
-    "Pay": "18.5",
-    "Original title": "Maler und Lackierer (m/w/d) (Maler/in und Lackierer/in - Gestaltung und Instandhaltung)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzkxNTM0OS1TIDE",
-   "title": "Vehicle detailers in Essen (full-time | early shift) (vehicle care specialist)",
-   "employer": "Jobdetektive priv.Arbeitsvermittlung J.Rump",
-   "country": "Germany",
-   "location": "DEA",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Our aim: to find the right job for you! We, the Job Detectives, are a certified private employment and recruitment agency. We place candidates in jobs subject to social security contributions in companies of all sizes and across all sectors. Our placement services are available to jobseekers upon presentation of a…",
-    "Posted on": "1793055833",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "Fahrzeugaufbereiter/-innen in Essen (Vollzeit | Frühschicht) (Fahrzeugpfleger/in)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzkwMTUzMi1TIDE",
-   "title": "Agricultural Machinery Mechatronics Technician (m/f/d) for attachments and accessories – Mon–Fri – full-time (Agricultural and Construction Machinery Mechatronics Technician)",
-   "employer": "J. Wienken GmbH",
-   "country": "Germany",
-   "location": "DE94G",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "✅ 100% mobile application possible – no documents required. J. Wienken GmbH offers a manufacturer-independent service covering commercial vehicles, machinery, trailers, semi-trailers and their bodywork. We are also service partners for Iveco, Alltrucks, Krone, Fliegl, Hiab and other manufacturers. The…",
-    "Posted on": "1792789272",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "Landmaschinenmechatroniker (m/w/d) für Auf- und Anbauten - Mo.-Fr. - Vollzeit (Land- und Baumaschinenmechatroniker/in)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzc0NzQzMS1TIDE",
-   "title": "Seasonal worker: watering graves (gardener – cemetery gardening)",
-   "employer": "Heino Schwarz Blumen Schwarz",
-   "country": "Germany",
-   "location": "DE255",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are looking for a member of staff to water our graves during the summer season. What you need: - An AM licence (scooter licence) or a standard car driving licence - Reliability and honesty - The ability to communicate in German or English Your role: You will water the graves reliably and…",
-    "Posted on": "1790110758",
-    "Language": "de",
-    "Contract": "temporary",
-    "Original title": "Saisonarbeitskraft Gräber gießen (Gärtner/in - Friedhofsgärtnerei)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzcyMzM1MS1TIDE",
-   "title": "An educational support staff member (m/f/d) – on a mini-job basis – Gutenberg School | Dieburg (Educational support staff – primary school childcare)",
-   "employer": "Betreuung DaDi gGmbH",
-   "country": "Germany",
-   "location": "DE716",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "An educational support staff member (m/f/d) – on a mini-job basis – Gutenberg School | Dieburg. Betreuung DaDi gGmbH is a subsidiary of the Darmstadt-Dieburg district authority. As the sponsoring body, we design and organise the all-day programmes at primary schools as part of the ‘Pact for All-Day Education’…",
-    "Posted on": "1789679699",
-    "Language": "de",
-    "Contract": "temporary",
-    "Original title": "eine*n pädagogische*n Mitarbeiter*in (w/m/d) - auf Minijob-Basis - Gutenbergschule | Dieburg (Pädagogische Fachkraft - Grundschulkindbetreuung)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzcyMzIxNi1TIDE",
-   "title": "An educational support staff member (m/f/d) – John F. Kennedy School | Münster (Educational support staff – primary school childcare)",
-   "employer": "Betreuung DaDi gGmbH",
-   "country": "Germany",
-   "location": "DE716",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "An educational support staff member (m/f/d) – John F. Kennedy School | Münster Betreung DaDi gGmbH is a subsidiary of the Darmstadt-Dieburg district authority. As the sponsoring body, we design and organise all-day programmes at primary schools as part of the ‘Pact for All-Day Schools’, as well as at schools…",
-    "Posted on": "1789679698",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "eine*n pädagogische*n Mitarbeiter*in (w/m/d) - John-F.-Kennedy-Schule | Münster (Pädagogische Fachkraft - Grundschulkindbetreuung)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMjUxNjI2NC1TIDE",
-   "title": "Sales Assistant for Bicycles, Bicycle Parts and Accessories (m/f/d) (Specialist Sales Assistant – Bicycle Retail)",
-   "employer": "h2r-personalberatung",
-   "country": "Germany",
-   "location": "DEA",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Are you looking for an employer who is different and really suits you? Would you like a good working environment, to work in a special atmosphere and, of course, to earn a very good salary? Then you should get in touch now. A modern company is looking to recruit for its branch in…",
-    "Posted on": "1791577857",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "Verkäufer/in für Fahrräder/ Fahrradteile und-zubehör (m/w/d) (Fachverkäufer/in - Zweiradhandel)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzk2ODEzNi1TIDE",
-   "title": "Service Staff – Catering and Hospitality | Assistant – Hospitality | Assistant – Kitchen (Service Staff – Catering and Hospitality)",
-   "employer": "SHL Gastro GmbH",
-   "country": "Germany",
-   "location": "DE40B",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We’re looking for new staff for our beer garden and restaurant in Leipe – both in front of house and in the kitchen. Whether you’re from the area and simply looking for a good job, or whether you’d like to try something new outside the city…",
-    "Posted on": "1793917733",
-    "Language": "de, a1",
-    "Contract": "temporary",
-    "Pay": "15.0",
-    "Original title": "Servicekraft - Gastronomie und Gastgewerbe | Helfer/in - Gastgewerbe | Helfer/in - Küche (Servicekraft - Gastronomie und Gastgewerbe)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzk1NTEwMi1TIDE",
-   "title": "Cook (m/f/d) – full-time and part-time (Cook)",
-   "employer": "BÄCKPOMM GmbH",
-   "country": "Germany",
-   "location": "DE80N",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Would you like to join a young, up-and-coming company and have you completed your training as a chef? Then you’ve come to the right place! Your responsibilities: - Mise en place for our à la carte bistro - Independently preparing and…",
-    "Posted on": "1793744922",
-    "Language": "de",
-    "Contract": "Full-time",
-    "Original title": "Koch/ Köchin (m/w/d) in Voll- und Teilzeit (Koch/Köchin)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDAtMTIwNjQzMjEzOC1TIDE",
-   "title": "Housekeeping Staff (m/f/d) – part-time / full-time (Housekeeper)",
-   "employer": "Erlebnis-und Freizeitpark Lichtenau GmbH & Co.KG",
-   "country": "Germany",
-   "location": "DED43",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We, the team at Sonnenlandpark Lichtenau, have been making people happy in their free time for 17 years! In the heart of Central Saxony, Sonnenlandpark offers a 3-in-1 leisure experience: an amusement park, a wildlife park and an indoor playground, all in one. With…",
-    "Posted on": "1778098840",
-    "Language": "de, b1",
-    "Contract": "directhire",
-    "Original title": "Mitarbeiter Housekeeping (m/w/d) in TZ / VZ (Hausdame/Housekeeper)"
-   }
-  },
-  {
-   "id": "eu-MTYwMzItS0lCNDNVSjRJQTAyTTNMUy1TIDE",
-   "title": "Agricultural Machinery Mechatronics Technician (m/f/d)  STARTING BONUS €500 (Agricultural Machinery Mechanic)",
-   "employer": "kfs Personal Service GmbH",
-   "country": "Germany",
-   "location": "DEG0M",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Agricultural Machinery Mechatronics Technician (m/f/d) START-UP BONUS €500 Location: Altenburg, Thuringia Employment type(s): Full-time We are looking for: an agricultural machinery mechatronics technician (m/f/d) to start as soon as possible for our regional client in the Altenburg area. Prospects: - Offer of a permanent position with…",
-    "Posted on": "1793661368",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "Landmaschinenmechatroniker m/w/d  STARTPRÄMIE 500,-€ (Landmaschinenmechaniker/in)"
    }
   },
   {
@@ -6363,6 +6185,25 @@
    }
   },
   {
+   "id": "eu-MTAwMDEtMTAwMzkxOTE5MC1TIDE",
+   "title": "Painter and Varnisher (m/f/d) (Painter and Varnisher – Design and Maintenance)",
+   "employer": "Vincenzo Calcagnile Malermeisterbetrieb",
+   "country": "Germany",
+   "location": "DE218",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "To strengthen our team, we are looking for 1–2 painters and varnishers (m/f/d) to start immediately or by arrangement – each on a full-time, permanent basis. This is not seasonal work – we offer long-term employment.We are a renowned painting and decorating firm and have been operating successfully in… since 2008.",
+    "Posted on": "1793142283",
+    "Language": "de",
+    "Contract": "directhire",
+    "Pay": "18.5",
+    "Original title": "Maler und Lackierer (m/w/d) (Maler/in und Lackierer/in - Gestaltung und Instandhaltung)"
+   }
+  },
+  {
    "id": "eu-MTU1NTUtMko5TFQ1RkQxVTJRVDUzWi1TIDE",
    "title": "Warehouse Assistant for Stationery (m/f/d)  (Plant Mechanic)",
    "employer": "Time Tec Personalservice GmbH",
@@ -6382,8 +6223,62 @@
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzcyMzI5OC1TIDE",
-   "title": "An educational support staff member (m/f/d) – Gutenberg School | Dieburg (Educational Support Staff – Primary School Childcare)",
+   "id": "eu-MTAwMDEtMTAwMzkxNTM0OS1TIDE",
+   "title": "Vehicle detailers in Essen (full-time | early shift) (vehicle care specialist)",
+   "employer": "Jobdetektive priv.Arbeitsvermittlung J.Rump",
+   "country": "Germany",
+   "location": "DEA",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Our aim: to find the right job for you! We, the Job Detectives, are a certified private employment and recruitment agency. We place candidates in jobs subject to social security contributions in companies of all sizes and across all sectors. Our placement services are available to jobseekers upon presentation of a…",
+    "Posted on": "1793055833",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Fahrzeugaufbereiter/-innen in Essen (Vollzeit | Frühschicht) (Fahrzeugpfleger/in)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzkwMTUzMi1TIDE",
+   "title": "Agricultural Machinery Mechatronics Technician (m/f/d) for attachments and accessories – Mon–Fri – full-time (Agricultural and Construction Machinery Mechatronics Technician)",
+   "employer": "J. Wienken GmbH",
+   "country": "Germany",
+   "location": "DE94G",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "✅ 100% mobile application possible – no documents required. J. Wienken GmbH offers a manufacturer-independent service covering commercial vehicles, machinery, trailers, semi-trailers and their bodywork. We are also service partners for Iveco, Alltrucks, Krone, Fliegl, Hiab and other manufacturers. The…",
+    "Posted on": "1792789272",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Landmaschinenmechatroniker (m/w/d) für Auf- und Anbauten - Mo.-Fr. - Vollzeit (Land- und Baumaschinenmechatroniker/in)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzc0NzQzMS1TIDE",
+   "title": "Seasonal worker: watering graves (gardener – cemetery gardening)",
+   "employer": "Heino Schwarz Blumen Schwarz",
+   "country": "Germany",
+   "location": "DE255",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are looking for a member of staff to water our graves during the summer season. What you need: - An AM licence (scooter licence) or a standard car driving licence - Reliability and honesty - The ability to communicate in German or English Your role: You will water the graves reliably and…",
+    "Posted on": "1790110758",
+    "Language": "de",
+    "Contract": "temporary",
+    "Original title": "Saisonarbeitskraft Gräber gießen (Gärtner/in - Friedhofsgärtnerei)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzcyMzM1MS1TIDE",
+   "title": "An educational support staff member (m/f/d) – on a mini-job basis – Gutenberg School | Dieburg (Educational support staff – primary school childcare)",
    "employer": "Betreuung DaDi gGmbH",
    "country": "Germany",
    "location": "DE716",
@@ -6392,11 +6287,29 @@
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "An educational support staff member (m/f/d) – Gutenberg School | Dieburg. Betreuung DaDi gGmbH is a subsidiary of the Darmstadt-Dieburg district authority. As the sponsoring body, we design and organise all-day programmes at primary schools as part of the ‘Pact for All-Day Education’, as well as at schools in the…",
+    "Requirements and description": "An educational support staff member (m/f/d) – on a mini-job basis – Gutenberg School | Dieburg. Betreuung DaDi gGmbH is a subsidiary of the Darmstadt-Dieburg district authority. As the sponsoring body, we design and organise the all-day programmes at primary schools as part of the ‘Pact for All-Day Education’…",
     "Posted on": "1789679699",
     "Language": "de",
     "Contract": "temporary",
-    "Original title": "eine*n pädagogische*n Mitarbeiter*in (w/m/d) - Gutenbergschule | Dieburg (Pädagogische Fachkraft - Grundschulkindbetreuung)"
+    "Original title": "eine*n pädagogische*n Mitarbeiter*in (w/m/d) - auf Minijob-Basis - Gutenbergschule | Dieburg (Pädagogische Fachkraft - Grundschulkindbetreuung)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzcyMzIxNi1TIDE",
+   "title": "An educational support staff member (m/f/d) – John F. Kennedy School | Münster (Educational support staff – primary school childcare)",
+   "employer": "Betreuung DaDi gGmbH",
+   "country": "Germany",
+   "location": "DE716",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "An educational support staff member (m/f/d) – John F. Kennedy School | Münster Betreung DaDi gGmbH is a subsidiary of the Darmstadt-Dieburg district authority. As the sponsoring body, we design and organise all-day programmes at primary schools as part of the ‘Pact for All-Day Schools’, as well as at schools…",
+    "Posted on": "1789679698",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "eine*n pädagogische*n Mitarbeiter*in (w/m/d) - John-F.-Kennedy-Schule | Münster (Pädagogische Fachkraft - Grundschulkindbetreuung)"
    }
   },
   {
@@ -6513,58 +6426,148 @@
    }
   },
   {
-   "id": "eu-MTkyNzUtazYxMzE4LjEyMjUtUyAx",
-   "title": "Professional driver for Friedenstein-Express (m/f/d) (Professional driver)",
-   "employer": "KulTourStadt Gotha GmbH",
+   "id": "eu-MTAwMDEtMTAwMjUxNjI2NC1TIDE",
+   "title": "Sales Assistant for Bicycles, Bicycle Parts and Accessories (m/f/d) (Specialist Sales Assistant – Bicycle Retail)",
+   "employer": "h2r-personalberatung",
    "country": "Germany",
-   "location": "DEG0C",
+   "location": "DEA",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Professional driver for Friedenstein-Express (m/f/d) at KulTourStadt Gotha GmbH is supporting its tourism partner, Zölle-Reisen, in its search for new staff to deliver a very special driving experience in Gotha. Have you always wanted to drive a ‘locomotive’? Then we’ve got just the thing…",
-    "Posted on": "1793055762",
+    "Requirements and description": "Are you looking for an employer who is different and really suits you? Would you like a good working environment, to work in a special atmosphere and, of course, to earn a very good salary? Then you should get in touch now. A modern company is looking to recruit for its branch in…",
+    "Posted on": "1791577857",
     "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Verkäufer/in für Fahrräder/ Fahrradteile und-zubehör (m/w/d) (Fachverkäufer/in - Zweiradhandel)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzk2ODEzNi1TIDE",
+   "title": "Service Staff – Catering and Hospitality | Assistant – Hospitality | Assistant – Kitchen (Service Staff – Catering and Hospitality)",
+   "employer": "SHL Gastro GmbH",
+   "country": "Germany",
+   "location": "DE40B",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We’re looking for new staff for our beer garden and restaurant in Leipe – both in front of house and in the kitchen. Whether you’re from the area and simply looking for a good job, or whether you’d like to try something new outside the city…",
+    "Posted on": "1793917733",
+    "Language": "de, a1",
     "Contract": "temporary",
-    "Original title": "Berufskraftfahrer für Friedenstein-Express (m/w/d) (Berufskraftfahrer/in)"
+    "Pay": "15.0",
+    "Original title": "Servicekraft - Gastronomie und Gastgewerbe | Helfer/in - Gastgewerbe | Helfer/in - Küche (Servicekraft - Gastronomie und Gastgewerbe)"
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzk3NDg1Ni1TIDE",
-   "title": "Garden and Landscaping Team is looking for new members (m/f/d) (Garden/Landscape Designer)",
-   "employer": "Andreas de Vries",
+   "id": "eu-MTAwMDEtMTAwMzk1NTEwMi1TIDE",
+   "title": "Cook (m/f/d) – full-time and part-time (Cook)",
+   "employer": "BÄCKPOMM GmbH",
    "country": "Germany",
-   "location": "DE923",
+   "location": "DE80N",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "This is us… We are a team with a passion for green oases. For us, it’s all about planting dreams and designing living spaces. As specialists in gardening and landscaping, we have been creating unique outdoor spaces for over 25 years – spaces that inspire and invite you to relax and feel at ease…",
-    "Posted on": "1794003861",
+    "Requirements and description": "Would you like to join a young, up-and-coming company and have you completed your training as a chef? Then you’ve come to the right place! Your responsibilities: - Mise en place for our à la carte bistro - Independently preparing and…",
+    "Posted on": "1793744922",
     "Language": "de",
-    "Contract": "directhire",
-    "Original title": "Garten Landschaftsbau Team sucht Verstärkung (m/w/d) (Garten-/Landschaftsgestalter/in)"
+    "Contract": "Full-time",
+    "Original title": "Koch/ Köchin (m/w/d) in Voll- und Teilzeit (Koch/Köchin)"
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzk3NDg0Mi1TIDE",
-   "title": "Landscaping Assistant (m/f/d) – part-time or full-time, permanent (Assistant – Horticulture)",
-   "employer": "Andreas de Vries",
+   "id": "eu-MTAwMDAtMTIwNjQzMjEzOC1TIDE",
+   "title": "Housekeeping Staff (m/f/d) – part-time / full-time (Housekeeper)",
+   "employer": "Erlebnis-und Freizeitpark Lichtenau GmbH & Co.KG",
    "country": "Germany",
-   "location": "DE923",
+   "location": "DED43",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Job title: Staff member (m/f/d) for Green Space Maintenance &amp; Horticulture (Full-time or Part-time) About us &amp; the role: We are looking to strengthen our team in the field of green space maintenance, horticulture and landscaping as soon as possible. - Working hours: Monday to Friday…",
-    "Posted on": "1794003861",
+    "Requirements and description": "We, the team at Sonnenlandpark Lichtenau, have been making people happy in their free time for 17 years! In the heart of Central Saxony, Sonnenlandpark offers a 3-in-1 leisure experience: an amusement park, a wildlife park and an indoor playground, all in one. With…",
+    "Posted on": "1778098840",
+    "Language": "de, b1",
+    "Contract": "directhire",
+    "Original title": "Mitarbeiter Housekeeping (m/w/d) in TZ / VZ (Hausdame/Housekeeper)"
+   }
+  },
+  {
+   "id": "eu-MTI5NTEtYjgxMjQ4Y2QtY2RmMS00NGIzLS1TIDE",
+   "title": "Electrical Fitter (m/f/d) in Lengede (Electronics Technician – Building and Infrastructure Systems)",
+   "employer": "vitronet Holding GmbH",
+   "country": "Germany",
+   "location": "DE91A",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Your benefits✓ A future-proof career: Energy supply and fibre-optic networks are the infrastructure of the future. Benefit from one of the sectors with the brightest prospects.✓ We invest in you: Make the most of our wide range of training opportunities.✓…",
+    "Posted on": "1774991922",
     "Language": "de",
     "Contract": "directhire",
-    "Pay": "Tarifvertrag: Garten- und Landschaftsbau",
-    "Original title": "Helfer Grünpflege (m/w/d) - Teilzeit oder Vollzeit, unbefristet (Helfer/in - Gartenbau)"
+    "Original title": "Elektromonteur (m/w/d) in Lengede (Elektroniker/in - Gebäude- und Infrastruktursysteme)"
+   }
+  },
+  {
+   "id": "eu-MTI5NTEtMThmMmI0ZWYtNTg3Yi00NWUyLS1TIDE",
+   "title": "Combined Fitter (m/f/d) for Gas/Water/Electricity/District Heating in Lengede (Technical Specialist – Distribution Network Technology)",
+   "employer": "vitronet Holding GmbH",
+   "country": "Germany",
+   "location": "DE91A",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Your benefits✓ A future-proof career: Energy supply and fibre-optic networks are the infrastructure of the future. Benefit from one of the sectors with the brightest prospects.✓ We invest in you: Make the most of our wide range of training opportunities.✓…",
+    "Posted on": "1774991922",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Kombimonteur (m/w/d) Gas/Wasser/Strom/Fernwärme in Lengede (Berufsspezialist/in - Verteilnetztechnik)"
+   }
+  },
+  {
+   "id": "eu-MTI5NTEtOTc0ZGI1YWYtM2YyMi00YTBjLS1TIDE",
+   "title": "Medium-voltage fitter (m/f/d) in Lengede (pipework fitter)",
+   "employer": "vitronet Holding GmbH",
+   "country": "Germany",
+   "location": "DE91A",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Your benefits✓ A future-proof career: Energy supply and fibre-optic networks are the infrastructure of the future. Benefit from one of the sectors with the brightest prospects.✓ We invest in you: Make the most of our wide range of training opportunities.✓…",
+    "Posted on": "1774991922",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Mittelspannungsmonteur (m/w/d) in Lengede (Rohrleitungsbauer/in)"
+   }
+  },
+  {
+   "id": "eu-MTYwMzItS0lCNDNVSjRJQTAyTTNMUy1TIDE",
+   "title": "Agricultural Machinery Mechatronics Technician (m/f/d)  STARTING BONUS €500 (Agricultural Machinery Mechanic)",
+   "employer": "kfs Personal Service GmbH",
+   "country": "Germany",
+   "location": "DEG0M",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Agricultural Machinery Mechatronics Technician (m/f/d) START-UP BONUS €500 Location: Altenburg, Thuringia Employment type(s): Full-time We are looking for: an agricultural machinery mechatronics technician (m/f/d) to start as soon as possible for our regional client in the Altenburg area. Prospects: - Offer of a permanent position with…",
+    "Posted on": "1793661368",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Landmaschinenmechatroniker m/w/d  STARTPRÄMIE 500,-€ (Landmaschinenmechaniker/in)"
    }
   },
   {
@@ -6955,7 +6958,7 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "Angolul Vidáman Educational and Service Limited Liability Company is seeking an educational assistant to work in Budapest’s 8th district under a fixed-term employment contract. . Work rota and working hours: permanent morning shift; start and end of employment:…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Oktatási asszisztens"
@@ -6973,7 +6976,7 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "NÁDASDI KFT is seeking other cleaning and support staff to work in Csévharaszt under an employment contract for an indefinite period. . Work rota and working hours: permanent morning shift; start and end dates of employment: 17 September 2026 – ; place and method of job interview:…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "directhire",
     "Original title": "Egyéb takarító és kisegítő (baromfifeldolgozó betanított munkás)"
@@ -6991,7 +6994,7 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "KREAL FM solutions Limited Liability Company is seeking other cleaning and support staff to work in Budapest’s 3rd district under a fixed-term employment contract. . Work schedule and working hours: fixed daytime hours; start and end dates of employment: 29 January 2027 –…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Egyéb takarító és kisegítő"
@@ -7009,28 +7012,10 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "STORE HOUSE Property Management Limited Liability Company is seeking a vehicle cleaner to work in Budapest’s 16th district under a fixed-term employment contract. . Work rota and working hours: flexible; start and end dates of employment: 1 February 2027 – 31 January 2029,…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Járműtakarító"
-   }
-  },
-  {
-   "id": "eu-MTU1NjYwMjYwMDAgMTY",
-   "title": "Institutional cleaner and assistant",
-   "employer": "HAZAI PÉKSÉG Sütőipari és Kereskedelmi Korlátolt Felelősségű Társaság",
-   "country": "Hungary",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "HAZAI PÉKSÉG Bakery and Trading Limited Liability Company is seeking a cleaner and assistant for its Albertirsa site, to be employed on a fixed-term contract. . Work rota and working hours: permanent morning shift; start and end dates:…",
-    "Posted on": "1794267000",
-    "Language": "hu",
-    "Contract": "temporary",
-    "Original title": "Intézményi takarító és kisegítő"
    }
   },
   {
@@ -7045,16 +7030,16 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "ZILIBAL Limited Liability Company is seeking an institutional cleaner and support staff member to work in Budapest’s 22nd district under a fixed-term employment contract. . Work rota and working hours: two shifts: morning and afternoon; start and end dates of employment: 4 November 2026 – 3 November 2028,…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő (szállodai szobatakarítás)"
    }
   },
   {
-   "id": "eu-MTU1MzQzNzQzMTQgMTY",
+   "id": "eu-MTU1NjYwMjYwMDAgMTY",
    "title": "Institutional cleaner and assistant",
-   "employer": "TARCHA WORLD Kereskedelmi és Szolgáltató Kft.",
+   "employer": "HAZAI PÉKSÉG Sütőipari és Kereskedelmi Korlátolt Felelősségű Társaság",
    "country": "Hungary",
    "location": "None",
    "region": "Europe",
@@ -7062,26 +7047,8 @@
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "TARCHA WORLD Kereskedelmi és Szolgáltató Kft. is seeking an institutional cleaner and support staff member to work in Budapest’s 14th district under a fixed-term employment contract. . Work rota and working hours: permanent morning shift; start and end dates of employment: 12 October 2026 –…",
-    "Posted on": "1794267000",
-    "Language": "hu",
-    "Contract": "temporary",
-    "Original title": "Intézményi takarító és kisegítő"
-   }
-  },
-  {
-   "id": "eu-MTU1NzA0MTQxMDggMTY",
-   "title": "Institutional cleaner and assistant",
-   "employer": "IBRI Pékség Korlátolt Felelősségű Társaság",
-   "country": "Hungary",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "IBRI Bakery Limited Liability Company is seeking an institutional cleaner and assistant to work in Budapest’s 3rd district under a fixed-term employment contract. . Work rota and working hours: irregular; start and end dates of employment: 16 December 2026 – 16 December 2028,…",
-    "Posted on": "1794267000",
+    "Requirements and description": "HAZAI PÉKSÉG Bakery and Trading Limited Liability Company is seeking a cleaner and assistant for its Albertirsa site, to be employed on a fixed-term contract. . Work rota and working hours: permanent morning shift; start and end dates:…",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő"
@@ -7099,7 +7066,43 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "ACH Service Kft. is seeking a cleaning and support staff member to work in Ecseri under a fixed-term employment contract. . Work rota and working hours: two shifts: morning–afternoon; start and end dates of employment: 1 December 2026 – 15 October 2028; place and method of job interview: A…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
+    "Language": "hu",
+    "Contract": "temporary",
+    "Original title": "Intézményi takarító és kisegítő"
+   }
+  },
+  {
+   "id": "eu-MTU1MzQzNzQzMTQgMTY",
+   "title": "Institutional cleaner and assistant",
+   "employer": "TARCHA WORLD Kereskedelmi és Szolgáltató Kft.",
+   "country": "Hungary",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "TARCHA WORLD Kereskedelmi és Szolgáltató Kft. is seeking an institutional cleaner and support staff member to work in Budapest’s 14th district under a fixed-term employment contract. . Work rota and working hours: permanent morning shift; start and end dates of employment: 12 October 2026 –…",
+    "Posted on": "1794274200",
+    "Language": "hu",
+    "Contract": "temporary",
+    "Original title": "Intézményi takarító és kisegítő"
+   }
+  },
+  {
+   "id": "eu-MTU1NzA0MTQxMDggMTY",
+   "title": "Institutional cleaner and assistant",
+   "employer": "IBRI Pékség Korlátolt Felelősségű Társaság",
+   "country": "Hungary",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "IBRI Bakery Limited Liability Company is seeking an institutional cleaner and assistant to work in Budapest’s 3rd district under a fixed-term employment contract. . Work rota and working hours: irregular; start and end dates of employment: 16 December 2026 – 16 December 2028,…",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő"
@@ -7117,28 +7120,10 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "Nexways Cargo Limited Liability Company is seeking an institutional cleaner and support staff member to work in Budapest’s 23rd district under a fixed-term employment contract. . Work rota and working hours: two shifts: morning–afternoon; start and end dates of employment: 21 September 2026 – 21 September 2028,…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő"
-   }
-  },
-  {
-   "id": "eu-MTU1Mzc4OTYyMDYgMTY",
-   "title": "Institutional cleaner and assistant (4-hour role)",
-   "employer": "Pophen.technology Hungary Korlátolt Felelősségű Társaság",
-   "country": "Hungary",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Pophen.technology Hungary Limited Liability Company is seeking an institutional cleaner and support staff member to work in Debrecen under an employment contract for an indefinite period. . Work schedule and working hours: fixed daytime hours; start and end dates of employment: 26 October 2026 –…",
-    "Posted on": "1794267000",
-    "Language": "hu",
-    "Contract": "directhire",
-    "Original title": "Intézményi takarító és kisegítő (4 órás állás)"
    }
   },
   {
@@ -7153,10 +7138,28 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "Argona Limited Liability Company is seeking an institutional cleaner and support staff member to work in Budapest’s 10th district under a fixed-term employment contract. . Work rota and working hours: permanent morning shift; start and end dates of employment: 9 November 2026 – 9 November 2028,…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Intézményi takarító és kisegítő (a szobák és előtér kitakarítása)"
+   }
+  },
+  {
+   "id": "eu-MTU1Mzc4OTYyMDYgMTY",
+   "title": "Institutional cleaner and assistant (4-hour role)",
+   "employer": "Pophen.technology Hungary Korlátolt Felelősségű Társaság",
+   "country": "Hungary",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Pophen.technology Hungary Limited Liability Company is seeking an institutional cleaner and support staff member to work in Debrecen under an employment contract for an indefinite period. . Work schedule and working hours: fixed daytime hours; start and end dates of employment: 26 October 2026 –…",
+    "Posted on": "1794274200",
+    "Language": "hu",
+    "Contract": "directhire",
+    "Original title": "Intézményi takarító és kisegítő (4 órás állás)"
    }
   },
   {
@@ -7171,7 +7174,7 @@
    "closes_on": "",
    "details": {
     "Requirements and description": "A-Z Nursery and International Crèche is seeking a childcare worker or nursery nurse to work in Budapest’s 12th district under a fixed-term employment contract. . Work schedule and working hours: fixed daytime hours; start and end dates: 1 October 2026 – 30 September 2028,…",
-    "Posted on": "1794267000",
+    "Posted on": "1794274200",
     "Language": "hu",
     "Contract": "temporary",
     "Original title": "Gyermekfelügyelő, dajka (gondozó, takarító)"
@@ -10095,6 +10098,23 @@
    }
   },
   {
+   "id": "eu-MTUyMzktazQyNzQ2LjM2NjYtUyAx",
+   "title": "Electrical Engineer (m/f/d) (Ingenieur/in - Elektrotechnik)",
+   "employer": "OG Recruitment S.à r.l.",
+   "country": "Luxembourg",
+   "location": "LU000",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Electrical Engineer (m/f/d) in MamerOG Recruitment is your consulting agency for the recruitment of specialists in Luxembourg and the entire border region. We are exclusively concerned with direct placements with our clients. No temporary employment.On behalf of our renowned client with headquarters in Mamer (L) we are looking for an Electrical Engineer (m/f/d) for mechanical and electrical satellite systems.The position will be filled directly and permanent with the client.Our client is an innovative, Luxembourg based high-tech company with several state-of-the-art divisions.Your tasks- Design electrical installations and controller solutions for the satellite ground segment and the rubber industry testing equipment:- Define, document, implement and test new features and technologies in existing or new products,- Create electrical concepts and drawings,- Identify, assess and mitigate…",
+    "Posted on": "1791840544",
+    "Language": "de",
+    "Contract": "directhire"
+   }
+  },
+  {
    "id": "eu-MTIxMTctWUYtNTIxNjAtWUYtUyAx",
    "title": "Industrial Mechanic / Construction Mechanic / Metalworker / Motor Vehicle Mechanic (m/f/d) (Metalworker – Construction Technology)",
    "employer": "International Can S.A.",
@@ -10167,23 +10187,6 @@
    }
   },
   {
-   "id": "eu-ODY1MTY2OSA5",
-   "title": "Recruiter / Talent Acquisition & HR Business Partner (m/w/d) (H/F)",
-   "employer": "Non renseigné",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Your role: You will attract the best talent to our company and help deliver a high-quality experience for candidates and employees. As a key point of contact for recruitment and talent acquisition, you will…",
-    "Posted on": "1794208620",
-    "Language": "fr",
-    "Contract": "directhire"
-   }
-  },
-  {
    "id": "eu-ODM3NjU0OCA5",
    "title": "Recruitment Officer (M/F)",
    "employer": "Non renseigné",
@@ -10214,6 +10217,23 @@
    "details": {
     "Requirements and description": "Would you like to join a renowned and innovative organisation? Spuerkeess, a mainstay of the Luxembourg financial sector with some of the highest credit ratings in the world, and a trusted employer that has been combining banking tradition and innovation since , is actively seeking a new…",
     "Posted on": "1793509261",
+    "Language": "fr",
+    "Contract": "directhire"
+   }
+  },
+  {
+   "id": "eu-ODY1MTY2OSA5",
+   "title": "Recruiter / Talent Acquisition & HR Business Partner (m/w/d) (H/F)",
+   "employer": "Non renseigné",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Your role: You will attract the best talent to our company and help deliver a high-quality experience for candidates and employees. As a key point of contact for recruitment and talent acquisition, you will…",
+    "Posted on": "1794208620",
     "Language": "fr",
     "Contract": "directhire"
    }
@@ -10255,24 +10275,6 @@
    }
   },
   {
-   "id": "eu-NzczNTc0NiA5",
-   "title": "Head of the Shelter Research Unit (SRU) (M/F/D) – Permanent contract – h () (M/F)",
-   "employer": "Non renseigné",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "The Luxembourg Red Cross International Aid (AICRL) is recruiting a Head of the Shelter Research Unit (SRU) (M/F/D) in Luxembourg City, working h per week, to start as soon as possible. Regular travel to countries where the organisation operates is to be expected. The SRU is the centre of expertise…",
-    "Posted on": "1791358260",
-    "Language": "fr",
-    "Contract": "directhire",
-    "Original title": "Responsable Shelter Research Unit (SRU) (M/F/D) - CDI - h () (H/F)"
-   }
-  },
-  {
    "id": "eu-NTkxNjkxOSA5",
    "title": "Recruiter (M/F/X)",
    "employer": "Non renseigné",
@@ -10291,20 +10293,21 @@
    }
   },
   {
-   "id": "eu-MTUyMzktazQyNzQ2LjM2NjYtUyAx",
-   "title": "Electrical Engineer (m/f/d) (Ingenieur/in - Elektrotechnik)",
-   "employer": "OG Recruitment S.à r.l.",
+   "id": "eu-NzczNTc0NiA5",
+   "title": "Head of the Shelter Research Unit (SRU) (M/F/D) – Permanent contract – h () (M/F)",
+   "employer": "Non renseigné",
    "country": "Luxembourg",
-   "location": "LU000",
+   "location": "None",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Electrical Engineer (m/f/d) in MamerOG Recruitment is your consulting agency for the recruitment of specialists in Luxembourg and the entire border region. We are exclusively concerned with direct placements with our clients. No temporary employment.On behalf of our renowned client with headquarters in Mamer (L) we are looking for an Electrical Engineer (m/f/d) for mechanical and electrical satellite systems.The position will be filled directly and permanent with the client.Our client is an innovative, Luxembourg based high-tech company with several state-of-the-art divisions.Your tasks- Design electrical installations and controller solutions for the satellite ground segment and the rubber industry testing equipment:- Define, document, implement and test new features and technologies in existing or new products,- Create electrical concepts and drawings,- Identify, assess and mitigate…",
-    "Posted on": "1791840544",
-    "Language": "de",
-    "Contract": "directhire"
+    "Requirements and description": "The Luxembourg Red Cross International Aid (AICRL) is recruiting a Head of the Shelter Research Unit (SRU) (M/F/D) in Luxembourg City, working h per week, to start as soon as possible. Regular travel to countries where the organisation operates is to be expected. The SRU is the centre of expertise…",
+    "Posted on": "1791358260",
+    "Language": "fr",
+    "Contract": "directhire",
+    "Original title": "Responsable Shelter Research Unit (SRU) (M/F/D) - CDI - h () (H/F)"
    }
   },
   {
@@ -14904,9 +14907,9 @@
    }
   },
   {
-   "id": "eu-MzQ5MTQ4NyAxNA",
-   "title": "LORRY DRIVER – JOB IN IVANČNA GORICA – M/F",
-   "employer": "SBS TRGOVINA D.O.O., PODJETJE ZA ZUNANJO IN NOTRANJO TRGOVINO, PROIZVODNJO IN STORITVE, Dolenjska cesta 320 , 1291 ŠKOFLJICA",
+   "id": "eu-MzQ4OTg2MCAxNA",
+   "title": "REGISTERED NURSE FOR OUTPATIENT CLINICS – M/F",
+   "employer": "BARSOS-MC, zdravstvene storitve d.o.o., Gregorčičeva ulica 11 , 1000 LJUBLJANA",
    "country": "Slovenia",
    "location": "SI041",
    "region": "Europe",
@@ -14914,33 +14917,33 @@
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "DRIVER, SALES ASSISTANT, 3-month probationary period, Permanent contract, Full-time, 40, Collecting goods from suppliers and delivering them to customers., , 6-day working week",
-    "Posted on": "1791748800",
+    "Requirements and description": "HEALTHCARE ASSISTANT (MORE DEMANDING TASKS), 3-month probationary period, Permanent contract, Full-time, 40, • Answering the telephone, replying to emails and booking patients in for appointments at outpatient clinics;• maintaining various patient records;•…",
+    "Posted on": "1791316800",
     "Language": "sl",
     "Contract": "directhire",
-    "Qualification": "2",
-    "Experience": "1",
-    "Original title": "VOZNIK TOVORNEGA VOZILA - DELO V IVANČNI GORICI - M/Ž"
+    "Qualification": "3",
+    "Experience": "3",
+    "Original title": "SREDNJA MEDICINSKA SESTRA ZA DELO V AMBULANTAH - M/Ž"
    }
   },
   {
-   "id": "eu-MzQ5MTEzOCAxNA",
-   "title": "SPECIALIST DOCTOR FOR PRE-HOSPITAL EMERGENCY MEDICAL SERVICES – M/F",
-   "employer": "ZDRAVSTVENI DOM ŠMARJE PRI JELŠAH, Celjska cesta 16 , 3240 ŠMARJE PRI JELŠAH",
+   "id": "eu-MzQ5MzE1OSAxNA",
+   "title": "SPECIALIST DOCTOR FOR THE ANTICOAGULANT OUTPATIENT CLINIC – M/F",
+   "employer": "ZDRAVSTVENI DOM VRHNIKA, Cesta 6. maja 11 , 1360 VRHNIKA",
    "country": "Slovenia",
-   "location": "SI034",
+   "location": "SI041",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "SPECIALIST IN EMERGENCY MEDICINE, 4-month probationary period, Permanent contract, Full-time, 40, PERFORMING THE DUTIES AND TASKS OF A SPECIALIST IN EMERGENCY MEDICINE (PPD1) IN PRE-HOSPITAL EMERGENCY MEDICAL SERVICES. , ,",
-    "Posted on": "1791489600",
+    "Requirements and description": "SPECIALIST DOCTORS (EXCLUDING GENERAL PRACTITIONERS), 4-month probationary period, Permanent contract, Part-time, 15, Outpatient clinic for the management of patients on anticoagulant therapy, prescribing, initiating and adjusting treatment with anticoagulants…",
+    "Posted on": "1791921600",
     "Language": "sl",
     "Contract": "directhire",
     "Qualification": "5",
-    "Experience": "0",
-    "Original title": "ZDRAVNIK SPECIALIST ZA DELO V PREHOSPITALNI NMP - M/Ž"
+    "Experience": "3",
+    "Original title": "ZDRAVNIK SPECIALIST ZA DELO V ANTIKOAGULANTNI AMBULANTI - M/Ž"
    }
   },
   {
@@ -14984,26 +14987,6 @@
    }
   },
   {
-   "id": "eu-MzQ5MzE1OSAxNA",
-   "title": "SPECIALIST DOCTOR FOR THE ANTICOAGULANT OUTPATIENT CLINIC – M/F",
-   "employer": "ZDRAVSTVENI DOM VRHNIKA, Cesta 6. maja 11 , 1360 VRHNIKA",
-   "country": "Slovenia",
-   "location": "SI041",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "SPECIALIST DOCTORS (EXCLUDING GENERAL PRACTITIONERS), 4-month probationary period, Permanent contract, Part-time, 15, Outpatient clinic for the management of patients on anticoagulant therapy, prescribing, initiating and adjusting treatment with anticoagulants…",
-    "Posted on": "1791921600",
-    "Language": "sl",
-    "Contract": "directhire",
-    "Qualification": "5",
-    "Experience": "3",
-    "Original title": "ZDRAVNIK SPECIALIST ZA DELO V ANTIKOAGULANTNI AMBULANTI - M/Ž"
-   }
-  },
-  {
    "id": "eu-MzQ3NDIxMS0yMDI2NDMgMTQ",
    "title": "PERSONAL ASSISTANT TO A PERSON WITH A DISABILITY (WORK IN KRANJ) – M/F",
    "employer": "YHD - DRUŠTVO ZA TEORIJO IN KULTURO HENDIKEPA, Železna cesta 14 , 1000 LJUBLJANA",
@@ -15024,9 +15007,9 @@
    }
   },
   {
-   "id": "eu-MzQ4OTg2MCAxNA",
-   "title": "REGISTERED NURSE FOR OUTPATIENT CLINICS – M/F",
-   "employer": "BARSOS-MC, zdravstvene storitve d.o.o., Gregorčičeva ulica 11 , 1000 LJUBLJANA",
+   "id": "eu-MzQ5MTQ4NyAxNA",
+   "title": "LORRY DRIVER – JOB IN IVANČNA GORICA – M/F",
+   "employer": "SBS TRGOVINA D.O.O., PODJETJE ZA ZUNANJO IN NOTRANJO TRGOVINO, PROIZVODNJO IN STORITVE, Dolenjska cesta 320 , 1291 ŠKOFLJICA",
    "country": "Slovenia",
    "location": "SI041",
    "region": "Europe",
@@ -15034,33 +15017,54 @@
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "HEALTHCARE ASSISTANT (MORE DEMANDING TASKS), 3-month probationary period, Permanent contract, Full-time, 40, • Answering the telephone, replying to emails and booking patients in for appointments at outpatient clinics;• maintaining various patient records;•…",
-    "Posted on": "1791316800",
+    "Requirements and description": "DRIVER, SALES ASSISTANT, 3-month probationary period, Permanent contract, Full-time, 40, Collecting goods from suppliers and delivering them to customers., , 6-day working week",
+    "Posted on": "1791748800",
     "Language": "sl",
     "Contract": "directhire",
-    "Qualification": "3",
-    "Experience": "3",
-    "Original title": "SREDNJA MEDICINSKA SESTRA ZA DELO V AMBULANTAH - M/Ž"
+    "Qualification": "2",
+    "Experience": "1",
+    "Original title": "VOZNIK TOVORNEGA VOZILA - DELO V IVANČNI GORICI - M/Ž"
    }
   },
   {
-   "id": "eu-MzQ4NDg2OSAxNA",
-   "title": "SPEECH AND LANGUAGE THERAPIST – WORKING WITH PEOPLE WITH MENTAL HEALTH PROBLEMS – E047081 – M/F",
-   "employer": "Zdravstveni dom Trbovlje, Rudarska cesta 12 , 1420 TRBOVLJE",
+   "id": "eu-MzQ5MTEzOCAxNA",
+   "title": "SPECIALIST DOCTOR FOR PRE-HOSPITAL EMERGENCY MEDICAL SERVICES – M/F",
+   "employer": "ZDRAVSTVENI DOM ŠMARJE PRI JELŠAH, Celjska cesta 16 , 3240 ŠMARJE PRI JELŠAH",
    "country": "Slovenia",
-   "location": "SI035",
+   "location": "SI034",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "SPEECH AND LANGUAGE THERAPIST FOR INDIVIDUAL SPEECH THERAPY, 3-month probationary period, Permanent contract, Full-time, 40, PREPARING AND ORGANISING THE WORKSPACE AND WORKSTATION, RECEIVING DOCUMENTATION AND PATIENTS, BOOKING AND REBOOKING APPOINTMENTS…",
-    "Posted on": "1790280000",
+    "Requirements and description": "SPECIALIST IN EMERGENCY MEDICINE, 4-month probationary period, Permanent contract, Full-time, 40, PERFORMING THE DUTIES AND TASKS OF A SPECIALIST IN EMERGENCY MEDICINE (PPD1) IN PRE-HOSPITAL EMERGENCY MEDICAL SERVICES. , ,",
+    "Posted on": "1791489600",
     "Language": "sl",
     "Contract": "directhire",
     "Qualification": "5",
-    "Experience": "4",
-    "Original title": "LOGOPED - DELO Z OSEBAMI S PSIHIČNO MOTNJO - E047081 - M/Ž"
+    "Experience": "0",
+    "Original title": "ZDRAVNIK SPECIALIST ZA DELO V PREHOSPITALNI NMP - M/Ž"
+   }
+  },
+  {
+   "id": "eu-MzQ4ODM3MyAxNA",
+   "title": "YOUTH WORKER FOR WORKING WITH YOUNG PEOPLE AND HORSES – M/F",
+   "employer": "Konjeniški in mladinski center Škatlica, Senik 1 , 2258 SVETI TOMAŽ",
+   "country": "Slovenia",
+   "location": "SI032",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "YOUTH WORKER, 3-month probationary period, Fixed-term contract, 12 months, Part-time, 20 hours; We are looking for someone to independently organise youth and equestrian activities and to provide support in working with international volunteers. Scope of employment: part-time…",
+    "Posted on": "1791144000",
+    "Language": "sl",
+    "Contract": "temporary",
+    "Qualification": "3",
+    "Experience": "3",
+    "Pay": "salaried",
+    "Original title": "MLADINSKI DELAVEC ZA DELO Z MLADIMI IN KONJI - M/Ž"
    }
   },
   {
@@ -15084,24 +15088,23 @@
    }
   },
   {
-   "id": "eu-MzQ4ODM3MyAxNA",
-   "title": "YOUTH WORKER FOR WORKING WITH YOUNG PEOPLE AND HORSES – M/F",
-   "employer": "Konjeniški in mladinski center Škatlica, Senik 1 , 2258 SVETI TOMAŽ",
+   "id": "eu-MzQ4NDg2OSAxNA",
+   "title": "SPEECH AND LANGUAGE THERAPIST – WORKING WITH PEOPLE WITH MENTAL HEALTH PROBLEMS – E047081 – M/F",
+   "employer": "Zdravstveni dom Trbovlje, Rudarska cesta 12 , 1420 TRBOVLJE",
    "country": "Slovenia",
-   "location": "SI032",
+   "location": "SI035",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "YOUTH WORKER, 3-month probationary period, Fixed-term contract, 12 months, Part-time, 20 hours; We are looking for someone to independently organise youth and equestrian activities and to provide support in working with international volunteers. Scope of employment: part-time…",
-    "Posted on": "1791144000",
+    "Requirements and description": "SPEECH AND LANGUAGE THERAPIST FOR INDIVIDUAL SPEECH THERAPY, 3-month probationary period, Permanent contract, Full-time, 40, PREPARING AND ORGANISING THE WORKSPACE AND WORKSTATION, RECEIVING DOCUMENTATION AND PATIENTS, BOOKING AND REBOOKING APPOINTMENTS…",
+    "Posted on": "1790280000",
     "Language": "sl",
-    "Contract": "temporary",
-    "Qualification": "3",
-    "Experience": "3",
-    "Pay": "salaried",
-    "Original title": "MLADINSKI DELAVEC ZA DELO Z MLADIMI IN KONJI - M/Ž"
+    "Contract": "directhire",
+    "Qualification": "5",
+    "Experience": "4",
+    "Original title": "LOGOPED - DELO Z OSEBAMI S PSIHIČNO MOTNJO - E047081 - M/Ž"
    }
   },
   {
