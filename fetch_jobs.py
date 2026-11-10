@@ -26,6 +26,14 @@ DATA = Path("data")
 JOBS_FILE = DATA / "jobs.json"
 HISTORY_FILE = DATA / "history.json"
 
+# --- Agency / job details (one extra request per job, cached) ---------------
+DETAIL_URL = "https://foreignjob.dofe.gov.np/api/LotSearch/GetLotDetailByID/{}"
+CACHE_FILE = DATA / "details_cache.json"
+MAX_DETAIL_FETCH = int(os.environ.get("MAX_DETAIL_FETCH", "700"))  # detail requests per run
+DETAIL_PAUSE = 1.0        # seconds between detail requests (be gentle with a government site)
+REFRESH_DAYS = 3          # re-fetch a cached job's details after this many days (positions left change)
+SHOW_PROPRIETOR_MOBILES = True  # False = hide the proprietors' personal mobile numbers
+
 contact = os.environ.get("CONTACT_EMAIL", "not-provided")
 session = requests.Session()
 session.headers.update({"User-Agent": f"job-demand-dashboard (contact: {contact})"})
@@ -95,6 +103,207 @@ def extra_fields(x):
         if t and t.lower() not in ("null", "none", "0", "0.0", "false"):
             out[k] = t
     return out
+
+
+class AuthError(Exception):
+    pass
+
+
+def num(s):
+    try:
+        return float(str(s).replace(",", ""))
+    except ValueError:
+        return None
+
+
+def fmt_num(s):
+    v = num(s)
+    if v is None:
+        return ""
+    return str(int(v)) if v == int(v) else str(round(v, 2))
+
+
+def to_int(s):
+    v = num(s)
+    return int(v) if v is not None else None
+
+
+def parse_dt(s, fmt="%m/%d/%Y %I:%M:%S %p"):
+    try:
+        return datetime.strptime(s, fmt)
+    except (TypeError, ValueError):
+        return None
+
+
+def load_json(path, default):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return default
+
+
+def fetch_detail(lot_id):
+    """Returns a list of rows, [] if none, or None after repeated network trouble."""
+    for attempt in range(3):
+        try:
+            r = session.get(DETAIL_URL.format(lot_id), timeout=30)
+            if r.status_code in (401, 403):
+                raise AuthError(r.status_code)
+            r.raise_for_status()
+            return r.json().get("result") or []
+        except AuthError:
+            raise
+        except (requests.RequestException, ValueError) as e:
+            print(f"  detail retry {attempt + 1} for {lot_id}: {e}")
+            time.sleep(3 * (attempt + 1))
+    return None
+
+
+def slim(row):
+    """Keep only the fields the app needs (keeps the cache small)."""
+    interviews = []
+    for iv in row.get("interviewList") or []:
+        start, end = parse_dt(iv.get("interviewDate")), parse_dt(iv.get("interviewEndDate"))
+        t = parse_dt(iv.get("interviewTime"))
+        interviews.append({
+            "from": start.date().isoformat() if start else None,
+            "to": end.date().isoformat() if end else None,
+            "time": t.strftime("%I:%M %p").lstrip("0") if t else None,
+            "venue": clean(iv.get("interviewVenue")),
+        })
+    return {
+        "lot_no": str(row.get("lotNo") or ""),
+        "ra_id": str(row.get("raID") or ""),
+        "ra_name": clean(row.get("raName")),
+        "ra_address": clean(row.get("raAddress")),
+        "phone": clean(row.get("phoneNo")),
+        "email": clean(row.get("email")),
+        "website": clean(row.get("website")),
+        "licence": clean(row.get("permissionNo")),
+        "proprietors": [
+            {"name": clean(p.get("proprietorName")), "mobile": clean(p.get("mobileNo")), "tel": clean(p.get("officeTelephone"))}
+            for p in (row.get("proprietors") or [])
+        ],
+        "employer_address": clean(row.get("companyAddress")),
+        "skill_type": clean(row.get("skillType")),
+        "qualification": clean(row.get("qualification")),
+        "contract": fmt_num(row.get("contractPeriod")),
+        "daily_hours": fmt_num(row.get("dailyWorkHour")),
+        "weekly_days": fmt_num(row.get("weeklyWorkDay")),
+        "food": clean(row.get("foodFacility")),
+        "accommodation": clean(row.get("accomodation")),
+        "men_approved": to_int(row.get("approvedNoOfMen")),
+        "women_approved": to_int(row.get("approvedNoOfWomen")),
+        "men_left": to_int(row.get("remainingNoOfMen")),
+        "women_left": to_int(row.get("remainingNoOfWomen")),
+        "interviews": interviews,
+    }
+
+
+def build_details(d, today_iso):
+    """Flat label -> text map. The app shows these on the job's details page.
+    Labels containing agency/phone/contact/address are shown in the contact section with tap-to-call."""
+    out = {}
+
+    def put(k, v):
+        if v not in (None, "", "0"):
+            out[k] = v
+
+    put("Qualification", d["qualification"])
+    put("Skill level", d["skill_type"])
+    if d["men_approved"] is not None or d["women_approved"] is not None:
+        out["Positions approved"] = f"{d['men_approved'] or 0} men, {d['women_approved'] or 0} women"
+        out["Positions remaining"] = f"{d['men_left'] or 0} men, {d['women_left'] or 0} women"
+    put("Contract period", d["contract"])
+    put("Daily work hours", d["daily_hours"])
+    put("Weekly work days", d["weekly_days"])
+    put("Food", d["food"])
+    put("Accommodation", d["accommodation"])
+    put("Employer location", d["employer_address"])
+
+    upcoming = [iv for iv in d["interviews"] if (iv["to"] or iv["from"] or "") >= today_iso]
+    if upcoming:
+        dates = []
+        for iv in upcoming:
+            span = iv["from"] if iv["from"] == iv["to"] else f"{iv['from']} to {iv['to']}"
+            dates.append(span + (f", {iv['time']}" if iv["time"] else ""))
+        out["Interview date"] = "\n".join(dict.fromkeys(dates))
+        venues = [iv["venue"] for iv in upcoming if iv["venue"]]
+        if venues:
+            out["Interview address"] = "\n".join(dict.fromkeys(venues))
+
+    put("Agency name", d["ra_name"])
+    put("Agency licence", d["licence"])
+    put("Agency address", d["ra_address"])
+    put("Agency phone", d["phone"])
+    put("Agency email", d["email"])
+    put("Agency website", d["website"])
+    if SHOW_PROPRIETOR_MOBILES:
+        for i, p in enumerate(d["proprietors"], 1):
+            nums = [x for x in (p["mobile"], p["tel"]) if x and x != d["phone"]]
+            if p["name"] or nums:
+                out[f"Proprietor {i} contact"] = p["name"] + (": " + ", ".join(nums) if nums else "")
+    return out
+
+
+def enrich(job_list, today):
+    """Adds agency contact + job terms to each job, fetching only what is new or stale."""
+    today_iso = today.isoformat()
+    cache = load_json(CACHE_FILE, {})
+    live = {str(j["id"]) for j in job_list}
+    cache = {k: v for k, v in cache.items() if k in live}
+
+    def age(entry):
+        try:
+            return (today - date.fromisoformat(entry["fetched"])).days
+        except (KeyError, ValueError):
+            return 999
+
+    first_by_id = {}
+    for j in job_list:
+        first_by_id.setdefault(str(j["id"]), j)
+    queue = [j for k, j in first_by_id.items() if k not in cache or age(cache[k]) >= REFRESH_DAYS]
+    # new jobs first, then stale ones; soonest-closing first within each group
+    queue.sort(key=lambda j: (str(j["id"]) in cache, j["deadline_days"] if j["deadline_days"] is not None else 999))
+
+    ok = bad = 0
+    stopped = None
+    for j in queue[:MAX_DETAIL_FETCH]:
+        try:
+            rows = fetch_detail(j["id"])
+        except AuthError as e:
+            stopped = f"DoFE answered {e.args[0]} for the detail request (login needed?). Skipping details."
+            break
+        if rows is None:
+            continue  # network trouble; try again next run
+        row = next((r for r in rows if str(r.get("lotNo")) == str(j["lot_no"])), None)
+        if row is None:
+            bad += 1
+            cache[str(j["id"])] = {"fetched": today_iso, "none": True}
+        else:
+            ok += 1
+            cache[str(j["id"])] = {"fetched": today_iso, "d": slim(row)}
+        if ok + bad >= 20 and bad > 0.1 * (ok + bad):
+            stopped = f"{bad} of {ok + bad} detail lookups returned a different lot number. The ID mapping may be wrong. Stopping."
+            break
+        time.sleep(DETAIL_PAUSE)
+
+    attached = 0
+    for j in job_list:
+        e = cache.get(str(j["id"]))
+        d = e.get("d") if e else None
+        if d and d["lot_no"] == str(j["lot_no"]):
+            j["ra_id"] = d["ra_id"]
+            j["open_men"], j["open_women"] = d["men_left"], d["women_left"]
+            j["details"] = build_details(d, today_iso)
+            attached += 1
+    CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    left = max(0, len(queue) - MAX_DETAIL_FETCH)
+    print(f"Details: {attached}/{len(job_list)} jobs have agency info. Fetched {ok + bad} this run "
+          f"({bad} did not match). Still queued for later runs: {left}.")
+    if stopped:
+        print("WARNING:", stopped)
+    return attached
 
 
 def post(country, gender, page):
@@ -206,10 +415,12 @@ def main():
     print("Share in 'Other':", round(100 * by_category.get("Other", 0) / len(job_list)), "%")
 
     DATA.mkdir(exist_ok=True)
+    with_details = enrich(job_list, today)
     out = {
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": SOURCE_PAGE,
         "count": len(job_list),
+        "with_details": with_details,
         "raw_rows": raw_rows,
         "by_country": by_country,
         "by_category": by_category,
