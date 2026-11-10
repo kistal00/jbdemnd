@@ -8,6 +8,11 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+START = time.time()  # when this run started (used for the time budget below)
+RUN_BUDGET_MIN = int(os.environ.get("RUN_BUDGET_MIN", "300"))  # stop fetching details after this many minutes
 
 URL = "https://foreignjob.dofe.gov.np/api/LotSearch/GetLotList"
 SOURCE_PAGE = "https://foreignjob.dofe.gov.np/Home/Index"
@@ -37,6 +42,10 @@ SHOW_PROPRIETOR_MOBILES = True  # False = hide the proprietors' personal mobile 
 contact = os.environ.get("CONTACT_EMAIL", "not-provided")
 session = requests.Session()
 session.headers.update({"User-Agent": f"job-demand-dashboard (contact: {contact})"})
+# Retries politely when the site answers "too many requests" (429) or has a short outage (5xx).
+session.mount("https://", HTTPAdapter(max_retries=Retry(
+    total=3, backoff_factor=2, status_forcelist=[429, 500, 502, 503, 504],
+    allowed_methods=None, respect_retry_after_header=True)))
 
 CURRENCY_CODES = {
     "QR (QATAR)": "QAR", "QR": "QAR", "SR": "SAR", "KD": "KWD", "BD": "BHD",
@@ -269,6 +278,9 @@ def enrich(job_list, today):
     ok = bad = 0
     stopped = None
     for j in queue[:MAX_DETAIL_FETCH]:
+        if time.time() - START > RUN_BUDGET_MIN * 60:
+            print(f"Time budget of {RUN_BUDGET_MIN} minutes reached; the rest is fetched next run.")
+            break
         try:
             rows = fetch_detail(j["id"])
         except AuthError as e:
@@ -297,7 +309,10 @@ def enrich(job_list, today):
             j["open_men"], j["open_women"] = d["men_left"], d["women_left"]
             j["details"] = build_details(d, today_iso)
             attached += 1
-    CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    # Write to a temporary file first, so a crash can never leave a half-written cache.
+    tmp_cache = CACHE_FILE.with_suffix(".tmp")
+    tmp_cache.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    tmp_cache.replace(CACHE_FILE)
     left = max(0, len(queue) - MAX_DETAIL_FETCH)
     print(f"Details: {attached}/{len(job_list)} jobs have agency info. Fetched {ok + bad} this run "
           f"({bad} did not match). Still queued for later runs: {left}.")
@@ -376,13 +391,11 @@ def main():
                         "salary": to_float(x.get("salaryStr")),
                         "currency": cur,
                         "currency_code": CURRENCY_CODES.get(cur.upper(), cur),
-                        "deadline_text": x.get("deadLine"),
                         "deadline_days": d,
                         # The site's own deadLineDate looked wrong in testing,
                         # so the closing date is calculated from "days left".
                         "closes_on": (today + timedelta(days=d)).isoformat() if d is not None else None,
                         "genders": [gender],
-                        "source_url": SOURCE_PAGE,
                         "details": extra_fields(x),
                     }
                 got += len(rows)
@@ -427,7 +440,8 @@ def main():
         "jobs": job_list,
     }
     tmp = JOBS_FILE.with_suffix(".tmp")
-    tmp.write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
+    # compact separators: a smaller file for every user to download
+    tmp.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     tmp.replace(JOBS_FILE)
 
     history = json.loads(HISTORY_FILE.read_text(encoding="utf-8")) if HISTORY_FILE.exists() else []
