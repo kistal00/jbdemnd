@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T03:26:35",
+ "updated": "2026-11-10T04:40:59",
  "jobs": [
   {
    "id": "eu-MTc0MTE2MjggNDM",
@@ -6012,6 +6012,62 @@
    }
   },
   {
+   "id": "eu-MTAwMDEtMTAwMzk0NzQwMy1TIDE",
+   "title": "Gardener and Landscape Gardener (Garden/Landscape Designer)",
+   "employer": "Uwe Kallies",
+   "country": "Germany",
+   "location": "DED",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are looking for a member of staff to join a team of up to 10 people, to start as soon as possible.The role involves standard tasks such as tree and hedge maintenance, planting new trees and shrubs, possibly preparing paths by laying paving and installing kerbs, as well as lawn maintenance. A…",
+    "Posted on": "1793661368",
+    "Language": "de",
+    "Contract": "directhire",
+    "Pay": "16.5",
+    "Original title": "Garten- u. Landschaftsbauer/-in (Garten-/Landschaftsgestalter/in)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzkxOTE5MC1TIDE",
+   "title": "Painter and Varnisher (m/f/d) (Painter and Varnisher – Design and Maintenance)",
+   "employer": "Vincenzo Calcagnile Malermeisterbetrieb",
+   "country": "Germany",
+   "location": "DE218",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "To strengthen our team, we are looking for 1–2 painters and varnishers (m/f/d) to start immediately or by arrangement – each on a full-time, permanent basis. This is not seasonal work – we offer long-term employment.We are a renowned painting and decorating firm and have been operating successfully in… since 2008.",
+    "Posted on": "1793142283",
+    "Language": "de",
+    "Contract": "directhire",
+    "Pay": "18.5",
+    "Original title": "Maler und Lackierer (m/w/d) (Maler/in und Lackierer/in - Gestaltung und Instandhaltung)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzkxNTM0OS1TIDE",
+   "title": "Vehicle detailers in Essen (full-time | early shift) (vehicle care specialist)",
+   "employer": "Jobdetektive priv.Arbeitsvermittlung J.Rump",
+   "country": "Germany",
+   "location": "DEA",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Our aim: to find the right job for you! We, the Job Detectives, are a certified private employment and recruitment agency. We place candidates in jobs subject to social security contributions in companies of all sizes and across all sectors. Our placement services are available to jobseekers upon presentation of a…",
+    "Posted on": "1793055833",
+    "Language": "de",
+    "Contract": "directhire",
+    "Original title": "Fahrzeugaufbereiter/-innen in Essen (Vollzeit | Frühschicht) (Fahrzeugpfleger/in)"
+   }
+  },
+  {
    "id": "eu-MTAwMDEtMTAwMzkwMTUzMi1TIDE",
    "title": "Agricultural Machinery Mechatronics Technician (m/f/d) for attachments and accessories – Mon–Fri – full-time (Agricultural and Construction Machinery Mechatronics Technician)",
    "employer": "J. Wienken GmbH",
@@ -6102,6 +6158,43 @@
    }
   },
   {
+   "id": "eu-MTAwMDEtMTAwMzk2ODEzNi1TIDE",
+   "title": "Service Staff – Catering and Hospitality | Assistant – Hospitality | Assistant – Kitchen (Service Staff – Catering and Hospitality)",
+   "employer": "SHL Gastro GmbH",
+   "country": "Germany",
+   "location": "DE40B",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We’re looking for new staff for our beer garden and restaurant in Leipe – both in front of house and in the kitchen. Whether you’re from the area and simply looking for a good job, or whether you’d like to try something new outside the city…",
+    "Posted on": "1793917733",
+    "Language": "de, a1",
+    "Contract": "temporary",
+    "Pay": "15.0",
+    "Original title": "Servicekraft - Gastronomie und Gastgewerbe | Helfer/in - Gastgewerbe | Helfer/in - Küche (Servicekraft - Gastronomie und Gastgewerbe)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzk1NTEwMi1TIDE",
+   "title": "Cook (m/f/d) – full-time and part-time (Cook)",
+   "employer": "BÄCKPOMM GmbH",
+   "country": "Germany",
+   "location": "DE80N",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Would you like to join a young, up-and-coming company and have you completed your training as a chef? Then you’ve come to the right place! Your responsibilities: - Mise en place for our à la carte bistro - Independently preparing and…",
+    "Posted on": "1793744922",
+    "Language": "de",
+    "Contract": "Full-time",
+    "Original title": "Koch/ Köchin (m/w/d) in Voll- und Teilzeit (Koch/Köchin)"
+   }
+  },
+  {
    "id": "eu-MTAwMDAtMTIwNjQzMjEzOC1TIDE",
    "title": "Housekeeping Staff (m/f/d) – part-time / full-time (Housekeeper)",
    "employer": "Erlebnis-und Freizeitpark Lichtenau GmbH & Co.KG",
@@ -6117,25 +6210,6 @@
     "Language": "de, b1",
     "Contract": "directhire",
     "Original title": "Mitarbeiter Housekeeping (m/w/d) in TZ / VZ (Hausdame/Housekeeper)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzk0NzQwMy1TIDE",
-   "title": "Gardener and Landscape Gardener (Garden/Landscape Designer)",
-   "employer": "Uwe Kallies",
-   "country": "Germany",
-   "location": "DED",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are looking for a member of staff to join a team of up to 10 people, to start as soon as possible.The role involves standard tasks such as tree and hedge maintenance, planting new trees and shrubs, possibly preparing paths by laying paving and installing kerbs, as well as lawn maintenance. A…",
-    "Posted on": "1793661368",
-    "Language": "de",
-    "Contract": "directhire",
-    "Pay": "16.5",
-    "Original title": "Garten- u. Landschaftsbauer/-in (Garten-/Landschaftsgestalter/in)"
    }
   },
   {
@@ -6289,25 +6363,6 @@
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzkxOTE5MC1TIDE",
-   "title": "Painter and Varnisher (m/f/d) (Painter and Varnisher – Design and Maintenance)",
-   "employer": "Vincenzo Calcagnile Malermeisterbetrieb",
-   "country": "Germany",
-   "location": "DE218",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "To strengthen our team, we are looking for 1–2 painters and varnishers (m/f/d) to start immediately or by arrangement – each on a full-time, permanent basis. This is not seasonal work – we offer long-term employment.We are a renowned painting and decorating firm and have been operating successfully in… since 2008.",
-    "Posted on": "1793142283",
-    "Language": "de",
-    "Contract": "directhire",
-    "Pay": "18.5",
-    "Original title": "Maler und Lackierer (m/w/d) (Maler/in und Lackierer/in - Gestaltung und Instandhaltung)"
-   }
-  },
-  {
    "id": "eu-MTU1NTUtMko5TFQ1RkQxVTJRVDUzWi1TIDE",
    "title": "Warehouse Assistant for Stationery (m/f/d)  (Plant Mechanic)",
    "employer": "Time Tec Personalservice GmbH",
@@ -6324,24 +6379,6 @@
     "Contract": "directhire",
     "Pay": "15.0",
     "Original title": "Lagerhelfer/in für Schreibwaren (m/w/d)  (Anlagenmechaniker/in)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzkxNTM0OS1TIDE",
-   "title": "Vehicle detailers in Essen (full-time | early shift) (vehicle care specialist)",
-   "employer": "Jobdetektive priv.Arbeitsvermittlung J.Rump",
-   "country": "Germany",
-   "location": "DEA",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Our aim: to find the right job for you! We, the Job Detectives, are a certified private employment and recruitment agency. We place candidates in jobs subject to social security contributions in companies of all sizes and across all sectors. Our placement services are available to jobseekers upon presentation of a…",
-    "Posted on": "1793055833",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "Fahrzeugaufbereiter/-innen in Essen (Vollzeit | Frühschicht) (Fahrzeugpfleger/in)"
    }
   },
   {
@@ -6531,39 +6568,21 @@
    }
   },
   {
-   "id": "eu-MTAwMDAtMTIwODU1Mjc1MC1TIDE",
-   "title": "Brewer / Maltster / Distiller (m/f/d) wanted for whisky production (brewer and maltster)",
-   "employer": "Hammerschmiede Spirituosen",
+   "id": "eu-MTIyNjUtNDg0OTAwX0pCNTI5MzY3NS1TIDE",
+   "title": "Customer Support Specialist (m/w/d) (Relocation-Specialist/-Manager/in)",
+   "employer": "FERCHAU GmbH Niederlassung Mannheim",
    "country": "Germany",
-   "location": "DE91C",
+   "location": "DE126",
    "region": "Europe",
-   "kind": "Seasonal",
+   "kind": "Visa sponsored",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "As a STILLMAN/MASHMAN (M / F / D), you will play a key role within the team in the areas of active whisky production and ensure the ideal conditions for producing perfect, handcrafted products to a 5* standard. You will work hand in hand with Anna Buchholz and Christian Gräfenstein to…",
-    "Posted on": "1794003823",
+    "Requirements and description": "Our clients value FERCHAU for its ability to find the best talent for a wide variety of roles and to bring people and technology together – day in, day out. Join us: as an all-rounder who will support our teams in the…",
+    "Posted on": "1794265490",
     "Language": "de",
-    "Contract": "Full-time",
-    "Original title": "Brauer / Mälzer / Brenner (m/w/d) für Whiskyproduktion gesucht (Brauer/in und Mälzer/in)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzk1NTIxNS1TIDE",
-   "title": "Baker (m/f/d) – full-time and part-time (Baker)",
-   "employer": "BÄCKPOMM GmbH",
-   "country": "Germany",
-   "location": "DE80N",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Would you like to be part of a young, up-and-coming company and do you love the art of baking? Then you’ve come to the right place! Your responsibilities: - Baking bread, rolls, fine pastries and other baked goods - Preparing, processing and handling doughs and mixtures -…",
-    "Posted on": "1793744922",
-    "Language": "de",
-    "Contract": "Full-time",
-    "Original title": "Bäcker/in (m/w/d) in Voll- und Teilzeit (Bäcker/in)"
+    "Contract": "directhire",
+    "Pay": "35000.0"
    }
   },
   {
@@ -9828,24 +9847,6 @@
    }
   },
   {
-   "id": "eu-ODExMzU4MiA5",
-   "title": "Formwork/Reinforcement Draughtsman / One-off Structures (M/F)",
-   "employer": "Non renseigné",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Our client is a multicultural company specialising in infrastructure management and refurbishment. To date, it has completed a number of ambitious projects, always with a focus on excellence in the work carried out. Placing team cohesion at the heart of their…",
-    "Posted on": "1792551652",
-    "Language": "fr",
-    "Contract": "directhire",
-    "Original title": "Dessinateur en Coffrage/Ferraillage / Ouvrages uniques (H/F)"
-   }
-  },
-  {
    "id": "eu-MTAwMDEtMTAwMzk1MDYwNS1TIDE",
    "title": "Guide (m/f/x) – 2027 season (tour guide)",
    "employer": "Luxair Société Luxembourgeoise de Navigation Aérienne S.A.",
@@ -9861,6 +9862,24 @@
     "Language": "de",
     "Contract": "temporary",
     "Original title": "Guide (m/f/x) - Saison 2027 (Reiseleiter/in)"
+   }
+  },
+  {
+   "id": "eu-ODExMzU4MiA5",
+   "title": "Formwork/Reinforcement Draughtsman / One-off Structures (M/F)",
+   "employer": "Non renseigné",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Our client is a multicultural company specialising in infrastructure management and refurbishment. To date, it has completed a number of ambitious projects, always with a focus on excellence in the work carried out. Placing team cohesion at the heart of their…",
+    "Posted on": "1792551652",
+    "Language": "fr",
+    "Contract": "directhire",
+    "Original title": "Dessinateur en Coffrage/Ferraillage / Ouvrages uniques (H/F)"
    }
   },
   {
@@ -10059,6 +10078,59 @@
    }
   },
   {
+   "id": "eu-MTAwMDEtMTAwMzk1MDY4Ni1TIDE",
+   "title": "Animator (m/f/x) - Season 2027 (Animateur/in)",
+   "employer": "Luxair Société Luxembourgeoise de Navigation Aérienne S.A.",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Main Responsibilities- Independently develop and deliver a varied, engaging, and high-quality children’s entertainment programme for different age groups, in line with the entertainment concept.- Deliver the children’s programme on a daily basis.- Host and lead the weekly children’s activities, including the “Special Day”, “Special Night”, “Kids Show” and “Dinner for Kids”.- Host the children’s “Mini Disco”.- Maintain contact with guests after the evening entertainment programme.- Ensure the safety of children participating in the activities.- Take responsibility for all equipment and materials related to the role.- Actively contribute to a positive atmosphere within the entertainment team.- Attend regular team meetings.- Complete work reports, stock inventories, children’s registration records and other related administrative tasks.Minimum Requirements for the Position- Have completed…",
+    "Posted on": "1793661393",
+    "Language": "de",
+    "Contract": "temporary"
+   }
+  },
+  {
+   "id": "eu-MTIxMTctWUYtNTIxNjAtWUYtUyAx",
+   "title": "Industrial Mechanic / Construction Mechanic / Metalworker / Motor Vehicle Mechanic (m/f/d) (Metalworker – Construction Technology)",
+   "employer": "International Can S.A.",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "html Industrial Mechanic / Design Mechanic / Metalworker / Motor Mechanic (m/f/d) Echternach | Full-time | Fixed-term About us Have you ever wondered where many of the care products sold under discounters’ own-brand labels and…",
+    "Posted on": "1791318452",
+    "Language": "de",
+    "Contract": "Full-time",
+    "Original title": "Industriemechaniker / Konstruktionsmechaniker / Metallbauer / KFZ-Mechaniker (m/w/d) (Metallbauer/in - Konstruktionstechnik)"
+   }
+  },
+  {
+   "id": "eu-MTIxMTctWUYtNTIxNjEtWUYtUyAx",
+   "title": "Printer / Printing Media Technologist (m/f/d) (Printing Media Technologist)",
+   "employer": "International Can S.A.",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "html Printing Technician / Media Technologist (m/f/d) Echternach | Full-time | Fixed-term About us Have you ever wondered where many of the personal care products sold under discounters’ and chemists’ own brands actually come from? As Europe’s…",
+    "Posted on": "1791318452",
+    "Language": "de",
+    "Contract": "Full-time",
+    "Original title": "Drucker / Medientechnologe Druck (m/w/d) (Medientechnologe/-technologin Druck)"
+   }
+  },
+  {
    "id": "eu-ODQ1NjE5NSA5",
    "title": "Operations Manager – WISAG Luxembourg (M/F/X) – Permanent contract (part-time)",
    "employer": "Non renseigné",
@@ -10095,6 +10167,23 @@
    }
   },
   {
+   "id": "eu-ODY1MTY2OSA5",
+   "title": "Recruiter / Talent Acquisition & HR Business Partner (m/w/d) (H/F)",
+   "employer": "Non renseigné",
+   "country": "Luxembourg",
+   "location": "None",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "Your role: You will attract the best talent to our company and help deliver a high-quality experience for candidates and employees. As a key point of contact for recruitment and talent acquisition, you will…",
+    "Posted on": "1794208620",
+    "Language": "fr",
+    "Contract": "directhire"
+   }
+  },
+  {
    "id": "eu-ODM3NjU0OCA5",
    "title": "Recruitment Officer (M/F)",
    "employer": "Non renseigné",
@@ -10125,23 +10214,6 @@
    "details": {
     "Requirements and description": "Would you like to join a renowned and innovative organisation? Spuerkeess, a mainstay of the Luxembourg financial sector with some of the highest credit ratings in the world, and a trusted employer that has been combining banking tradition and innovation since , is actively seeking a new…",
     "Posted on": "1793509261",
-    "Language": "fr",
-    "Contract": "directhire"
-   }
-  },
-  {
-   "id": "eu-ODY1MTY2OSA5",
-   "title": "Recruiter / Talent Acquisition & HR Business Partner (m/w/d) (H/F)",
-   "employer": "Non renseigné",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Your role: You will attract the best talent to our company and help deliver a high-quality experience for candidates and employees. As a key point of contact for recruitment and talent acquisition, you will…",
-    "Posted on": "1794208620",
     "Language": "fr",
     "Contract": "directhire"
    }
@@ -10183,24 +10255,6 @@
    }
   },
   {
-   "id": "eu-NTkxNjkxOSA5",
-   "title": "Recruiter (M/F/X)",
-   "employer": "Non renseigné",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "About usAt RH Lab., we firmly believe that successful recruitment changes much more than just a CV: it transforms careers, helps businesses grow and creates meaningful connections.For several years now, we have been supporting businesses in the Greater Region with their…",
-    "Posted on": "1786503660",
-    "Language": "fr",
-    "Contract": "directhire",
-    "Original title": "Recruteur(se) (H/F/X)"
-   }
-  },
-  {
    "id": "eu-NzczNTc0NiA5",
    "title": "Head of the Shelter Research Unit (SRU) (M/F/D) – Permanent contract – h () (M/F)",
    "employer": "Non renseigné",
@@ -10219,9 +10273,9 @@
    }
   },
   {
-   "id": "eu-MTAwMDEtMTAwMzk1MDY4Ni1TIDE",
-   "title": "Animator (m/f/x) - Season 2027 (Animateur/in)",
-   "employer": "Luxair Société Luxembourgeoise de Navigation Aérienne S.A.",
+   "id": "eu-NTkxNjkxOSA5",
+   "title": "Recruiter (M/F/X)",
+   "employer": "Non renseigné",
    "country": "Luxembourg",
    "location": "None",
    "region": "Europe",
@@ -10229,10 +10283,11 @@
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "Main Responsibilities- Independently develop and deliver a varied, engaging, and high-quality children’s entertainment programme for different age groups, in line with the entertainment concept.- Deliver the children’s programme on a daily basis.- Host and lead the weekly children’s activities, including the “Special Day”, “Special Night”, “Kids Show” and “Dinner for Kids”.- Host the children’s “Mini Disco”.- Maintain contact with guests after the evening entertainment programme.- Ensure the safety of children participating in the activities.- Take responsibility for all equipment and materials related to the role.- Actively contribute to a positive atmosphere within the entertainment team.- Attend regular team meetings.- Complete work reports, stock inventories, children’s registration records and other related administrative tasks.Minimum Requirements for the Position- Have completed…",
-    "Posted on": "1793661393",
-    "Language": "de",
-    "Contract": "temporary"
+    "Requirements and description": "About usAt RH Lab., we firmly believe that successful recruitment changes much more than just a CV: it transforms careers, helps businesses grow and creates meaningful connections.For several years now, we have been supporting businesses in the Greater Region with their…",
+    "Posted on": "1786503660",
+    "Language": "fr",
+    "Contract": "directhire",
+    "Original title": "Recruteur(se) (H/F/X)"
    }
   },
   {
@@ -10344,43 +10399,6 @@
     "Contract": "directhire",
     "Qualification": "7",
     "Experience": "8"
-   }
-  },
-  {
-   "id": "eu-ODU2MjMyNCA5",
-   "title": "Recruitment Consultant  (M/F)",
-   "employer": "Non renseigné",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Do you enjoy developing new business relationships just as much as identifying the talent that will make a difference for your clients? Join MacAnders Luxembourg and help us grow our office. A consultancy specialising in the recruitment of experts and senior executives,…",
-    "Posted on": "1793854850",
-    "Language": "fr",
-    "Contract": "directhire",
-    "Original title": "Consultant en recrutement  (H/F)"
-   }
-  },
-  {
-   "id": "eu-MTA1MDI2IDEx",
-   "title": "F&B Service Expert (Chef de Rang) (m/f/x)",
-   "employer": "Luxembourg Hotel Management S.A. - Luxembourg Marriott Hotel Alfa",
-   "country": "Luxembourg",
-   "location": "None",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "Description:POSITION SUMMARYOur jobs aren't just about putting food on the table that our guests will enjoy until they ask for their bill. Instead, we want to build an experience that is memorable and unique – with food and drinks on the side. Our Guest Service Experts take the initiative and deliver a wide range of services to make sure that guests enjoy their meal. Whether setting tables, communicating with the kitchen, interacting and serving guests, or cleaning work areas and supplies, the Guest Service Expert makes transactions feel like part of the experience.No matter what position you are in, there are a few things that are critical to success – creating a safe workplace, following company policies and procedures, upholding quality standards, and ensuring your uniform, personal appearance, and communications are professional. Guest Service Experts will be on their feet and…",
-    "Posted on": "1789594200",
-    "Language": "fr, c1, de, en, lb",
-    "Contract": "directhire",
-    "Qualification": "3",
-    "Experience": "1"
    }
   },
   {
@@ -14584,47 +14602,6 @@
    }
   },
   {
-   "id": "eu-MzQ5MTI1NCAxNA",
-   "title": "WAITER/WAITRESS – WORK IN HOSPITALITY – M/F",
-   "employer": "LOGUS PLUS, poslovne storitve, d.o.o., Škrabčev trg 27 , 1310 RIBNICA",
-   "country": "Slovenia",
-   "location": "SI037",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "WAITER/WAITRESS, 1-month probationary period, Fixed-term contract, 3 months or WITH THE POSSIBILITY OF A PERMANENT CONTRACT, Part-time, 30, SERVING FOOD AND DRINKS, ,",
-    "Posted on": "1791489600",
-    "Language": "sl",
-    "Contract": "temporary",
-    "Qualification": "2",
-    "Experience": "0",
-    "Pay": "salaried",
-    "Original title": "NATAKAR - DELO V STREŽBI - M/Ž"
-   }
-  },
-  {
-   "id": "eu-MzQ3MzIyOCAxNA",
-   "title": "WORK IN THE TIMBER INDUSTRY - M/F",
-   "employer": "HRIBLES ŽAGA proizvodnja in trgovina z lesom, d.o.o., Sidol 6 , 1219 LAZE V TUHINJU",
-   "country": "Slovenia",
-   "location": "SI041",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "LOG CUTTING OPERATOR, probationary period, Fixed-term contract (2 months) with the possibility of a permanent contract, Full-time, 40 hours. We are recruiting a colleague for our timber production department. Work is from Monday to Friday, 6.00 am to 2.00 pm, at our site in Kamnik. , ,",
-    "Posted on": "1788724800",
-    "Language": "sl",
-    "Contract": "temporary",
-    "Qualification": "1",
-    "Experience": "0",
-    "Original title": "DELO V LESNI PROIZVODNJI - M/Ž"
-   }
-  },
-  {
    "id": "eu-MzQ4MzA5MiAxNA",
    "title": "PSYCHOLOGIST (WORKING AT CDZO) – M/F",
    "employer": "ZDRAVSTVENI DOM NOVO MESTO, Kandijska cesta 4 , 8000 NOVO MESTO",
@@ -14682,6 +14659,47 @@
     "Qualification": "5",
     "Experience": "0",
     "Original title": "PSIHOLOG (DELO V CDZOM) - M/Ž"
+   }
+  },
+  {
+   "id": "eu-MzQ3MzIyOCAxNA",
+   "title": "WORK IN THE TIMBER INDUSTRY - M/F",
+   "employer": "HRIBLES ŽAGA proizvodnja in trgovina z lesom, d.o.o., Sidol 6 , 1219 LAZE V TUHINJU",
+   "country": "Slovenia",
+   "location": "SI041",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "LOG CUTTING OPERATOR, probationary period, Fixed-term contract (2 months) with the possibility of a permanent contract, Full-time, 40 hours. We are recruiting a colleague for our timber production department. Work is from Monday to Friday, 6.00 am to 2.00 pm, at our site in Kamnik. , ,",
+    "Posted on": "1788724800",
+    "Language": "sl",
+    "Contract": "temporary",
+    "Qualification": "1",
+    "Experience": "0",
+    "Original title": "DELO V LESNI PROIZVODNJI - M/Ž"
+   }
+  },
+  {
+   "id": "eu-MzQ5MTI1NCAxNA",
+   "title": "WAITER/WAITRESS – WORK IN HOSPITALITY – M/F",
+   "employer": "LOGUS PLUS, poslovne storitve, d.o.o., Škrabčev trg 27 , 1310 RIBNICA",
+   "country": "Slovenia",
+   "location": "SI037",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "WAITER/WAITRESS, 1-month probationary period, Fixed-term contract, 3 months or WITH THE POSSIBILITY OF A PERMANENT CONTRACT, Part-time, 30, SERVING FOOD AND DRINKS, ,",
+    "Posted on": "1791489600",
+    "Language": "sl",
+    "Contract": "temporary",
+    "Qualification": "2",
+    "Experience": "0",
+    "Pay": "salaried",
+    "Original title": "NATAKAR - DELO V STREŽBI - M/Ž"
    }
   },
   {
@@ -14826,26 +14844,6 @@
    }
   },
   {
-   "id": "eu-MzQ5MTIyNCAxNA",
-   "title": "PSYCHOLOGIST – WORKING WITH PEOPLE WITH MENTAL HEALTH PROBLEMS – M/F",
-   "employer": "ZDRAVSTVENI DOM KRŠKO, Cesta krških žrtev 132 C, 8270 KRŠKO",
-   "country": "Slovenia",
-   "location": "SI036",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "PSYCHOLOGISTS, 3-month probationary period, permanent contract, Full-time, 40, psychological consultations (use of psychodiagnostic tools, psychological assessments, more complex psychological counselling, preparation of psychodiagnostic assessments, reports and guidelines for…",
-    "Posted on": "1791489600",
-    "Language": "sl",
-    "Contract": "directhire",
-    "Qualification": "5",
-    "Experience": "2",
-    "Original title": "PSIHOLOG DELO Z OSEBAMI S PSIHIČNO MOTNJO - M/Ž"
-   }
-  },
-  {
    "id": "eu-MzQ5MDYxOSAxNA",
    "title": "CAREGIVER – INSTITUTIONAL CARE – WORK IN BE MENGEŠ – M/F",
    "employer": "PRIZMA PONIKVE, POSEBNI SOCIALNO VARSTVENI ZAVOD, Ponikve 76 , 1312 VIDEM - DOBREPOLJE",
@@ -14866,6 +14864,26 @@
    }
   },
   {
+   "id": "eu-MzQ5MTIyNCAxNA",
+   "title": "PSYCHOLOGIST – WORKING WITH PEOPLE WITH MENTAL HEALTH PROBLEMS – M/F",
+   "employer": "ZDRAVSTVENI DOM KRŠKO, Cesta krških žrtev 132 C, 8270 KRŠKO",
+   "country": "Slovenia",
+   "location": "SI036",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "PSYCHOLOGISTS, 3-month probationary period, permanent contract, Full-time, 40, psychological consultations (use of psychodiagnostic tools, psychological assessments, more complex psychological counselling, preparation of psychodiagnostic assessments, reports and guidelines for…",
+    "Posted on": "1791489600",
+    "Language": "sl",
+    "Contract": "directhire",
+    "Qualification": "5",
+    "Experience": "2",
+    "Original title": "PSIHOLOG DELO Z OSEBAMI S PSIHIČNO MOTNJO - M/Ž"
+   }
+  },
+  {
    "id": "eu-MzQ4NTk5NC0yMDI2NDMgMTQ",
    "title": "HEALTHCARE ADMINISTRATIVE ASSISTANT – WORK IN THE EMERGENCY DEPARTMENT – M/F",
    "employer": "SPLOŠNA BOLNIŠNICA CELJE, Oblakova ulica 5 , 3000 CELJE",
@@ -14883,106 +14901,6 @@
     "Qualification": "3",
     "Experience": "0",
     "Original title": "ZDRAVSTVENO ADMINISTRATIVNI SODELAVEC - DELO V URGENTNI DEJAVNOSTI - M/Ž"
-   }
-  },
-  {
-   "id": "eu-MzQ4OTg2MCAxNA",
-   "title": "REGISTERED NURSE FOR OUTPATIENT CLINICS – M/F",
-   "employer": "BARSOS-MC, zdravstvene storitve d.o.o., Gregorčičeva ulica 11 , 1000 LJUBLJANA",
-   "country": "Slovenia",
-   "location": "SI041",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "HEALTHCARE ASSISTANT (MORE DEMANDING TASKS), 3-month probationary period, Permanent contract, Full-time, 40, • Answering the telephone, replying to emails and booking patients in for appointments at outpatient clinics;• maintaining various patient records;•…",
-    "Posted on": "1791316800",
-    "Language": "sl",
-    "Contract": "directhire",
-    "Qualification": "3",
-    "Experience": "3",
-    "Original title": "SREDNJA MEDICINSKA SESTRA ZA DELO V AMBULANTAH - M/Ž"
-   }
-  },
-  {
-   "id": "eu-MzQ5MzE1OSAxNA",
-   "title": "SPECIALIST DOCTOR FOR THE ANTICOAGULANT OUTPATIENT CLINIC – M/F",
-   "employer": "ZDRAVSTVENI DOM VRHNIKA, Cesta 6. maja 11 , 1360 VRHNIKA",
-   "country": "Slovenia",
-   "location": "SI041",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "SPECIALIST DOCTORS (EXCLUDING GENERAL PRACTITIONERS), 4-month probationary period, Permanent contract, Part-time, 15, Outpatient clinic for the management of patients on anticoagulant therapy, prescribing, initiating and adjusting treatment with anticoagulants…",
-    "Posted on": "1791921600",
-    "Language": "sl",
-    "Contract": "directhire",
-    "Qualification": "5",
-    "Experience": "3",
-    "Original title": "ZDRAVNIK SPECIALIST ZA DELO V ANTIKOAGULANTNI AMBULANTI - M/Ž"
-   }
-  },
-  {
-   "id": "eu-MzQ4NzE0NC0yMDI2NDMgMTQ",
-   "title": "PERSONAL ASSISTANT TO A PERSON WITH A DISABILITY (WORK IN LJUBLJANA) – M/F",
-   "employer": "YHD - DRUŠTVO ZA TEORIJO IN KULTURO HENDIKEPA, Železna cesta 14 , 1000 LJUBLJANA",
-   "country": "Slovenia",
-   "location": "SI041",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "PERSONAL ASSISTANT FOR PEOPLE WITH DISABILITIES, 6-month trial period, permanent contract, Part-time, 10, ASSISTANCE WITH PERSONAL CARE AND HOUSEHOLD TASKS, ACCOMPANIMENT AND DAILY PHYSICAL ASSISTANCE, ,",
-    "Posted on": "1791921600",
-    "Language": "sl",
-    "Contract": "directhire",
-    "Qualification": "1",
-    "Experience": "0",
-    "Original title": "OSEBNI ASISTENT HENDIKEPIRANE OSEBE (DELO V LJUBLJANI) - M/Ž"
-   }
-  },
-  {
-   "id": "eu-MzQ4NzE0MC0yMDI2NDMgMTQ",
-   "title": "PERSONAL ASSISTANT TO A PERSON WITH A DISABILITY (WORK IN LJUBLJANA) – M/F",
-   "employer": "YHD - DRUŠTVO ZA TEORIJO IN KULTURO HENDIKEPA, Železna cesta 14 , 1000 LJUBLJANA",
-   "country": "Slovenia",
-   "location": "SI041",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "PERSONAL ASSISTANT FOR PEOPLE WITH DISABILITIES, 6-month trial period, permanent contract, Part-time, 20, ASSISTANCE WITH PERSONAL CARE AND HOUSEHOLD TASKS, ACCOMPANIMENT AND DAILY PHYSICAL ASSISTANCE, ,",
-    "Posted on": "1791748800",
-    "Language": "sl",
-    "Contract": "directhire",
-    "Qualification": "1",
-    "Experience": "0",
-    "Original title": "OSEBNI ASISTENT HENDIKEPIRANE OSEBE (DELO V LJUBLJANI) - M/Ž"
-   }
-  },
-  {
-   "id": "eu-MzQ3NDIxMS0yMDI2NDMgMTQ",
-   "title": "PERSONAL ASSISTANT TO A PERSON WITH A DISABILITY (WORK IN KRANJ) – M/F",
-   "employer": "YHD - DRUŠTVO ZA TEORIJO IN KULTURO HENDIKEPA, Železna cesta 14 , 1000 LJUBLJANA",
-   "country": "Slovenia",
-   "location": "SI042",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "PERSONAL ASSISTANT FOR PEOPLE WITH DISABILITIES, 6-month trial period, Permanent contract, Full-time, 40, ASSISTANCE WITH PERSONAL CARE AND HOUSEHOLD TASKS, ACCOMPANIMENT AND DAILY PHYSICAL ASSISTANCE, ,",
-    "Posted on": "1791921600",
-    "Language": "sl",
-    "Contract": "directhire",
-    "Qualification": "1",
-    "Experience": "0",
-    "Original title": "OSEBNI ASISTENT HENDIKEPIRANE OSEBE (DELO V KRANJU) - M/Ž"
    }
   },
   {
@@ -15026,24 +14944,123 @@
    }
   },
   {
-   "id": "eu-MzQ4ODM3MyAxNA",
-   "title": "YOUTH WORKER FOR WORKING WITH YOUNG PEOPLE AND HORSES – M/F",
-   "employer": "Konjeniški in mladinski center Škatlica, Senik 1 , 2258 SVETI TOMAŽ",
+   "id": "eu-MzQ4NzE0NC0yMDI2NDMgMTQ",
+   "title": "PERSONAL ASSISTANT TO A PERSON WITH A DISABILITY (WORK IN LJUBLJANA) – M/F",
+   "employer": "YHD - DRUŠTVO ZA TEORIJO IN KULTURO HENDIKEPA, Železna cesta 14 , 1000 LJUBLJANA",
    "country": "Slovenia",
-   "location": "SI032",
+   "location": "SI041",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "YOUTH WORKER, 3-month probationary period, Fixed-term contract, 12 months, Part-time, 20 hours; We are looking for someone to independently organise youth and equestrian activities and to provide support in working with international volunteers. Scope of employment: part-time…",
-    "Posted on": "1791144000",
+    "Requirements and description": "PERSONAL ASSISTANT FOR PEOPLE WITH DISABILITIES, 6-month trial period, permanent contract, Part-time, 10, ASSISTANCE WITH PERSONAL CARE AND HOUSEHOLD TASKS, ACCOMPANIMENT AND DAILY PHYSICAL ASSISTANCE, ,",
+    "Posted on": "1791921600",
     "Language": "sl",
-    "Contract": "temporary",
+    "Contract": "directhire",
+    "Qualification": "1",
+    "Experience": "0",
+    "Original title": "OSEBNI ASISTENT HENDIKEPIRANE OSEBE (DELO V LJUBLJANI) - M/Ž"
+   }
+  },
+  {
+   "id": "eu-MzQ4NzE0MC0yMDI2NDMgMTQ",
+   "title": "PERSONAL ASSISTANT TO A PERSON WITH A DISABILITY (WORK IN LJUBLJANA) – M/F",
+   "employer": "YHD - DRUŠTVO ZA TEORIJO IN KULTURO HENDIKEPA, Železna cesta 14 , 1000 LJUBLJANA",
+   "country": "Slovenia",
+   "location": "SI041",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "PERSONAL ASSISTANT FOR PEOPLE WITH DISABILITIES, 6-month trial period, permanent contract, Part-time, 20, ASSISTANCE WITH PERSONAL CARE AND HOUSEHOLD TASKS, ACCOMPANIMENT AND DAILY PHYSICAL ASSISTANCE, ,",
+    "Posted on": "1791748800",
+    "Language": "sl",
+    "Contract": "directhire",
+    "Qualification": "1",
+    "Experience": "0",
+    "Original title": "OSEBNI ASISTENT HENDIKEPIRANE OSEBE (DELO V LJUBLJANI) - M/Ž"
+   }
+  },
+  {
+   "id": "eu-MzQ5MzE1OSAxNA",
+   "title": "SPECIALIST DOCTOR FOR THE ANTICOAGULANT OUTPATIENT CLINIC – M/F",
+   "employer": "ZDRAVSTVENI DOM VRHNIKA, Cesta 6. maja 11 , 1360 VRHNIKA",
+   "country": "Slovenia",
+   "location": "SI041",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "SPECIALIST DOCTORS (EXCLUDING GENERAL PRACTITIONERS), 4-month probationary period, Permanent contract, Part-time, 15, Outpatient clinic for the management of patients on anticoagulant therapy, prescribing, initiating and adjusting treatment with anticoagulants…",
+    "Posted on": "1791921600",
+    "Language": "sl",
+    "Contract": "directhire",
+    "Qualification": "5",
+    "Experience": "3",
+    "Original title": "ZDRAVNIK SPECIALIST ZA DELO V ANTIKOAGULANTNI AMBULANTI - M/Ž"
+   }
+  },
+  {
+   "id": "eu-MzQ3NDIxMS0yMDI2NDMgMTQ",
+   "title": "PERSONAL ASSISTANT TO A PERSON WITH A DISABILITY (WORK IN KRANJ) – M/F",
+   "employer": "YHD - DRUŠTVO ZA TEORIJO IN KULTURO HENDIKEPA, Železna cesta 14 , 1000 LJUBLJANA",
+   "country": "Slovenia",
+   "location": "SI042",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "PERSONAL ASSISTANT FOR PEOPLE WITH DISABILITIES, 6-month trial period, Permanent contract, Full-time, 40, ASSISTANCE WITH PERSONAL CARE AND HOUSEHOLD TASKS, ACCOMPANIMENT AND DAILY PHYSICAL ASSISTANCE, ,",
+    "Posted on": "1791921600",
+    "Language": "sl",
+    "Contract": "directhire",
+    "Qualification": "1",
+    "Experience": "0",
+    "Original title": "OSEBNI ASISTENT HENDIKEPIRANE OSEBE (DELO V KRANJU) - M/Ž"
+   }
+  },
+  {
+   "id": "eu-MzQ4OTg2MCAxNA",
+   "title": "REGISTERED NURSE FOR OUTPATIENT CLINICS – M/F",
+   "employer": "BARSOS-MC, zdravstvene storitve d.o.o., Gregorčičeva ulica 11 , 1000 LJUBLJANA",
+   "country": "Slovenia",
+   "location": "SI041",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "HEALTHCARE ASSISTANT (MORE DEMANDING TASKS), 3-month probationary period, Permanent contract, Full-time, 40, • Answering the telephone, replying to emails and booking patients in for appointments at outpatient clinics;• maintaining various patient records;•…",
+    "Posted on": "1791316800",
+    "Language": "sl",
+    "Contract": "directhire",
     "Qualification": "3",
     "Experience": "3",
-    "Pay": "salaried",
-    "Original title": "MLADINSKI DELAVEC ZA DELO Z MLADIMI IN KONJI - M/Ž"
+    "Original title": "SREDNJA MEDICINSKA SESTRA ZA DELO V AMBULANTAH - M/Ž"
+   }
+  },
+  {
+   "id": "eu-MzQ4NDg2OSAxNA",
+   "title": "SPEECH AND LANGUAGE THERAPIST – WORKING WITH PEOPLE WITH MENTAL HEALTH PROBLEMS – E047081 – M/F",
+   "employer": "Zdravstveni dom Trbovlje, Rudarska cesta 12 , 1420 TRBOVLJE",
+   "country": "Slovenia",
+   "location": "SI035",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "SPEECH AND LANGUAGE THERAPIST FOR INDIVIDUAL SPEECH THERAPY, 3-month probationary period, Permanent contract, Full-time, 40, PREPARING AND ORGANISING THE WORKSPACE AND WORKSTATION, RECEIVING DOCUMENTATION AND PATIENTS, BOOKING AND REBOOKING APPOINTMENTS…",
+    "Posted on": "1790280000",
+    "Language": "sl",
+    "Contract": "directhire",
+    "Qualification": "5",
+    "Experience": "4",
+    "Original title": "LOGOPED - DELO Z OSEBAMI S PSIHIČNO MOTNJO - E047081 - M/Ž"
    }
   },
   {
@@ -15067,23 +15084,24 @@
    }
   },
   {
-   "id": "eu-MzQ4NDg2OSAxNA",
-   "title": "SPEECH AND LANGUAGE THERAPIST – WORKING WITH PEOPLE WITH MENTAL HEALTH PROBLEMS – E047081 – M/F",
-   "employer": "Zdravstveni dom Trbovlje, Rudarska cesta 12 , 1420 TRBOVLJE",
+   "id": "eu-MzQ4ODM3MyAxNA",
+   "title": "YOUTH WORKER FOR WORKING WITH YOUNG PEOPLE AND HORSES – M/F",
+   "employer": "Konjeniški in mladinski center Škatlica, Senik 1 , 2258 SVETI TOMAŽ",
    "country": "Slovenia",
-   "location": "SI035",
+   "location": "SI032",
    "region": "Europe",
    "kind": "Seasonal",
    "salary": "",
    "closes_on": "",
    "details": {
-    "Requirements and description": "SPEECH AND LANGUAGE THERAPIST FOR INDIVIDUAL SPEECH THERAPY, 3-month probationary period, Permanent contract, Full-time, 40, PREPARING AND ORGANISING THE WORKSPACE AND WORKSTATION, RECEIVING DOCUMENTATION AND PATIENTS, BOOKING AND REBOOKING APPOINTMENTS…",
-    "Posted on": "1790280000",
+    "Requirements and description": "YOUTH WORKER, 3-month probationary period, Fixed-term contract, 12 months, Part-time, 20 hours; We are looking for someone to independently organise youth and equestrian activities and to provide support in working with international volunteers. Scope of employment: part-time…",
+    "Posted on": "1791144000",
     "Language": "sl",
-    "Contract": "directhire",
-    "Qualification": "5",
-    "Experience": "4",
-    "Original title": "LOGOPED - DELO Z OSEBAMI S PSIHIČNO MOTNJO - E047081 - M/Ž"
+    "Contract": "temporary",
+    "Qualification": "3",
+    "Experience": "3",
+    "Pay": "salaried",
+    "Original title": "MLADINSKI DELAVEC ZA DELO Z MLADIMI IN KONJI - M/Ž"
    }
   },
   {
@@ -16508,6 +16526,63 @@
    }
   },
   {
+   "id": "eu-MTAwMDEtMTAwMzk4MjAzMy1TIDE",
+   "title": "Senior Consultant in Child and Adolescent Psychiatry (m/f/d) (Specialist in Child and Adolescent Psychiatry and Psychotherapy)",
+   "employer": "PremiumJob AG",
+   "country": "Switzerland",
+   "location": "CH06",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are looking for a Senior Consultant in Child and Adolescent Psychiatry and Psychotherapy (m/f/d) for an outpatient clinic. Role: You will manage the outpatient clinic and be responsible for its running in professional, administrative and business management terms. In addition…",
+    "Posted on": "1794265503",
+    "Language": "de",
+    "Contract": "directhire",
+    "Pay": "149000.0",
+    "Original title": "Oberärztin Kinder- und Jugendpsychiatrie (m/w/d) (Facharzt/-ärztin - Kinder- und Jugendpsychiatrie und -psychotherapie)"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzk4MDA1Mi1TIDE",
+   "title": "Ward Manager (m/f/d) 80–100% – in geriatric psychiatry in the beautiful canton of Zug, Switzerland (Registered Nurse (university-qualified))",
+   "employer": "Personal Spezial Personalservice & Vermittlung Hansjürgen Mathiak",
+   "country": "Switzerland",
+   "location": "CH06",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "🌟 Making a difference, shaping the future: Ward Manager (80–100%) in geriatric psychiatry in the beautiful canton of Zug. You have a passion for psychiatry, your heart is in the right place, and you’re looking for a working environment that…",
+    "Posted on": "1794178108",
+    "Language": "de",
+    "Contract": "directhire",
+    "Pay": "90000.0",
+    "Original title": "Stationsleitung (w/m/d) 80–100 % -  in der Alterspsychiatrie im wunderschönen Kanton Zug, Schweiz (Pflegefachmann/-frau (Hochschule))"
+   }
+  },
+  {
+   "id": "eu-MTAwMDEtMTAwMzk2Nzk3OC1TIDE",
+   "title": "Specialist in Child and Adolescent Psychiatry and Psychotherapy (m/f/d) (Specialist – Child and Adolescent Psychiatry and Psychotherapy)",
+   "employer": "PremiumJob AG",
+   "country": "Switzerland",
+   "location": "CH05",
+   "region": "Europe",
+   "kind": "Seasonal",
+   "salary": "",
+   "closes_on": "",
+   "details": {
+    "Requirements and description": "We are looking for a specialist in child and adolescent psychiatry and psychotherapy (m/f/d) for an outpatient clinic. Role: You will manage the outpatient clinic and be responsible for its operation from a clinical, administrative and business management perspective. You will also…",
+    "Posted on": "1793920483",
+    "Language": "de",
+    "Contract": "directhire",
+    "Pay": "148000.0",
+    "Original title": "Facharzt Kinder- und Jugendpsychiatrie und Psychotherapie (m/w/d) (Facharzt/-ärztin - Kinder- und Jugendpsychiatrie und -psychotherapie)"
+   }
+  },
+  {
    "id": "eu-MTAwMDEtMTAwMzkyMzkwNi1TIDE",
    "title": "MANAGING PARTNER (m/w/d) (Recruiter/in)",
    "employer": "ISG Personalmanagement GmbH",
@@ -16778,60 +16853,6 @@
     "Language": "de",
     "Contract": "directhire",
     "Original title": "Land- und Baumaschinenmechaniker (m/w/d) CODE 03030828C (Mechaniker/in - Land- und Baumaschinentechnik)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzg1ODY1OC1TIDE",
-   "title": "ROOFING CONTRACTOR (STEEP-PITCH ROOFS) 100% (German-speaking part of Switzerland) – immediate start/ongoing (roofing contractor)",
-   "employer": "MPV Maurer Personalvermittlung (priv.)",
-   "country": "Switzerland",
-   "location": "CH03, CH040",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are currently looking for skilled pitched-roof roofers to join various roofing companies in German-speaking Switzerland. You could start work immediately or at short notice – subject to direct agreement with the Swiss employer. We are a private…",
-    "Posted on": "1792012263",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "DACHDECKER STEILDACH 100% (CH-Kt. Deutsch-Schweiz) – per sofort/fortlaufend (Dachdecker/in)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzg1ODY1MS1TIDE",
-   "title": "FLAT ROOFING CONTRACTOR 100% (German-speaking part of Switzerland) – immediate start/ongoing (flat roof installer)",
-   "employer": "MPV Maurer Personalvermittlung (priv.)",
-   "country": "Switzerland",
-   "location": "None, CH040",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are currently looking for skilled flat-roofing fitters to join various roofing companies in German-speaking Switzerland. The role is available immediately or at short notice – subject to direct agreement with the Swiss employer. We are a private…",
-    "Posted on": "1792012263",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "DACHDECKER FLACHDACH 100% (CH-Kt. Deutsch-Schweiz) - per sofort/fortlaufend (Flachdachdecker/in)"
-   }
-  },
-  {
-   "id": "eu-MTAwMDEtMTAwMzg1ODYzMC1TIDE",
-   "title": "GIPSER 100% (Canton of German-speaking Switzerland) – with immediate effect/ongoing (plasterer)",
-   "employer": "MPV Maurer Personalvermittlung (priv.)",
-   "country": "Switzerland",
-   "location": "CH06, CH05",
-   "region": "Europe",
-   "kind": "Seasonal",
-   "salary": "",
-   "closes_on": "",
-   "details": {
-    "Requirements and description": "We are currently looking for skilled plasterers for various building sites across all regions of German-speaking Switzerland. Work could start immediately or in the near future, depending on direct arrangements with the Swiss employer. We are a private recruitment and…",
-    "Posted on": "1792012263",
-    "Language": "de",
-    "Contract": "directhire",
-    "Original title": "GIPSER 100% (CH-Kt. Deutsch-Schweiz) – per sofort/fortlaufend (Stuckateur/in)"
    }
   }
  ]
