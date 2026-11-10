@@ -2,36 +2,86 @@ name: Update job data
 
 on:
   schedule:
-    - cron: "30 2 * * *"   # 02:30 UTC = 08:15 Nepal time, once a day
-  workflow_dispatch:        # lets you run it by hand from the Actions tab
+    - cron: "15 18 * * *"   # 18:15 UTC = 00:00 (midnight) Nepal time, once a day
+  workflow_dispatch:         # run it by hand from the Actions tab
 
 permissions:
   contents: write
 
+# Never run two updates at the same time
 concurrency:
-  group: update-data
+  group: update-job-data
   cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 360     # 6 hours = the maximum GitHub allows
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests
+
+      - run: pip install "requests>=2.32,<3"
+
+      # Per-job agency details are cached so each run only fetches what is new.
+      # The cache lives in the Actions cache and is NOT committed to the repo.
+      - name: Restore details cache
+        uses: actions/cache/restore@v4
+        with:
+          path: data/details_cache.json
+          key: details-cache-${{ github.run_id }}
+          restore-keys: details-cache-
+
+      # The scraper compares with the previous data and refuses to publish a result that looks broken.
+      - name: Get previous data (safety comparison)
+        run: |
+          mkdir -p data
+          curl -fsS "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/data/jobs.json" -o data/jobs.json || rm -f data/jobs.json
+
       - name: Fetch jobs
         env:
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
-          MAX_DETAIL_FETCH: ${{ vars.MAX_DETAIL_FETCH || '700' }}
+          MAX_DETAIL_FETCH: "6000"   # details fetched per run (slow and polite: ~1 second each)
+          RUN_BUDGET_MIN: "300"      # scraper stops fetching details after 5 hours, finishes cleanly
         run: python fetch_jobs.py
-      - name: Commit data
+
+      # Save the cache even if the run failed or was cancelled, so progress is not lost.
+      - name: Save details cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: data/details_cache.json
+          key: details-cache-${{ github.run_id }}
+
+      - name: Sanity check
         run: |
+          python - <<'PY'
+          import json, sys
+          d = json.load(open("data/jobs.json", encoding="utf-8"))
+          n = len(d["jobs"])
+          print("jobs:", n)
+          if n < 50:
+              sys.exit("Too few jobs, not publishing")
+          PY
+
+      # Publishes ONLY the files the app needs, as a single commit on the "data" branch
+      # (force-pushed each day). This keeps the repo small.
+      - name: Publish to the data branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          mkdir publish
+          for f in jobs.json seasonal.json history.json; do
+            if [ -f "data/$f" ]; then cp "data/$f" publish/; fi
+          done
+          cd publish
+          git init -q -b data
           git config user.name "job-data-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet || git commit -m "Update job data"
-          git pull --rebase
-          git push
+          git add .
+          git commit -q -m "Data $(date -u +%F)"
+          git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
