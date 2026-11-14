@@ -1,0 +1,40 @@
+{
+  "jobs": [
+    {
+      "id": "example-1",
+      "title": "Berry picker (EXAMPLE - copy this block and edit)",
+      "employer": "Example Farm Oy",
+      "country": "Finland",
+      "location": "Rovaniemi",
+      "region": "Europe",
+      "kind": "Seasonal",
+      "salary": "EUR 14/h",
+      "closes_on": "2026-12-31",
+      "details": {
+        "Qualification": "No degree needed",
+        "Requirements": "Physically fit, able to work outdoors 8 hours a day",
+        "Experience": "Not required",
+        "Language": "Basic English",
+        "Contract": "3 months, starts June"
+      }
+    },
+    {
+      "id": "example-2",
+      "title": "Warehouse operator (EXAMPLE)",
+      "employer": "Example Logistics GmbH",
+      "country": "Germany",
+      "location": "Hamburg",
+      "region": "Europe",
+      "kind": "Visa sponsored",
+      "salary": "EUR 2,300/month",
+      "closes_on": "2026-12-15",
+      "details": {
+        "Qualification": "High school diploma",
+        "Requirements": "Forklift licence preferred",
+        "Experience": "1 year in warehouse work",
+        "Language": "English, basic German",
+        "Visa": "Employer sponsors work visa"
+      }
+    }
+  ]
+}
