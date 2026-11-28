@@ -2,7 +2,7 @@ name: Update job data
 
 on:
   schedule:
-    - cron: "15 18 * * *"   # 18:15 UTC = 00:00 (midnight) Nepal time, once a day
+    - cron: "15 18 * * *"   # 18:15 UTC = 00:00 midnight Nepal time, once a day
   workflow_dispatch:         # run it by hand from the Actions tab
 
 permissions:
@@ -35,20 +35,34 @@ jobs:
           key: details-cache-${{ github.run_id }}
           restore-keys: details-cache-
 
+      - name: Restore EURES cache
+        uses: actions/cache/restore@v4
+        with:
+          path: data/eures_cache.json
+          key: eures-cache-${{ github.run_id }}
+          restore-keys: eures-cache-
+
       # The scraper compares with the previous data and refuses to publish a result that looks broken.
       - name: Get previous data (safety comparison)
         run: |
           mkdir -p data
           curl -fsS "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/data/jobs.json" -o data/jobs.json || rm -f data/jobs.json
 
-      - name: Fetch jobs
+      - name: Fetch jobs - DoFE ALL
         env:
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
-          MAX_DETAIL_FETCH: "6000"   # details fetched per run (slow and polite: ~1 second each)
+          MAX_DETAIL_FETCH: "100000"   # no cap, fetch all details - was 6000, that capped DoFE
           RUN_BUDGET_MIN: "300"      # scraper stops fetching details after 5 hours, finishes cleanly
         run: python fetch_jobs.py
 
-      # Save the cache even if the run failed or was cancelled, so progress is not lost.
+      # MUST run AFTER fetch_jobs.py, because build_seasonal.py reads data/jobs.json for DoFE ALL
+      - name: Build seasonal - DoFE ALL + Canada in Foreign min 4 + EURES + Manual
+        env:
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: python build_seasonal.py
+
+      # Save the caches even if the run failed or was cancelled, so progress is not lost.
       - name: Save details cache
         if: always()
         uses: actions/cache/save@v4
@@ -56,7 +70,14 @@ jobs:
           path: data/details_cache.json
           key: details-cache-${{ github.run_id }}
 
-      - name: Sanity check
+      - name: Save EURES cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: data/eures_cache.json
+          key: eures-cache-${{ github.run_id }}
+
+      - name: Sanity check - jobs + seasonal + Canada
         run: |
           python - <<'PY'
           import json, sys
@@ -65,19 +86,46 @@ jobs:
           print("jobs:", n)
           if n < 50:
               sys.exit("Too few jobs, not publishing")
+
+          # seasonal must exist and must have DoFE + Canada
+          try:
+              s = json.load(open("data/seasonal.json", encoding="utf-8"))
+          except FileNotFoundError:
+              sys.exit("seasonal.json missing - build_seasonal.py did not run")
+          sjobs = s.get("jobs", [])
+          print("seasonal:", len(sjobs))
+          if len(sjobs) < 50:
+              sys.exit("Too few seasonal jobs, not publishing")
+          canada = [j for j in sjobs if j.get("country") == "Canada"]
+          print("Canada in seasonal:", len(canada))
+          if len(canada) < 4:
+              print("WARNING: Canada < 4, check Job Bank - but still publishing, DoFE may have 0 Canada")
+          # DoFE must be in seasonal, because DoFE collect ALL
+          dofe = [j for j in sjobs if j.get("source") == "DoFE"]
+          print("DoFE in seasonal:", len(dofe))
+          if len(dofe) < 50:
+              sys.exit("DoFE missing in seasonal - build_seasonal.py did not read jobs.json")
+          # agencies.json is kept for future, even though Agencies tab is hidden in app
+          try:
+              a = json.load(open("data/agencies.json", encoding="utf-8"))
+              print("agencies:", len(a.get("agencies", a.get("jobs", []))) if isinstance(a, dict) else len(a))
+          except FileNotFoundError:
+              print("WARNING: agencies.json missing, but not blocking publish - Detail still uses job.agency")
           PY
 
       # Publishes ONLY the files the app needs, as a single commit on the "data" branch
       # (force-pushed each day). This keeps the repo small.
+      # agencies.json is published too - tab is hidden in app, but data is kept for future + Detail fallback.
       - name: Publish to the data branch
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -e
           mkdir publish
-          for f in jobs.json seasonal.json history.json; do
+          for f in jobs.json seasonal.json history.json agencies.json; do
             if [ -f "data/$f" ]; then cp "data/$f" publish/; fi
           done
+          ls -lh publish/
           cd publish
           git init -q -b data
           git config user.name "job-data-bot"
