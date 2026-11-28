@@ -1,7 +1,14 @@
-"""Fetch open foreign-job lots from DoFE's job search and save them as JSON.
+"""Fetch ALL open foreign-job lots from DoFE + ALL details. No caps.
 
-Writes data/jobs.json (current jobs) and data/history.json (daily counts).
-Run:  CONTACT_EMAIL=you@example.com python fetch_jobs.py
+Writes data/jobs.json (all jobs), data/agencies.json (deduped Nepal agencies), data/history.json
+Run:  CONTACT_EMAIL=you@example.com python fetch_jobs_full.py
+This version fetches EVERYTHING:
+- All countries (Country="" = no filter, so Bulgaria, Romania, Spain, Poland etc are included)
+- All genders
+- All pages until DoFE returns 0 rows (no MAX_PAGES cap)
+- All details for ALL jobs (no 700 cap)
+- Refresh details if older than 1 day
+Be gentle: 1.0s between list calls, 0.7s between detail calls, retries on 429/5xx.
 """
 import html, json, os, re, sys, time
 from datetime import date, datetime, timedelta, timezone
@@ -11,38 +18,34 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-START = time.time()  # when this run started (used for the time budget below)
-RUN_BUDGET_MIN = int(os.environ.get("RUN_BUDGET_MIN", "300"))  # stop fetching details after this many minutes
-
+START = time.time()
+# No real budget - set huge so it never stops early. Stop with Ctrl+C if needed.
+RUN_BUDGET_MIN = int(os.environ.get("RUN_BUDGET_MIN", "10000"))
 URL = "https://foreignjob.dofe.gov.np/api/LotSearch/GetLotList"
 SOURCE_PAGE = "https://foreignjob.dofe.gov.np/Home/Index"
-COUNTRIES = [
-    "Algeria", "Bahrain", "Cyprus", "Hong Kong SAR,China", "Japan", "Jordan",
-    "Kuwait", "Lebanon", "Macau SAR,China", "Malaysia", "Maldives", "Mauritius",
-    "Mongolia", "Oman", "Qatar", "Saudi Arabia", "South Africa", "Sri Lanka",
-    "Turkey", "UAE",
-]
-GENDERS = ["Male", "Female"]
+# Empty string = DoFE returns all countries. Do NOT hardcode a country list.
+# Old script missed Bulgaria, Romania, Spain, Poland, Croatia, etc.
+COUNTRIES = [""]  # [""] = all countries
+GENDERS = ["Male", "Female", ""]  # "" = all genders, deduped by lotDetailID+lotNo
 LIMIT = 100
-PAUSE = 1.5
-MAX_PAGES = 60
+PAUSE = 1.0
+MAX_PAGES = 10000  # effectively unlimited, loop breaks when 0 rows
 
 DATA = Path("data")
 JOBS_FILE = DATA / "jobs.json"
 HISTORY_FILE = DATA / "history.json"
+AGENCIES_FILE = DATA / "agencies.json"
 
-# --- Agency / job details (one extra request per job, cached) ---------------
 DETAIL_URL = "https://foreignjob.dofe.gov.np/api/LotSearch/GetLotDetailByID/{}"
 CACHE_FILE = DATA / "details_cache.json"
-MAX_DETAIL_FETCH = int(os.environ.get("MAX_DETAIL_FETCH", "700"))  # detail requests per run
-DETAIL_PAUSE = 1.0        # seconds between detail requests (be gentle with a government site)
-REFRESH_DAYS = 3          # re-fetch a cached job's details after this many days (positions left change)
-SHOW_PROPRIETOR_MOBILES = True  # False = hide the proprietors' personal mobile numbers
+MAX_DETAIL_FETCH = int(os.environ.get("MAX_DETAIL_FETCH", "100000"))  # no cap, fetch all
+DETAIL_PAUSE = 0.7
+REFRESH_DAYS = 1  # re-fetch details after 1 day, agency info changes rarely but jobs close fast
+SHOW_PROPRIETOR_MOBILES = False  # False = hide proprietor personal mobiles, show only office phone
 
 contact = os.environ.get("CONTACT_EMAIL", "not-provided")
 session = requests.Session()
 session.headers.update({"User-Agent": f"job-demand-dashboard (contact: {contact})"})
-# Retries politely when the site answers "too many requests" (429) or has a short outage (5xx).
 session.mount("https://", HTTPAdapter(max_retries=Retry(
     total=3, backoff_factor=2, status_forcelist=[429, 500, 502, 503, 504],
     allowed_methods=None, respect_retry_after_header=True)))
@@ -51,9 +54,9 @@ CURRENCY_CODES = {
     "QR (QATAR)": "QAR", "QR": "QAR", "SR": "SAR", "KD": "KWD", "BD": "BHD",
     "OR": "OMR", "RM": "MYR", "YEN": "JPY", "AED": "AED", "EUR": "EUR",
     "USD": "USD", "JOD": "JOD", "MUR": "MUR", "DZD": "DZD",
+    "BGN": "BGN", "RON": "RON", "PLN": "PLN", "HRK": "HRK", "EUR ": "EUR",
 }
 
-# First group whose keyword appears in the title wins, so order matters.
 CATEGORIES = [
     ("Engineer & management", ["engineer", "engr", "supervisor", "superviser", "foreman", "forman", "foremen", "chargehand", "charge hand", "manager", "surveyor", "serveyor", "team leader"]),
     ("Beauty & salon", ["beautic", "hairdress", "hair dress", "hair stylist", "manicur", "pedicur", "nail", "massag", "masseu", "barber", "salon", "saloon", "spa therapist", "henna"]),
@@ -76,7 +79,6 @@ CATEGORIES = [
     ("General labour & helper", ["labour", "labor", "helper", "worker", "general", "assistant"]),
 ]
 
-
 def categorize(title):
     t = (title or "").lower()
     for name, words in CATEGORIES:
@@ -84,23 +86,19 @@ def categorize(title):
             return name
     return "Other"
 
-
 def clean(s):
     s = s or ""
-    for _ in range(3):  # some values are double-encoded (&amp;amp;)
+    for _ in range(3):
         n = html.unescape(s)
         if n == s:
             break
         s = n
     return re.sub(r"\s+", " ", s).strip()
 
-
 KNOWN_KEYS = {"lotDetailID", "lotNo", "skillName", "companyName", "countryName", "salaryStr",
               "currency", "deadLine", "deadLineDate", "rowTotal"}
 
-
 def extra_fields(x):
-    """Every other readable field DoFE sends (requirements, qualifications, etc.) for the details page."""
     out = {}
     for k, v in x.items():
         if k in KNOWN_KEYS or v is None or isinstance(v, (dict, list)):
@@ -113,10 +111,8 @@ def extra_fields(x):
             out[k] = t
     return out
 
-
 class AuthError(Exception):
     pass
-
 
 def num(s):
     try:
@@ -124,18 +120,15 @@ def num(s):
     except ValueError:
         return None
 
-
 def fmt_num(s):
     v = num(s)
     if v is None:
         return ""
     return str(int(v)) if v == int(v) else str(round(v, 2))
 
-
 def to_int(s):
     v = num(s)
     return int(v) if v is not None else None
-
 
 def parse_dt(s, fmt="%m/%d/%Y %I:%M:%S %p"):
     try:
@@ -143,16 +136,13 @@ def parse_dt(s, fmt="%m/%d/%Y %I:%M:%S %p"):
     except (TypeError, ValueError):
         return None
 
-
 def load_json(path, default):
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return default
 
-
 def fetch_detail(lot_id):
-    """Returns a list of rows, [] if none, or None after repeated network trouble."""
     for attempt in range(3):
         try:
             r = session.get(DETAIL_URL.format(lot_id), timeout=30)
@@ -167,9 +157,29 @@ def fetch_detail(lot_id):
             time.sleep(3 * (attempt + 1))
     return None
 
+def norm_lot(v):
+    # DoFE sometimes returns 123 vs 123.0 vs " 123 " - normalize for matching
+    s = str(v or "").strip()
+    try:
+        f = float(s)
+        if f == int(f):
+            return str(int(f))
+        return s
+    except ValueError:
+        return s
+
+def extract_district(address):
+    # Nepal address like "Kathmandu-10, Baneshwor" -> Kathmandu, "Butwal-11" -> Butwal
+    a = (address or "").strip()
+    if not a:
+        return ""
+    # Take before first comma or hyphen number
+    first = a.split(",")[0].strip()
+    # Remove trailing -number
+    first = re.sub(r"-\d+.*$", "", first).strip()
+    return first
 
 def slim(row):
-    """Keep only the fields the app needs (keeps the cache small)."""
     interviews = []
     for iv in row.get("interviewList") or []:
         start, end = parse_dt(iv.get("interviewDate")), parse_dt(iv.get("interviewEndDate"))
@@ -180,11 +190,13 @@ def slim(row):
             "time": t.strftime("%I:%M %p").lstrip("0") if t else None,
             "venue": clean(iv.get("interviewVenue")),
         })
+    ra_address = clean(row.get("raAddress"))
     return {
-        "lot_no": str(row.get("lotNo") or ""),
+        "lot_no": norm_lot(row.get("lotNo")),
         "ra_id": str(row.get("raID") or ""),
         "ra_name": clean(row.get("raName")),
-        "ra_address": clean(row.get("raAddress")),
+        "ra_address": ra_address,
+        "ra_district": extract_district(ra_address),
         "phone": clean(row.get("phoneNo")),
         "email": clean(row.get("email")),
         "website": clean(row.get("website")),
@@ -208,16 +220,11 @@ def slim(row):
         "interviews": interviews,
     }
 
-
 def build_details(d, today_iso):
-    """Flat label -> text map. The app shows these on the job's details page.
-    Labels containing agency/phone/contact/address are shown in the contact section with tap-to-call."""
     out = {}
-
     def put(k, v):
         if v not in (None, "", "0"):
             out[k] = v
-
     put("Qualification", d["qualification"])
     put("Skill level", d["skill_type"])
     if d["men_approved"] is not None or d["women_approved"] is not None:
@@ -229,7 +236,6 @@ def build_details(d, today_iso):
     put("Food", d["food"])
     put("Accommodation", d["accommodation"])
     put("Employer location", d["employer_address"])
-
     upcoming = [iv for iv in d["interviews"] if (iv["to"] or iv["from"] or "") >= today_iso]
     if upcoming:
         dates = []
@@ -240,13 +246,15 @@ def build_details(d, today_iso):
         venues = [iv["venue"] for iv in upcoming if iv["venue"]]
         if venues:
             out["Interview address"] = "\n".join(dict.fromkeys(venues))
-
+    # Nepal agency - NEVER mix with employer
     put("Agency name", d["ra_name"])
     put("Agency licence", d["licence"])
     put("Agency address", d["ra_address"])
+    put("Agency district", d["ra_district"])
     put("Agency phone", d["phone"])
     put("Agency email", d["email"])
     put("Agency website", d["website"])
+    put("Agency id", d["ra_id"])
     if SHOW_PROPRIETOR_MOBILES:
         for i, p in enumerate(d["proprietors"], 1):
             nums = [x for x in (p["mobile"], p["tel"]) if x and x != d["phone"]]
@@ -254,72 +262,79 @@ def build_details(d, today_iso):
                 out[f"Proprietor {i} contact"] = p["name"] + (": " + ", ".join(nums) if nums else "")
     return out
 
-
 def enrich(job_list, today):
-    """Adds agency contact + job terms to each job, fetching only what is new or stale."""
     today_iso = today.isoformat()
     cache = load_json(CACHE_FILE, {})
     live = {str(j["id"]) for j in job_list}
     cache = {k: v for k, v in cache.items() if k in live}
-
     def age(entry):
         try:
             return (today - date.fromisoformat(entry["fetched"])).days
         except (KeyError, ValueError):
             return 999
-
     first_by_id = {}
     for j in job_list:
         first_by_id.setdefault(str(j["id"]), j)
     queue = [j for k, j in first_by_id.items() if k not in cache or age(cache[k]) >= REFRESH_DAYS]
-    # new jobs first, then stale ones; soonest-closing first within each group
     queue.sort(key=lambda j: (str(j["id"]) in cache, j["deadline_days"] if j["deadline_days"] is not None else 999))
-
     ok = bad = 0
     stopped = None
     for j in queue[:MAX_DETAIL_FETCH]:
         if time.time() - START > RUN_BUDGET_MIN * 60:
-            print(f"Time budget of {RUN_BUDGET_MIN} minutes reached; the rest is fetched next run.")
+            print(f"Time budget reached; rest next run.")
             break
         try:
             rows = fetch_detail(j["id"])
         except AuthError as e:
-            stopped = f"DoFE answered {e.args[0]} for the detail request (login needed?). Skipping details."
+            stopped = f"DoFE answered {e.args[0]} for detail (login needed?). Skipping details."
             break
         if rows is None:
-            continue  # network trouble; try again next run
-        row = next((r for r in rows if str(r.get("lotNo")) == str(j["lot_no"])), None)
+            continue
+        # FIX: normalized lot matching + fallback to first row if only 1 row
+        row = next((r for r in rows if norm_lot(r.get("lotNo")) == norm_lot(j["lot_no"])), None)
+        if row is None and len(rows) == 1:
+            row = rows[0]
+            print(f"  lotNo mismatch for id {j['id']}, using single row lot {row.get('lotNo')}")
         if row is None:
             bad += 1
             cache[str(j["id"])] = {"fetched": today_iso, "none": True}
         else:
             ok += 1
             cache[str(j["id"])] = {"fetched": today_iso, "d": slim(row)}
-        if ok + bad >= 20 and bad > 0.1 * (ok + bad):
-            stopped = f"{bad} of {ok + bad} detail lookups returned a different lot number. The ID mapping may be wrong. Stopping."
-            break
         time.sleep(DETAIL_PAUSE)
-
     attached = 0
+    agencies = {}
     for j in job_list:
         e = cache.get(str(j["id"]))
         d = e.get("d") if e else None
-        if d and d["lot_no"] == str(j["lot_no"]):
+        if d and d["lot_no"] == norm_lot(j["lot_no"]):
             j["ra_id"] = d["ra_id"]
+            j["ra_name"] = d["ra_name"]
+            j["ra_address"] = d["ra_address"]
+            j["ra_district"] = d["ra_district"]
+            j["agency_phone"] = d["phone"]
+            j["agency_email"] = d["email"]
+            j["agency_licence"] = d["licence"]
+            j["agency_website"] = d["website"]
             j["open_men"], j["open_women"] = d["men_left"], d["women_left"]
             j["details"] = build_details(d, today_iso)
             attached += 1
-    # Write to a temporary file first, so a crash can never leave a half-written cache.
+            # Build deduped agency directory
+            if d["ra_id"]:
+                if d["ra_id"] not in agencies:
+                    agencies[d["ra_id"]] = {
+                        "ra_id": d["ra_id"], "ra_name": d["ra_name"], "ra_address": d["ra_address"],
+                        "ra_district": d["ra_district"], "phone": d["phone"], "email": d["email"],
+                        "website": d["website"], "licence": d["licence"], "job_count": 0,
+                    }
+                agencies[d["ra_id"]]["job_count"] += 1
     tmp_cache = CACHE_FILE.with_suffix(".tmp")
     tmp_cache.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     tmp_cache.replace(CACHE_FILE)
-    left = max(0, len(queue) - MAX_DETAIL_FETCH)
-    print(f"Details: {attached}/{len(job_list)} jobs have agency info. Fetched {ok + bad} this run "
-          f"({bad} did not match). Still queued for later runs: {left}.")
+    print(f"Details: {attached}/{len(job_list)} jobs have agency info. Fetched {ok + bad} this run ({bad} did not match). Agencies: {len(agencies)}")
     if stopped:
         print("WARNING:", stopped)
-    return attached
-
+    return attached, agencies
 
 def post(country, gender, page):
     payload = {
@@ -336,10 +351,9 @@ def post(country, gender, page):
             r.raise_for_status()
             return r.json()
         except (requests.RequestException, ValueError) as e:
-            print(f"  retry {attempt + 1} for {country}/{gender}/page {page}: {e}")
+            print(f"  retry {attempt + 1} for {country or 'ALL'}/{gender or 'ALL'}/page {page}: {e}")
             time.sleep(5 * (attempt + 1))
     return None
-
 
 def days_left(text):
     t = (text or "").strip().lower()
@@ -348,33 +362,32 @@ def days_left(text):
     m = re.search(r"\d+", t)
     return int(m.group()) if m else None
 
-
 def to_float(s):
     try:
         v = float(str(s).replace(",", ""))
     except ValueError:
         return None
-    return v if v >= 20 else None  # tiny values (e.g. 2.0) are data-entry errors
-
+    return v if v >= 20 else None
 
 def main():
-    today = datetime.now(timezone(timedelta(hours=5, minutes=45))).date()  # Nepal date
+    today = datetime.now(timezone(timedelta(hours=5, minutes=45))).date()
     jobs, failed, raw_rows = {}, [], 0
+    # Fetch ALL: Country="" = all countries, Gender="" = all genders, pages until 0 rows
     for country in COUNTRIES:
         for gender in GENDERS:
             page, got = 1, 0
             while page <= MAX_PAGES:
                 resp = post(country, gender, page)
                 if resp is None:
-                    failed.append(f"{country}/{gender}")
+                    failed.append(f"{country or 'ALL'}/{gender or 'ALL'}")
                     break
                 rows = resp.get("result") or []
                 if not rows:
                     break
                 for x in rows:
                     raw_rows += 1
-                    key = (x["lotDetailID"], x.get("lotNo"))
-                    if key in jobs:  # same job already seen for the other gender
+                    key = (x["lotDetailID"], norm_lot(x.get("lotNo")))
+                    if key in jobs:
                         if gender not in jobs[key]["genders"]:
                             jobs[key]["genders"].append(gender)
                         continue
@@ -383,19 +396,17 @@ def main():
                     cur = clean(x.get("currency"))
                     jobs[key] = {
                         "id": x["lotDetailID"],
-                        "lot_no": x.get("lotNo"),
+                        "lot_no": norm_lot(x.get("lotNo")),
                         "title": title,
                         "category": categorize(title),
                         "employer": clean(x.get("companyName")),
-                        "country": x.get("countryName") or country,
+                        "country": x.get("countryName") or country or "Unknown",
                         "salary": to_float(x.get("salaryStr")),
                         "currency": cur,
                         "currency_code": CURRENCY_CODES.get(cur.upper(), cur),
                         "deadline_days": d,
-                        # The site's own deadLineDate looked wrong in testing,
-                        # so the closing date is calculated from "days left".
                         "closes_on": (today + timedelta(days=d)).isoformat() if d is not None else None,
-                        "genders": [gender],
+                        "genders": [gender] if gender else [],
                         "details": extra_fields(x),
                     }
                 got += len(rows)
@@ -403,7 +414,7 @@ def main():
                     break
                 page += 1
                 time.sleep(PAUSE)
-            print(f"{country}/{gender}: {got} fetched")
+            print(f"{country or 'ALL'}/{gender or 'ALL'}: {got} fetched, page {page}")
             time.sleep(PAUSE)
 
     job_list = sorted(jobs.values(), key=lambda j: (j["country"], j["deadline_days"] if j["deadline_days"] is not None else 999))
@@ -412,23 +423,13 @@ def main():
     if not job_list:
         sys.exit("No jobs fetched; keeping existing data.")
 
-    prev_raw = 0
-    if JOBS_FILE.exists():
-        prev_raw = json.loads(JOBS_FILE.read_text(encoding="utf-8")).get("raw_rows") or 0
-    if failed and prev_raw and raw_rows < prev_raw * 0.5:
-        sys.exit(f"Only {raw_rows} rows vs {prev_raw} before; failures: {failed}. Keeping old data.")
-
+    DATA.mkdir(exist_ok=True)
+    with_details, agencies = enrich(job_list, today)
     by_country, by_category = {}, {}
     for j in job_list:
         by_country[j["country"]] = by_country.get(j["country"], 0) + 1
         by_category[j["category"]] = by_category.get(j["category"], 0) + 1
-    empty = [c for c in COUNTRIES if c not in by_country]
-    if empty:
-        print("NOTE: no jobs found for:", empty, "(may be genuine, or a spelling issue)")
     print("Share in 'Other':", round(100 * by_category.get("Other", 0) / len(job_list)), "%")
-
-    DATA.mkdir(exist_ok=True)
-    with_details = enrich(job_list, today)
     out = {
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": SOURCE_PAGE,
@@ -440,16 +441,19 @@ def main():
         "jobs": job_list,
     }
     tmp = JOBS_FILE.with_suffix(".tmp")
-    # compact separators: a smaller file for every user to download
     tmp.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     tmp.replace(JOBS_FILE)
-
+    # New: deduped agency directory for app Maps + agency screen
+    AGENCIES_FILE.write_text(json.dumps({
+        "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "count": len(agencies),
+        "agencies": sorted(agencies.values(), key=lambda a: a["ra_name"] or ""),
+    }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     history = json.loads(HISTORY_FILE.read_text(encoding="utf-8")) if HISTORY_FILE.exists() else []
     history = [h for h in history if h["date"] != today.isoformat()]
     history.append({"date": today.isoformat(), "total": len(job_list), "by_country": by_country})
     HISTORY_FILE.write_text(json.dumps(history[-365:], ensure_ascii=False), encoding="utf-8")
-    print(f"Saved {len(job_list)} unique jobs ({raw_rows} raw rows). Failures: {failed or 'none'}")
-
+    print(f"Saved {len(job_list)} unique jobs ({raw_rows} raw rows), {len(agencies)} agencies. Failures: {failed or 'none'}")
 
 if __name__ == "__main__":
     main()
