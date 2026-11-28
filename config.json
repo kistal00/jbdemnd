@@ -1,0 +1,39 @@
+{
+  "min_version_code": 0,
+  "whatsapp_number": "9779843361004",
+  "notice": {
+    "en": "",
+    "ne": ""
+  },
+  "ads": {
+    "reward_every": 5,
+    "back_ad_every": 2,
+    "page_change_ads": true,
+    "cooldown_seconds": 0,
+    "native_enabled": true,
+    "app_open_enabled": true,
+    "app_open_min_away_seconds": 60
+  },
+  "europe_pitch": {
+    "enabled": true,
+    "title_en": "Apply to 100 Europe jobs for just Rs 1,000",
+    "title_ne": "केवल रु १,००० मा १०० युरोप जागिरमा आवेदन दिनुहोस्",
+    "body_en": "Skip weeks of searching and form-filling. Tell us the work and countries you prefer, and our team prepares and submits your applications to 100 matching jobs for you.",
+    "body_ne": "हप्तौँ खोज्ने र फारम भर्ने झन्झट छोड्नुहोस्। तपाईंले रोज्ने काम र देश हामीलाई बताउनुहोस्, हाम्रो टोलीले तपाईंका लागि मिल्दा १०० जागिरमा आवेदन तयार गरी पठाइदिन्छ।",
+    "bullets_en": [
+      "Applications matched to your preferences",
+      "One simple fee: Rs 1,000",
+      "Updates and support on WhatsApp"
+    ],
+    "bullets_ne": [
+      "तपाईंको रोजाइअनुसार मिल्दा आवेदन",
+      "एउटै सरल शुल्क: रु १,०००",
+      "WhatsApp मा जानकारी र सहयोग"
+    ],
+    "button_en": "Start on WhatsApp",
+    "button_ne": "WhatsApp मा सुरु गर्नुहोस्",
+    "disclaimer_en": "We submit applications on your behalf. A job or visa is never guaranteed; the employer makes the final decision. Independent service, not affiliated with the Government of Nepal or DoFE.",
+    "disclaimer_ne": "हामी तपाईंको तर्फबाट आवेदन पठाउँछौं। जागिर वा भिसाको ग्यारेन्टी हुँदैन; अन्तिम निर्णय रोजगारदाताको हुन्छ। स्वतन्त्र सेवा, नेपाल सरकार वा DoFE सँग सम्बन्धित छैन।",
+    "whatsapp_message": "Hello, I want to apply to 100 Europe jobs for Rs 1,000. Please guide me on the next steps."
+  }
+}
